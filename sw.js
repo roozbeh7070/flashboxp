@@ -1,18 +1,18 @@
-const CACHE_NAME = 'lang-app-v5';
+const CACHE_NAME = 'lang-app-v6';
 const ASSETS = [
     './',
-    'index.html',
-    'manifest.json',
-    'css/style.css',
-    'js/app.js',
-    'js/storage.js',
-    'js/utils.js',
-    'js/quiz.js',
-    'js/components/FolderCard.js',
-    'js/components/WordCard.js',
-    'fonts/Vazirmatn-Regular.ttf',
-    'fonts/Vazirmatn-Bold.ttf',
-    'doc/logo.png'
+    './index.html',
+    './manifest.json',
+    './css/style.css',
+    './js/app.js',
+    './js/storage.js',
+    './js/utils.js',
+    './js/quiz.js',
+    './js/components/FolderCard.js',
+    './js/components/WordCard.js',
+    './fonts/Vazirmatn-Regular.ttf',
+    './fonts/Vazirmatn-Bold.ttf',
+    './doc/logo.png'
 ];
 
 // Install Service Worker
