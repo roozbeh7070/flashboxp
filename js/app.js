@@ -943,7 +943,7 @@ class FlashcardApp {
                         </label>
                     </div>
                     <button onclick="app.manualUpdateCheck(this)" class="w-full p-6 bg-blue-50 text-blue-600 rounded-3xl font-black flex justify-between items-center border border-blue-100 active:scale-95 transition-all">
-                        <span>بهروزرسانی</span>
+                        <span>بروزرسانی</span>
                         <i class="fas fa-sync-alt text-2xl"></i>
                     </button>
                     <button onclick="app.factoryReset()" class="w-full p-6 bg-red-50 text-red-600 rounded-3xl font-black flex justify-between items-center border border-red-100 active:scale-95 transition-all">
