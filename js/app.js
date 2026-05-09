@@ -13,6 +13,7 @@ class FlashcardApp {
         this.tempQuizScope = 'all';
         this.tempEditFolderIdx = null;
         this.currentFilter = 'all';
+        this.registration = null;
 
         this.init();
     }
@@ -22,7 +23,6 @@ class FlashcardApp {
         this.setupEventListeners();
         this.registerServiceWorker();
         this.updateUILabels();
-        this.checkForUpdates();
 
         // Hide Persian mic button in Safari as it's not supported
         if (utils.isSafari()) {
@@ -31,17 +31,92 @@ class FlashcardApp {
         }
     }
 
-    async checkForUpdates() {
-        if (navigator.onLine) {
-            try {
-                const reg = await navigator.serviceWorker.getRegistration();
-                if (reg) {
-                    await reg.update();
-                }
-            } catch (e) {
-                console.warn('Update check failed:', e);
-            }
+    registerServiceWorker() {
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./sw.js')
+                    .then(reg => {
+                        this.registration = reg;
+                        console.log('Service Worker registered', reg);
+                        
+                        reg.onupdatefound = () => {
+                            const installingWorker = reg.installing;
+                            installingWorker.onstatechange = () => {
+                                if (installingWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                                    this.showUpdatePrompt();
+                                }
+                            };
+                        };
+                    })
+                    .catch(err => console.log('Service Worker registration failed', err));
+            });
         }
+    }
+
+    async manualUpdateCheck(btn) {
+        if (!navigator.onLine) {
+            alert('لطفاً ابتدا به اینترنت متصل شوید.');
+            return;
+        }
+
+        const originalContent = btn.innerHTML;
+        btn.disabled = true;
+        btn.innerHTML = `<span>در حال جستجو...</span><i class="fas fa-spinner fa-spin text-2xl"></i>`;
+
+        try {
+            // Re-fetch registration just in case
+            if (!this.registration) {
+                this.registration = await navigator.serviceWorker.getRegistration();
+            }
+
+            if (this.registration) {
+                // If there's already a waiting worker, show prompt immediately
+                if (this.registration.waiting) {
+                    this.showUpdatePrompt();
+                    btn.disabled = false;
+                    btn.innerHTML = originalContent;
+                    return;
+                }
+
+                await this.registration.update();
+                
+                // Wait a bit to see if updatefound triggers
+                setTimeout(() => {
+                    if (!this.registration.installing && !this.registration.waiting) {
+                        btn.innerHTML = `<span>شما از آخرین نسخه استفاده می‌کنید</span><i class="fas fa-check-circle text-2xl text-green-500"></i>`;
+                        setTimeout(() => {
+                            btn.disabled = false;
+                            btn.innerHTML = originalContent;
+                        }, 2000);
+                    } else {
+                        btn.disabled = false;
+                        btn.innerHTML = originalContent;
+                    }
+                }, 1500);
+            } else {
+                btn.disabled = false;
+                btn.innerHTML = originalContent;
+            }
+        } catch (e) {
+            console.warn('Manual update check failed:', e);
+            btn.disabled = false;
+            btn.innerHTML = originalContent;
+        }
+    }
+
+    showUpdatePrompt() {
+        this.showModal(`
+            <div class="ios-modal p-8 text-center">
+                <div class="w-20 h-20 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 text-3xl">
+                    <i class="fas fa-rocket fa-bounce"></i>
+                </div>
+                <h3 class="text-2xl font-black mb-2 text-gray-900">نسخه جدید پیدا شد!</h3>
+                <p class="text-gray-400 mb-8 font-bold leading-relaxed">تغییرات جدید و بهبودهای ظاهری آماده دریافت هستند. آیا می‌خواهید الان بروزرسانی کنید؟</p>
+                <div class="flex gap-3">
+                    <button onclick="app.closeModal()" class="flex-1 p-4 bg-gray-100 text-gray-500 rounded-2xl font-black">بعداً</button>
+                    <button onclick="app.hotReload()" class="flex-1 p-5 blue-sharp rounded-2xl font-black shadow-xl active:scale-95 transition-transform">بروزرسانی آنی</button>
+                </div>
+            </div>`);
     }
 
     updateUILabels() {
@@ -58,44 +133,6 @@ class FlashcardApp {
         };
         const engInput = document.getElementById('eng-input');
         if (engInput) engInput.placeholder = `${labels[lang]} (${perLabels[lang]})`;
-    }
-
-    registerServiceWorker() {
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('./sw.js')
-                    .then(reg => {
-                        console.log('Service Worker registered', reg);
-                        
-                        // Check for updates periodically
-                        reg.onupdatefound = () => {
-                            const installingWorker = reg.installing;
-                            installingWorker.onstatechange = () => {
-                                if (installingWorker.state === 'installed' && navigator.serviceWorker.controller) {
-                                    // New content is available; show the prompt
-                                    this.showUpdatePrompt();
-                                }
-                            };
-                        };
-                    })
-                    .catch(err => console.log('Service Worker registration failed', err));
-            });
-        }
-    }
-
-    showUpdatePrompt() {
-        this.showModal(`
-            <div class="ios-modal p-8 text-center">
-                <div class="w-20 h-20 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 text-3xl">
-                    <i class="fas fa-rocket fa-bounce"></i>
-                </div>
-                <h3 class="text-2xl font-black mb-2 text-gray-900">نسخه جدید در دسترس است!</h3>
-                <p class="text-gray-400 mb-8 font-bold leading-relaxed">تغییرات جدید و بهبودهای ظاهری برای شما آماده شده است. آیا می‌خواهید الان بروزرسانی کنید؟</p>
-                <div class="flex gap-3">
-                    <button onclick="app.closeModal()" class="flex-1 p-4 bg-gray-100 text-gray-500 rounded-2xl font-black">بعداً</button>
-                    <button onclick="app.hotReload()" class="flex-1 p-5 blue-sharp rounded-2xl font-black shadow-xl active:scale-95 transition-transform">بروزرسانی آنی</button>
-                </div>
-            </div>`);
     }
 
     setupEventListeners() {
@@ -905,7 +942,7 @@ class FlashcardApp {
                             <input type="file" id="importFile" class="hidden" onchange="app.importData(event)">
                         </label>
                     </div>
-                    <button onclick="app.hotReload()" class="w-full p-6 bg-blue-50 text-blue-600 rounded-3xl font-black flex justify-between items-center border border-blue-100 active:scale-95 transition-all">
+                    <button onclick="app.manualUpdateCheck(this)" class="w-full p-6 bg-blue-50 text-blue-600 rounded-3xl font-black flex justify-between items-center border border-blue-100 active:scale-95 transition-all">
                         <span>بهروزرسانی</span>
                         <i class="fas fa-sync-alt text-2xl"></i>
                     </button>
