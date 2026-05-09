@@ -32,12 +32,39 @@ class FlashcardApp {
     registerServiceWorker() {
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
-                // Using relative path for SW registration
                 navigator.serviceWorker.register('./sw.js')
-                    .then(reg => console.log('Service Worker registered', reg))
+                    .then(reg => {
+                        console.log('Service Worker registered', reg);
+                        
+                        // Check for updates periodically
+                        reg.onupdatefound = () => {
+                            const installingWorker = reg.installing;
+                            installingWorker.onstatechange = () => {
+                                if (installingWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                                    // New content is available; show the prompt
+                                    this.showUpdatePrompt();
+                                }
+                            };
+                        };
+                    })
                     .catch(err => console.log('Service Worker registration failed', err));
             });
         }
+    }
+
+    showUpdatePrompt() {
+        this.showModal(`
+            <div class="ios-modal p-8 text-center">
+                <div class="w-20 h-20 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 text-3xl">
+                    <i class="fas fa-rocket fa-bounce"></i>
+                </div>
+                <h3 class="text-2xl font-black mb-2 text-gray-900">نسخه جدید در دسترس است!</h3>
+                <p class="text-gray-400 mb-8 font-bold leading-relaxed">تغییرات جدید و بهبودهای ظاهری برای شما آماده شده است. آیا می‌خواهید الان بروزرسانی کنید؟</p>
+                <div class="flex gap-3">
+                    <button onclick="app.closeModal()" class="flex-1 p-4 bg-gray-100 text-gray-500 rounded-2xl font-black">بعداً</button>
+                    <button onclick="app.hotReload()" class="flex-1 p-5 blue-sharp rounded-2xl font-black shadow-xl active:scale-95 transition-transform">بروزرسانی آنی</button>
+                </div>
+            </div>`);
     }
 
     setupEventListeners() {
@@ -833,33 +860,39 @@ class FlashcardApp {
             </div>`);
     }
 
-    hotReload() {
+    async hotReload() {
         this.showModal(`
             <div class="ios-modal p-8 text-center">
                 <div class="w-20 h-20 bg-blue-100 text-blue-500 rounded-full flex items-center justify-center mx-auto mb-6 text-3xl">
                     <i class="fas fa-sync-alt fa-spin"></i>
                 </div>
                 <h3 class="text-2xl font-black mb-2 text-gray-900">در حال بروزرسانی...</h3>
-                <p class="text-gray-400 mb-8 font-bold">لطفاً شکیبا باشید، برنامه در حال دریافت آخرین تغییرات ظاهری و ساختاری است.</p>
+                <p class="text-gray-400 mb-8 font-bold">در حال دریافت آخرین نسخه و پاکسازی حافظه موقت...</p>
             </div>`);
 
-        // 1. Structural Migration (Data)
-        this.data = getInitialData();
-        this.save();
+        try {
+            // 1. Clear all Cache Storage
+            if ('caches' in window) {
+                const cacheNames = await caches.keys();
+                await Promise.all(cacheNames.map(name => caches.delete(name)));
+            }
 
-        // 2. Service Worker & Cache Update
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.getRegistrations().then(registrations => {
+            // 2. Unregister Service Workers
+            if ('serviceWorker' in navigator) {
+                const registrations = await navigator.serviceWorker.getRegistrations();
                 for (let registration of registrations) {
-                    registration.update();
+                    await registration.unregister();
                 }
-            });
-        }
+            }
 
-        // 3. Force Reload to apply visual changes (CSS/JS)
-        setTimeout(() => {
-            location.reload(true);
-        }, 1500);
+            // 3. Force reload from server
+            setTimeout(() => {
+                window.location.reload(true);
+            }, 1000);
+        } catch (e) {
+            console.error("Update failed:", e);
+            window.location.reload(true);
+        }
     }
 
     factoryReset() {
