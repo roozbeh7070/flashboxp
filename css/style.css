@@ -1,12 +1,12 @@
 @font-face {
     font-family: 'Vazirmatn';
-    src: url('../Fonts/Vazirmatn-Regular.ttf') format('truetype');
+    src: url('../font/Vazirmatn-Regular.ttf') format('truetype');
     font-weight: 100 600;
     font-style: normal;
 }
 @font-face {
     font-family: 'Vazirmatn';
-    src: url('../Fonts/Vazirmatn-Bold.ttf') format('truetype');
+    src: url('../font/Vazirmatn-Bold.ttf') format('truetype');
     font-weight: 700 900;
     font-style: normal;
 }

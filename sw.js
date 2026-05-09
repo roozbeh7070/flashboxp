@@ -10,9 +10,9 @@ const ASSETS = [
     './js/quiz.js',
     './js/components/FolderCard.js',
     './js/components/WordCard.js',
-    './Fonts/Vazirmatn-Regular.ttf',
-    './Fonts/Vazirmatn-Bold.ttf',
-    './Doc/logo.png'
+    './font/Vazirmatn-Regular.ttf',
+    './font/Vazirmatn-Bold.ttf',
+    './doc/logo.png'
 ];
 
 // Install Service Worker
