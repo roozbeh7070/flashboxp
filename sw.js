@@ -1,5 +1,6 @@
-const CACHE_NAME = 'lang-app-v4';
+const CACHE_NAME = 'lang-app-v5';
 const ASSETS = [
+    './',
     'index.html',
     'manifest.json',
     'css/style.css',
@@ -9,9 +10,9 @@ const ASSETS = [
     'js/quiz.js',
     'js/components/FolderCard.js',
     'js/components/WordCard.js',
-    'Fonts/Vazirmatn-Regular.ttf',
-    'Fonts/Vazirmatn-Bold.ttf',
-    'Doc/logo.png'
+    'fonts/Vazirmatn-Regular.ttf',
+    'fonts/Vazirmatn-Bold.ttf',
+    'doc/logo.png'
 ];
 
 // Install Service Worker
@@ -39,7 +40,7 @@ self.addEventListener('activate', (event) => {
 // Fetch Assets from Cache
 self.addEventListener('fetch', (event) => {
     event.respondWith(
-        caches.match(event.request).then((cachedResponse) => {
+        caches.match(event.request, { ignoreSearch: true }).then((cachedResponse) => {
             return cachedResponse || fetch(event.request).catch(() => null);
         })
     );
