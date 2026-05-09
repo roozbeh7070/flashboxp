@@ -10,6 +10,7 @@ const ASSETS = [
     './js/quiz.js',
     './js/components/FolderCard.js',
     './js/components/WordCard.js',
+    './js/tailwind-cdn.js',
     './font/Vazirmatn-Regular.ttf',
     './font/Vazirmatn-Bold.ttf',
     './doc/logo.png'
