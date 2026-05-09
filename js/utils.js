@@ -5,6 +5,10 @@ export const speakAny = (txt) => {
     window.speechSynthesis.speak(u);
 };
 
+export const isSafari = () => {
+    return /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+};
+
 export const startSpeechRecognition = (lang, onResult, onError) => {
     const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
     if (!SpeechRecognition) {
@@ -20,11 +24,13 @@ export const startSpeechRecognition = (lang, onResult, onError) => {
     recognition.onresult = (event) => {
         const text = event.results[0][0].transcript;
         onResult(text);
+        recognition.stop();
     };
 
     recognition.onerror = (event) => {
         console.error("Speech recognition error:", event.error);
         if (onError) onError(event.error);
+        recognition.stop();
     };
 
     recognition.start();

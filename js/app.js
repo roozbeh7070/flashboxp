@@ -21,6 +21,12 @@ class FlashcardApp {
         this.renderFolders();
         this.setupEventListeners();
         this.registerServiceWorker();
+
+        // Hide Persian mic button in Safari as it's not supported
+        if (utils.isSafari()) {
+            const perMicBtn = document.getElementById('per-mic-btn');
+            if (perMicBtn) perMicBtn.style.display = 'none';
+        }
     }
 
     registerServiceWorker() {
