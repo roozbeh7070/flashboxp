@@ -13,7 +13,8 @@ const ASSETS = [
     './js/tailwind-cdn.js',
     './font/Vazirmatn-Regular.ttf',
     './font/Vazirmatn-Bold.ttf',
-    './doc/logo.png'
+    './doc/logo.png',
+    './doc/icon.png'
 ];
 
 // Install Service Worker
