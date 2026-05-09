@@ -6,8 +6,15 @@ export const getInitialData = () => {
             {name: 'همه کلمات', words: [], isSystem: true, id: 0},
             {name: 'کلمات موفق', words: [], isSystem: true, id: 222},
             {name: 'تمرین مجدد', words: [], isSystem: true, id: 111}
-        ] 
+        ],
+        settings: {
+            targetLang: 'en'
+        }
     };
+
+    if (!data.settings) {
+        data.settings = { targetLang: 'en' };
+    }
 
     // Robust Data Migration and De-duplication
     data.folders.forEach(f => { if(f.name === 'موفق‌ها') f.name = 'کلمات موفق'; });

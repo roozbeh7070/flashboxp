@@ -1,12 +1,21 @@
-export const speakAny = (txt) => {
+export const speakAny = (txt, lang = 'en-US') => {
     const u = new SpeechSynthesisUtterance(txt);
-    u.lang = 'en-US';
+    u.lang = lang;
     u.rate = 0.85;
     window.speechSynthesis.speak(u);
 };
 
 export const isSafari = () => {
     return /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+};
+
+export const getFullLangCode = (lang) => {
+    const map = {
+        'en': 'en-US',
+        'de': 'de-DE',
+        'fr': 'fr-FR'
+    };
+    return map[lang] || lang;
 };
 
 export const startSpeechRecognition = (lang, onResult, onError) => {
@@ -37,9 +46,9 @@ export const startSpeechRecognition = (lang, onResult, onError) => {
     return recognition;
 };
 
-export const getTranslation = async (word) => {
+export const getTranslation = async (word, sl = 'en', tl = 'fa') => {
     try {
-        const res = await fetch(`https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=fa&dt=t&q=${encodeURI(word)}`);
+        const res = await fetch(`https://translate.googleapis.com/translate_a/single?client=gtx&sl=${sl}&tl=${tl}&dt=t&q=${encodeURI(word)}`);
         const json = await res.json();
         return json[0][0][0];
     } catch (e) {

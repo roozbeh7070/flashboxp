@@ -21,12 +21,43 @@ class FlashcardApp {
         this.renderFolders();
         this.setupEventListeners();
         this.registerServiceWorker();
+        this.updateUILabels();
+        this.checkForUpdates();
 
         // Hide Persian mic button in Safari as it's not supported
         if (utils.isSafari()) {
             const perMicBtn = document.getElementById('per-mic-btn');
             if (perMicBtn) perMicBtn.style.display = 'none';
         }
+    }
+
+    async checkForUpdates() {
+        if (navigator.onLine) {
+            try {
+                const reg = await navigator.serviceWorker.getRegistration();
+                if (reg) {
+                    await reg.update();
+                }
+            } catch (e) {
+                console.warn('Update check failed:', e);
+            }
+        }
+    }
+
+    updateUILabels() {
+        const lang = this.data.settings.targetLang;
+        const labels = {
+            'en': 'English',
+            'de': 'Deutsch',
+            'fr': 'Français'
+        };
+        const perLabels = {
+            'en': 'انگلیسی',
+            'de': 'آلمانی',
+            'fr': 'فرانسوی'
+        };
+        const engInput = document.getElementById('eng-input');
+        if (engInput) engInput.placeholder = `${labels[lang]} (${perLabels[lang]})`;
     }
 
     registerServiceWorker() {
@@ -153,6 +184,7 @@ class FlashcardApp {
             if (addWordContainer) addWordContainer.classList.remove('hidden');
         }
 
+        this.updateUILabels();
         this.renderWords();
     }
 
@@ -447,11 +479,11 @@ class FlashcardApp {
                     <div class="space-y-6 mb-6">
                         <div class="flex flex-col gap-3">
                             <button id="qmode-eng" onclick="app.setQuizMode('eng', this)" class="qmode-btn p-5 border-2 rounded-2xl font-black border-transparent bg-white text-gray-800 flex justify-between items-center transition-all active">
-                                <span>انگلیسی به فارسی</span>
+                                <span>زبان مقصد به فارسی</span>
                                 <i class="fas fa-chevron-left text-xs opacity-50"></i>
                             </button>
                             <button id="qmode-per" onclick="app.setQuizMode('per', this)" class="qmode-btn p-5 border-2 rounded-2xl font-black border-transparent bg-white text-gray-800 flex justify-between items-center transition-all">
-                                <span>فارسی به انگلیسی</span>
+                                <span>فارسی به زبان مقصد</span>
                                 <i class="fas fa-chevron-left text-xs opacity-50"></i>
                             </button>
                         </div>
@@ -595,7 +627,7 @@ class FlashcardApp {
 
     speakWordInQuiz(e) {
         e.stopPropagation();
-        utils.speakAny(this.quizSession.getCurrentWord().eng);
+        utils.speakAny(this.quizSession.getCurrentWord().eng, utils.getFullLangCode(this.data.settings.targetLang));
     }
 
     // --- Utils & UI Helpers ---
@@ -681,7 +713,7 @@ class FlashcardApp {
         const word = input.value;
         if (!word) return;
         try {
-            const trans = await utils.getTranslation(word);
+            const trans = await utils.getTranslation(word, this.data.settings.targetLang);
             document.getElementById('per-input').value = trans;
         } catch (e) {
             alert("خطا در اتصال");
@@ -699,7 +731,13 @@ class FlashcardApp {
         icon.classList.add('fa-spin');
         btn.classList.add('text-red-500');
 
-        utils.startSpeechRecognition(lang, (text) => {
+        // If inputId is 'eng-input', use the target language from settings
+        let finalLang = lang;
+        if (inputId === 'eng-input') {
+            finalLang = utils.getFullLangCode(this.data.settings.targetLang);
+        }
+
+        utils.startSpeechRecognition(finalLang, (text) => {
             document.getElementById(inputId).value = text;
             icon.classList.replace('fa-spinner', 'fa-microphone');
             icon.classList.remove('fa-spin');
@@ -713,7 +751,7 @@ class FlashcardApp {
     }
 
     speakAny(txt) {
-        utils.speakAny(txt);
+        utils.speakAny(txt, utils.getFullLangCode(this.data.settings.targetLang));
     }
 
     async openExploreModal() {
@@ -744,7 +782,8 @@ class FlashcardApp {
             </div>`);
 
         try {
-            const url = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=fa&dt=t&dt=bd&dt=at&q=${encodeURIComponent(word)}`;
+            const sl = this.data.settings.targetLang;
+            const url = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=${sl}&tl=fa&dt=t&dt=bd&dt=at&q=${encodeURIComponent(word)}`;
             const res = await fetch(url);
             if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
             const json = await res.json();
@@ -826,6 +865,11 @@ class FlashcardApp {
             <div class="ios-modal">
                 <div class="modal-title-box !bg-[#303030]">تنظیمات برنامه</div>
                 <div class="space-y-4">
+                    <div class="p-4 bg-white rounded-3xl border border-gray-100 shadow-sm">
+                        <label class="text-xs font-black text-gray-400 uppercase mb-2 block mr-2">زبان در حال یادگیری:</label>
+                        <div id="target-lang-dropdown"></div>
+                    </div>
+
                     <div class="grid grid-cols-2 gap-3 mb-2">
                         <button onclick="app.exportData()" class="p-4 bg-white text-gray-700 rounded-3xl font-black flex flex-col items-center justify-center gap-2 border border-gray-100 shadow-sm active:scale-95 transition-all">
                             <i class="fas fa-download text-2xl text-blue-500"></i>
@@ -847,7 +891,7 @@ class FlashcardApp {
                     </button>
                     <div class="space-y-2 pt-2">
                         <div class="p-3 bg-gray-50 text-gray-400 rounded-2xl text-center font-black text-[10px] tracking-widest uppercase">
-                            Software Version 1.2.1
+                            Software Version 1.2.2
                         </div>
                         <a href="https://boxp.ir" target="_blank" class="w-full p-5 bg-orange-500 text-white rounded-3xl font-black flex justify-center items-center gap-2 shadow-lg active:scale-[0.98] transition-all no-underline">
                             <span class="text-xs">توسعه یافته توسط پلتفرم جعبه (باکسپی)</span>
@@ -858,6 +902,17 @@ class FlashcardApp {
                     </div>
                 </div>
             </div>`);
+
+        const langOptions = [
+            { label: 'English (انگلیسی)', value: 'en' },
+            { label: 'German (آلمانی)', value: 'de' },
+            { label: 'French (فرانسوی)', value: 'fr' }
+        ];
+        this.createCustomSelect('target-lang-dropdown', langOptions, this.data.settings.targetLang, (val) => {
+            this.data.settings.targetLang = val;
+            this.save();
+            this.updateUILabels();
+        });
     }
 
     async hotReload() {
