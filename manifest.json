@@ -2,7 +2,7 @@
   "name": "اپلیکیشن زبان من",
   "short_name": "زبان من",
   "description": "فلش‌کارت‌های یادگیری زبان با ساختار کامپوننت‌محور",
-  "start_url": "./index.html",
+  "start_url": "index.html",
   "display": "standalone",
   "background_color": "#424242",
   "theme_color": "#1c4849",

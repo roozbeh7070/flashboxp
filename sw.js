@@ -1,27 +1,26 @@
-const CACHE_NAME = 'lang-app-v3';
+const CACHE_NAME = 'lang-app-v4';
 const ASSETS = [
-    './',
-    './index.html',
-    './manifest.json',
-    './css/style.css',
-    './js/app.js',
-    './js/storage.js',
-    './js/utils.js',
-    './js/quiz.js',
-    './js/components/FolderCard.js',
-    './js/components/WordCard.js',
-    './Fonts/Vazirmatn-Regular.ttf',
-    './Fonts/Vazirmatn-Bold.ttf',
-    './Doc/logo.png',
-    'https://cdn.tailwindcss.com',
-    'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css'
+    'index.html',
+    'manifest.json',
+    'css/style.css',
+    'js/app.js',
+    'js/storage.js',
+    'js/utils.js',
+    'js/quiz.js',
+    'js/components/FolderCard.js',
+    'js/components/WordCard.js',
+    'Fonts/Vazirmatn-Regular.ttf',
+    'Fonts/Vazirmatn-Bold.ttf',
+    'Doc/logo.png'
 ];
 
 // Install Service Worker
 self.addEventListener('install', (event) => {
     event.waitUntil(
         caches.open(CACHE_NAME).then((cache) => {
-            return cache.addAll(ASSETS);
+            return Promise.allSettled(
+                ASSETS.map(url => cache.add(url).catch(err => console.log('Failed to cache:', url, err)))
+            );
         })
     );
 });
@@ -41,7 +40,7 @@ self.addEventListener('activate', (event) => {
 self.addEventListener('fetch', (event) => {
     event.respondWith(
         caches.match(event.request).then((cachedResponse) => {
-            return cachedResponse || fetch(event.request);
+            return cachedResponse || fetch(event.request).catch(() => null);
         })
     );
 });
