@@ -904,21 +904,90 @@ class FlashcardApp {
     }
 
     exportData() {
+        const now = new Date();
+        const dateStr = now.getFullYear().toString() + 
+                        (now.getMonth() + 1).toString().padStart(2, '0') + 
+                        now.getDate().toString().padStart(2, '0') + '-' + 
+                        now.getHours().toString().padStart(2, '0') + 
+                        now.getMinutes().toString().padStart(2, '0');
+        const filename = `flashboxp+${dateStr}.json`;
+        
         const blob = new Blob([JSON.stringify(this.data)], { type: 'application/json' });
         const a = document.createElement('a');
         a.href = URL.createObjectURL(blob);
-        a.download = `Backup_MyLang_${new Date().toLocaleDateString().replace(/\//g, '-')}.json`;
+        a.download = filename;
         a.click();
     }
 
     importData(event) {
+        const file = event.target.files[0];
+        if (!file) return;
         const reader = new FileReader();
         reader.onload = (e) => {
-            this.data = JSON.parse(e.target.result);
-            this.save();
-            alert("داده‌ها لود شدند");
+            try {
+                this.tempImportData = JSON.parse(e.target.result);
+                this.showImportOptions();
+            } catch (err) {
+                alert("فایل نامعتبر است");
+            }
         };
-        reader.readAsText(event.target.files[0]);
+        reader.readAsText(file);
+    }
+
+    showImportOptions() {
+        this.showModal(`
+            <div class="ios-modal p-8 text-center">
+                <div class="w-16 h-16 bg-blue-100 text-blue-500 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl"><i class="fas fa-file-import"></i></div>
+                <h3 class="text-xl font-black mb-2">لود کلمات</h3>
+                <p class="text-gray-500 mb-6 font-bold text-sm leading-relaxed">چگونه می‌خواهید کلمات لود شوند؟</p>
+                <div class="flex flex-col gap-3">
+                    <button onclick="app.processImport('replace')" class="p-4 blue-sharp rounded-2xl font-black">جایگزین کامل (حذف قبلی)</button>
+                    <button onclick="app.processImport('merge')" class="p-4 bg-green-500 text-white rounded-2xl font-black">افزودن به موارد قبلی (ادغام)</button>
+                    <button onclick="app.closeModal()" class="p-4 bg-gray-100 text-gray-500 rounded-2xl font-black">انصراف</button>
+                </div>
+            </div>`);
+    }
+
+    processImport(mode) {
+        if (!this.tempImportData) return;
+        
+        const systemFolderIds = [0, 111, 222];
+
+        if (mode === 'replace') {
+            // Keep current system folders but clear their words (they'll be synced anyway)
+            const currentSystemFolders = this.data.folders.filter(f => systemFolderIds.includes(f.id));
+            currentSystemFolders.forEach(f => f.words = []);
+
+            // Get regular folders from backup
+            const newRegularFolders = (this.tempImportData.folders || []).filter(f => !systemFolderIds.includes(f.id));
+            
+            this.data.folders = [...currentSystemFolders, ...newRegularFolders];
+            if (this.tempImportData.settings) {
+                this.data.settings = this.tempImportData.settings;
+            }
+        } else if (mode === 'merge') {
+            const newFolders = this.tempImportData.folders || [];
+            newFolders.forEach(newFolder => {
+                if (systemFolderIds.includes(newFolder.id)) return; // System folders sync later
+                
+                const existingFolder = this.data.folders.find(f => f.name === newFolder.name && !f.isSystem);
+                if (existingFolder) {
+                    newFolder.words.forEach(newWord => {
+                        if (!existingFolder.words.some(w => w.eng.toLowerCase() === newWord.eng.toLowerCase())) {
+                            existingFolder.words.push(newWord);
+                        }
+                    });
+                } else {
+                    this.data.folders.push(newFolder);
+                }
+            });
+        }
+
+        this.save();
+        this.closeModal();
+        this.renderFolders();
+        delete this.tempImportData;
+        alert("عملیات با موفقیت انجام شد");
     }
 
     openSettingsModal() {
@@ -934,11 +1003,11 @@ class FlashcardApp {
                     <div class="grid grid-cols-2 gap-3 mb-2">
                         <button onclick="app.exportData()" class="p-4 bg-white text-gray-700 rounded-3xl font-black flex flex-col items-center justify-center gap-2 border border-gray-100 shadow-sm active:scale-95 transition-all">
                             <i class="fas fa-download text-2xl text-blue-500"></i>
-                            <span class="text-sm">خروجی بک‌آپ</span>
+                            <span class="text-sm">خروجی کلمات</span>
                         </button>
                         <label class="p-4 bg-white text-gray-700 rounded-3xl font-black flex flex-col items-center justify-center gap-2 border border-gray-100 shadow-sm cursor-pointer active:scale-95 transition-all">
                             <i class="fas fa-upload text-2xl text-green-500"></i>
-                            <span class="text-sm">لود بک‌آپ</span>
+                            <span class="text-sm">لود کلمات</span>
                             <input type="file" id="importFile" class="hidden" onchange="app.importData(event)">
                         </label>
                     </div>
