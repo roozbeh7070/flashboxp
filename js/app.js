@@ -296,6 +296,9 @@ class FlashcardApp {
                     <button onclick="app.closeModal(); app.openEditModal(${word.id})" class="w-10 h-10 bg-white shadow-sm border border-gray-100 rounded-xl text-orange-500 flex items-center justify-center active:scale-90 transition-all">
                         <i class="fas fa-edit"></i>
                     </button>
+                    <button onclick="app.resetWordStatus(${word.id})" class="w-10 h-10 bg-white shadow-sm border border-gray-100 rounded-xl text-green-500 flex items-center justify-center active:scale-90 transition-all">
+                        <i class="fas fa-sync-alt"></i>
+                    </button>
                     <button onclick="app.closeModal(); app.openDeleteWordModal(${word.id})" class="w-10 h-10 bg-white shadow-sm border border-gray-100 rounded-xl text-red-500 flex items-center justify-center active:scale-90 transition-all">
                         <i class="fas fa-trash-alt"></i>
                     </button>
@@ -313,6 +316,19 @@ class FlashcardApp {
                     <p dir="rtl" class="text-2xl font-bold text-gray-500">${word.per}</p>
                 </div>
             </div>`);
+    }
+
+    resetWordStatus(wordId) {
+        const source = this.findWordById(wordId);
+        if (source) {
+            source.word.success = false;
+            source.word.failed = false;
+            this.save();
+            this.renderWords();
+            this.closeModal();
+            // Show a quick toast or alert? Let's just re-open the modal with updated state or just close it.
+            // Closing is safer to show the change in the list.
+        }
     }
 
     handleSearchInput(input) {
