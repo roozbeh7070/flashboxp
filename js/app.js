@@ -709,12 +709,29 @@ class FlashcardApp {
     }
 
     async getTranslation() {
-        const input = document.getElementById('eng-input');
-        const word = input.value;
-        if (!word) return;
+        const engInput = document.getElementById('eng-input');
+        const perInput = document.getElementById('per-input');
+        
+        let word, sl, tl;
+        if (engInput.value.trim()) {
+            word = engInput.value.trim();
+            sl = this.data.settings.targetLang;
+            tl = 'fa';
+        } else if (perInput.value.trim()) {
+            word = perInput.value.trim();
+            sl = 'fa';
+            tl = this.data.settings.targetLang;
+        } else {
+            return;
+        }
+
         try {
-            const trans = await utils.getTranslation(word, this.data.settings.targetLang);
-            document.getElementById('per-input').value = trans;
+            const trans = await utils.getTranslation(word, sl, tl);
+            if (tl === 'fa') {
+                perInput.value = trans;
+            } else {
+                engInput.value = trans;
+            }
         } catch (e) {
             alert("خطا در اتصال");
         }
@@ -789,42 +806,49 @@ class FlashcardApp {
             const json = await res.json();
 
             let html = '';
-            if (json[1] && json[1][0] && json[1][0][1]) {
-                html += `<div class="bg-blue-50 p-4 rounded-2xl">
-                    <div class="text-[10px] font-black text-blue-500 mb-2 uppercase">ترجمه‌های پیشنهادی</div>
-                    <div class="flex flex-wrap gap-2">
-                        ${json[1][0][1].map(t => `<button onclick="app.selectMeaning('${t}')" class="bg-white px-3 py-2 rounded-xl text-sm font-bold shadow-sm border border-blue-100 active:scale-95 transition-all">${t}</button>`).join('')}
-                    </div>
-                </div>`;
-            }
+            
+            // Collect all possible meanings
+            const allMeanings = new Map(); // pos -> Set of meanings
 
-            const dictData = json[5] || json[1];
-            if (Array.isArray(dictData) && dictData[0] && Array.isArray(dictData[0]) && typeof dictData[0][0] === 'string') {
+            // 1. Check dictionary data (json[1] or json[5])
+            const dictData = json[1] || json[5];
+            if (Array.isArray(dictData)) {
                 dictData.forEach(group => {
                     if (Array.isArray(group) && group.length >= 2) {
-                        const pos = group[0];
-                        const meanings = group[1];
-                        if (Array.isArray(meanings)) {
-                            html += `<div>
-                                <div class="text-[10px] font-black text-gray-400 mb-2 uppercase mr-2">${utils.translatePOS(pos)} (${pos})</div>
-                                <div class="flex flex-wrap gap-2">
-                                    ${meanings.map(m => `<button onclick="app.selectMeaning('${m}')" class="bg-white px-3 py-2 rounded-xl text-sm font-bold shadow-sm border border-gray-100 active:scale-95 transition-all">${m}</button>`).join('')}
-                                </div>
-                            </div>`;
+                        const pos = typeof group[0] === 'string' ? group[0] : 'other';
+                        const meanings = Array.isArray(group[1]) ? group[1] : (Array.isArray(group[2]) ? group[2] : []);
+                        
+                        if (meanings.length > 0) {
+                            if (!allMeanings.has(pos)) allMeanings.set(pos, new Set());
+                            meanings.forEach(m => {
+                                if (typeof m === 'string') allMeanings.get(pos).add(m);
+                                else if (m && typeof m === 'object' && m.word) allMeanings.get(pos).add(m.word);
+                            });
                         }
                     }
                 });
             }
 
-            if (!html) {
-                const simpleTranslation = json[0][0][0];
+            // 2. Add main translation if no dictionary data
+            const mainTrans = json[0] && json[0][0] && json[0][0][0];
+            
+            if (allMeanings.size > 0) {
+                allMeanings.forEach((meanings, pos) => {
+                    html += `<div>
+                        <div class="text-[10px] font-black text-gray-400 mb-2 uppercase mr-2">${utils.translatePOS(pos)} (${pos})</div>
+                        <div class="flex flex-wrap gap-2">
+                            ${Array.from(meanings).map(m => `<button onclick="app.selectMeaning('${m}')" class="bg-white px-3 py-2 rounded-xl text-sm font-bold shadow-sm border border-gray-100 active:scale-95 transition-all">${m}</button>`).join('')}
+                        </div>
+                    </div>`;
+                });
+            } else if (mainTrans) {
                 html = `<div class="text-center py-10">
                     <p class="text-gray-500 font-bold mb-4">دیکشنری جزئیات بیشتری نیافت، ترجمه اصلی:</p>
-                    <button onclick="app.selectMeaning('${simpleTranslation}')" class="blue-sharp px-6 py-3 rounded-2xl font-black">${simpleTranslation}</button>
+                    <button onclick="app.selectMeaning('${mainTrans}')" class="blue-sharp px-6 py-3 rounded-2xl font-black">${mainTrans}</button>
                 </div>`;
             }
             
-            document.getElementById('explore-results').innerHTML = html;
+            document.getElementById('explore-results').innerHTML = html || '<div class="text-center py-10 text-gray-400">نتیجه‌ای یافت نشد.</div>';
         } catch (e) {
             document.getElementById('explore-results').innerHTML = `
                 <div class="text-center py-10">
@@ -891,7 +915,7 @@ class FlashcardApp {
                     </button>
                     <div class="space-y-2 pt-2">
                         <div class="p-3 bg-gray-50 text-gray-400 rounded-2xl text-center font-black text-[10px] tracking-widest uppercase">
-                            Software Version 1.2.2
+                            Software Version 1.2.3
                         </div>
                         <a href="https://boxp.ir" target="_blank" class="w-full p-5 bg-orange-500 text-white rounded-3xl font-black flex justify-center items-center gap-2 shadow-lg active:scale-[0.98] transition-all no-underline">
                             <span class="text-xs">توسعه یافته توسط پلتفرم جعبه (باکسپی)</span>
