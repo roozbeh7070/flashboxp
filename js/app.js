@@ -975,9 +975,29 @@ class FlashcardApp {
         submitBtn.disabled = true;
         submitBtn.innerHTML = `<span>در حال پردازش...</span><i class="fas fa-spinner fa-spin mr-2"></i>`;
 
+        let phone = '';
+        if (mode === 'signup') {
+            const confirmPassword = document.getElementById('auth-confirm-password').value;
+            phone = document.getElementById('auth-phone').value.trim();
+            if (password !== confirmPassword) {
+                alert("رمز عبور و تکرار آن با هم مطابقت ندارند.");
+                submitBtn.disabled = false;
+                submitBtn.innerText = originalText;
+                return;
+            }
+        }
+
         try {
             if (mode === 'signup') {
-                const { error } = await supabase.auth.signUp({ email, password });
+                const { error } = await supabase.auth.signUp({ 
+                    email, 
+                    password,
+                    options: {
+                        data: {
+                            phone: phone
+                        }
+                    }
+                });
                 if (error) throw error;
                 alert("ثبت‌نام موفقیت‌آمیز بود! لطفا ایمیل خود را چک کنید و آن را تأیید کنید.");
                 this.closeModal();
