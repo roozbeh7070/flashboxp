@@ -378,15 +378,51 @@ export const actionMethods = {
     async executeFactoryReset() {
         if (this.user) {
             try {
-                // Delete all words and folders for the user from Supabase on factory reset
-                const { error: wErr } = await supabase.from('words').delete().eq('user_id', this.user.id);
-                if (wErr) {
-                    alert("خطا در حذف کلمات از سرور: " + JSON.stringify(wErr));
+                // Fetch all folders and words of the user from Supabase to delete them by ID (more reliable and matches individual deletion logic)
+                const { data: remoteFolders, error: fetchFoldErr } = await supabase
+                    .from('folders')
+                    .select('id')
+                    .eq('user_id', this.user.id);
+                
+                const { data: remoteWords, error: fetchWordsErr } = await supabase
+                    .from('words')
+                    .select('id')
+                    .eq('user_id', this.user.id);
+
+                if (fetchFoldErr || fetchWordsErr) {
+                    console.error("Failed to fetch user data for deletion on reset:", fetchFoldErr || fetchWordsErr);
                 }
-                const { error: fErr } = await supabase.from('folders').delete().eq('user_id', this.user.id);
-                if (fErr) {
-                    alert("خطا در حذف مجموعه‌ها از سرور: " + JSON.stringify(fErr));
+
+                const folderIds = remoteFolders ? remoteFolders.map(f => f.id) : [];
+                const wordIds = remoteWords ? remoteWords.map(w => w.id) : [];
+
+                // Delete all words
+                if (wordIds.length > 0) {
+                    const { error: wErr } = await supabase
+                        .from('words')
+                        .delete()
+                        .in('id', wordIds)
+                        .eq('user_id', this.user.id);
+                    if (wErr) {
+                        alert("خطا در حذف کلمات از سرور: " + JSON.stringify(wErr));
+                    }
                 }
+
+                // Delete all folders
+                if (folderIds.length > 0) {
+                    const { error: fErr } = await supabase
+                        .from('folders')
+                        .delete()
+                        .in('id', folderIds)
+                        .eq('user_id', this.user.id);
+                    if (fErr) {
+                        alert("خطا در حذف مجموعه‌ها از سرور: " + JSON.stringify(fErr));
+                    }
+                }
+
+                // Sign out from Supabase to ensure the session is cleared
+                await supabase.auth.signOut();
+                this.user = null;
             } catch (err) {
                 console.error("Failed to delete cloud data on factory reset:", err);
                 alert("خطای عمومی در حذف داده‌های ابری: " + err.message);
