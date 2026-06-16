@@ -1,5 +1,5 @@
 import { saveData, clearData } from '../storage.js';
-import { pushToCloud } from './sync.js';
+import { syncData } from './sync.js';
 import * as modals from '../components/Modals.js';
 import * as utils from '../utils.js';
 
@@ -10,20 +10,41 @@ export const actionMethods = {
         const successFolder = this.data.folders.find(f => f.id === 222);
         const failedFolder = this.data.folders.find(f => f.id === 111);
 
+        const allPhraseFolder = this.data.folders.find(f => f.id === 300);
+        const successPhraseFolder = this.data.folders.find(f => f.id === 322);
+        const failedPhraseFolder = this.data.folders.find(f => f.id === 311);
+
         if (allFolder) allFolder.words = [];
         if (successFolder) successFolder.words = [];
         if (failedFolder) failedFolder.words = [];
 
+        if (allPhraseFolder) allPhraseFolder.words = [];
+        if (successPhraseFolder) successPhraseFolder.words = [];
+        if (failedPhraseFolder) failedPhraseFolder.words = [];
+
         this.data.folders.forEach((f, fIdx) => {
             if (f.isSystem) return;
+            
+            const isPhraseFolder = f.isPhrase === true;
+            
             f.words.forEach(w => {
                 const wordWithMeta = { ...w, sourceFolderIdx: fIdx };
-                if (allFolder) allFolder.words.push(wordWithMeta);
-                if (successFolder && w.success && !w.failed) {
-                    successFolder.words.push(wordWithMeta);
-                }
-                if (failedFolder && w.failed) {
-                    failedFolder.words.push(wordWithMeta);
+                if (isPhraseFolder) {
+                    if (allPhraseFolder) allPhraseFolder.words.push(wordWithMeta);
+                    if (successPhraseFolder && w.success && !w.failed) {
+                        successPhraseFolder.words.push(wordWithMeta);
+                    }
+                    if (failedPhraseFolder && w.failed) {
+                        failedPhraseFolder.words.push(wordWithMeta);
+                    }
+                } else {
+                    if (allFolder) allFolder.words.push(wordWithMeta);
+                    if (successFolder && w.success && !w.failed) {
+                        successFolder.words.push(wordWithMeta);
+                    }
+                    if (failedFolder && w.failed) {
+                        failedFolder.words.push(wordWithMeta);
+                    }
                 }
             });
         });
@@ -31,6 +52,10 @@ export const actionMethods = {
         if (allFolder) allFolder.words.sort((a, b) => b.id - a.id);
         if (successFolder) successFolder.words.sort((a, b) => b.id - a.id);
         if (failedFolder) failedFolder.words.sort((a, b) => b.id - a.id);
+
+        if (allPhraseFolder) allPhraseFolder.words.sort((a, b) => b.id - a.id);
+        if (successPhraseFolder) successPhraseFolder.words.sort((a, b) => b.id - a.id);
+        if (failedPhraseFolder) failedPhraseFolder.words.sort((a, b) => b.id - a.id);
     },
 
     save() {
@@ -38,7 +63,12 @@ export const actionMethods = {
         saveData(this.data);
         this.renderFolders();
         if (this.user) {
-            pushToCloud(this.data.folders, this.user).catch(err => console.error('BG Sync failed:', err));
+            syncData(this.data, this.user).then(synced => {
+                this.data = synced;
+                this.syncSystemFolders();
+                this.renderFolders();
+                if (this.activeIdx !== null) this.renderWords();
+            }).catch(err => console.error('BG Sync failed:', err));
         }
     },
 
@@ -258,7 +288,7 @@ export const actionMethods = {
     processImport(mode) {
         if (!this.tempImportData) return;
         
-        const systemFolderIds = [0, 111, 222];
+        const systemFolderIds = [0, 111, 222, 300, 311, 322];
 
         if (mode === 'replace') {
             const currentSystemFolders = this.data.folders.filter(f => systemFolderIds.includes(f.id));
@@ -398,5 +428,164 @@ export const actionMethods = {
                     </span>
                 </div>
             </div>`).join('');
+    },
+
+    async openWordExplorer(wordText, localTranslation) {
+        this.showModal(modals.WordExplorerModal(wordText));
+
+        // 1. Load irregular verbs list if not cached
+        if (!this.irregularVerbsCache) {
+            try {
+                const res = await fetch('https://raw.githubusercontent.com/WithEnglishWeCan/generated-english-irregular-verbs/master/irregular.verbs.build.json');
+                if (res.ok) {
+                    this.irregularVerbsCache = await res.json();
+                }
+            } catch (err) {
+                console.error("Failed to load irregular verbs database:", err);
+            }
+        }
+
+        // 2. Fetch dictionary definitions from Free Dictionary API
+        let dictData = null;
+        let dictError = false;
+        try {
+            const res = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${encodeURIComponent(wordText.trim().toLowerCase())}`);
+            if (res.ok) {
+                dictData = await res.json();
+            } else {
+                dictError = true;
+            }
+        } catch (err) {
+            dictError = true;
+            console.error("Failed to fetch dictionary definition:", err);
+        }
+
+        // 3. Process Verb Conjugations
+        const lowerWord = wordText.trim().toLowerCase();
+        let verbConjugations = null;
+        if (this.irregularVerbsCache && this.irregularVerbsCache[lowerWord]) {
+            const verbInfo = this.irregularVerbsCache[lowerWord][0];
+            verbConjugations = {
+                past: verbInfo["2"] ? verbInfo["2"].join(' / ') : '',
+                pp: verbInfo["3"] ? verbInfo["3"].join(' / ') : '',
+                type: 'بی‌قاعده (Irregular)'
+            };
+        } else {
+            // Check if it's a verb in meanings
+            const isVerb = dictData && dictData[0]?.meanings.some(m => m.partOfSpeech.toLowerCase() === 'verb');
+            if (isVerb) {
+                const base = lowerWord;
+                let past = '';
+                if (base.endsWith('e')) {
+                    past = base + 'd';
+                } else if (base.endsWith('y') && !/[aeiou]y$/.test(base)) {
+                    past = base.slice(0, -1) + 'ied';
+                } else if (/[aeiou][bcdfghjklmnpqrstvwxyz]$/.test(base) && !/^[aeiou]/.test(base)) {
+                    if (base.length <= 4 && !base.endsWith('w') && !base.endsWith('x') && !base.endsWith('y')) {
+                        past = base + base.slice(-1) + 'ed';
+                    } else {
+                        past = base + 'ed';
+                    }
+                } else {
+                    past = base + 'ed';
+                }
+                verbConjugations = {
+                    past: past,
+                    pp: past,
+                    type: 'باقاعده (Regular)'
+                };
+            }
+        }
+
+        // 4. Build HTML Output
+        let html = '';
+
+        // Header Section: Pronunciation & Audio
+        let phoneticText = '';
+        let audioUrl = '';
+        if (dictData && dictData[0]) {
+            phoneticText = dictData[0].phonetic || '';
+            const audioObj = dictData[0].phonetics.find(p => p.audio && p.audio.length > 0);
+            if (audioObj) {
+                audioUrl = audioObj.audio;
+            }
+            if (!phoneticText) {
+                const textPhonetic = dictData[0].phonetics.find(p => p.text && p.text.length > 0);
+                if (textPhonetic) phoneticText = textPhonetic.text;
+            }
+        }
+
+        html += `
+            <div class="p-5 bg-white rounded-3xl border border-gray-100 shadow-sm flex justify-between items-center">
+                <div class="flex flex-col text-right">
+                    <span class="text-[10px] font-black text-gray-400">معنی ثبت شده:</span>
+                    <span class="text-lg font-black text-gray-800">${utils.escapeHTML(localTranslation)}</span>
+                    ${phoneticText ? `<span class="text-xs text-blue-600 font-bold mt-1" dir="ltr">${utils.escapeHTML(phoneticText)}</span>` : ''}
+                </div>
+                ${audioUrl ? `
+                    <button onclick="new Audio('${audioUrl}').play()" class="w-12 h-12 bg-blue-50 text-blue-500 rounded-2xl flex items-center justify-center shadow-sm active:scale-90 transition-all border border-blue-100">
+                        <i class="fas fa-volume-up text-lg"></i>
+                    </button>` : `
+                    <button onclick="app.speakAny('${utils.escapeHTML(wordText)}')" class="w-12 h-12 bg-gray-50 text-gray-400 rounded-2xl flex items-center justify-center active:scale-90 transition-all border border-gray-100">
+                        <i class="fas fa-volume-up text-lg"></i>
+                    </button>
+                `}
+            </div>`;
+
+        // Conjugations Card
+        if (verbConjugations) {
+            html += `
+                <div class="p-4 bg-white rounded-3xl border border-gray-100 shadow-sm flex flex-col gap-3">
+                    <div class="flex justify-between items-center pb-2 border-b border-gray-50">
+                        <span class="text-[10px] font-black text-gray-400">زمان‌های فعل (Verb Conjugations)</span>
+                        <span class="text-[9px] font-black px-2.5 py-0.5 rounded-full bg-orange-100 text-orange-600">${verbConjugations.type}</span>
+                    </div>
+                    <div class="grid grid-cols-2 gap-2 text-center">
+                        <div class="bg-gray-50 p-3 rounded-2xl border border-gray-200/50">
+                            <span class="text-[9px] font-black text-gray-400 block mb-1">گذشته ساده (Past Simple)</span>
+                            <span class="font-black text-sm text-gray-800" dir="ltr">${utils.escapeHTML(verbConjugations.past)}</span>
+                        </div>
+                        <div class="bg-gray-50 p-3 rounded-2xl border border-gray-200/50">
+                            <span class="text-[9px] font-black text-gray-400 block mb-1">اسم مفعول (Past Participle)</span>
+                            <span class="font-black text-sm text-gray-800" dir="ltr">${utils.escapeHTML(verbConjugations.pp)}</span>
+                        </div>
+                    </div>
+                </div>`;
+        }
+
+        // Dictionary Meanings & Definitions Card
+        if (dictData && dictData[0]?.meanings) {
+            dictData[0].meanings.forEach(m => {
+                const pos = m.partOfSpeech;
+                const faPos = utils.translatePOS(pos);
+                const defs = m.definitions.slice(0, 3).map((d, index) => `
+                    <div class="text-right flex flex-col gap-0.5 border-b border-gray-50 last:border-0 pb-2 mb-2 last:pb-0 last:mb-0">
+                        <div class="text-xs text-gray-800 font-bold text-left leading-relaxed" dir="ltr">
+                            <span class="text-blue-500 font-black mr-1">${index + 1}.</span> ${utils.escapeHTML(d.definition)}
+                        </div>
+                        ${d.example ? `<div class="text-[11px] text-gray-400 italic text-left mt-0.5" dir="ltr">e.g. "${utils.escapeHTML(d.example)}"</div>` : ''}
+                    </div>
+                `).join('');
+
+                html += `
+                    <div class="p-4 bg-white rounded-3xl border border-gray-100 shadow-sm flex flex-col gap-2">
+                        <div class="text-[10px] font-black text-gray-400 uppercase mr-1">${faPos} (${pos})</div>
+                        <div class="flex flex-col">${defs}</div>
+                    </div>`;
+            });
+        }
+
+        // If dictionary fetch failed and we have no verbConjugations
+        if (dictError && !verbConjugations) {
+            html += `
+                <div class="p-6 bg-white rounded-3xl border border-gray-100 shadow-sm text-center">
+                    <i class="fas fa-wifi text-gray-300 text-3xl mb-3"></i>
+                    <p class="text-gray-500 font-bold text-sm">خطا در دریافت اطلاعات آنلاین</p>
+                    <p class="text-gray-400 text-xs mt-1">امکان اتصال به سرور دیکشنری وجود ندارد یا کلمه یافت نشد.</p>
+                    <button onclick="app.openWordExplorer('${utils.escapeHTML(wordText)}', '${utils.escapeHTML(localTranslation)}')" class="mt-4 text-xs font-black text-blue-500 underline">تلاش مجدد</button>
+                </div>`;
+        }
+
+        document.getElementById('word-explorer-results').innerHTML = html;
     }
 };

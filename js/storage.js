@@ -52,21 +52,10 @@ export const saveToIndexedDB = async (data) => {
     }
 };
 
-export const getInitialData = () => {
-    let data = JSON.parse(localStorage.getItem(STORAGE_KEY)) || { 
-        folders: [
-            {name: 'همه کلمات', words: [], isSystem: true, id: 0},
-            {name: 'کلمات موفق', words: [], isSystem: true, id: 222},
-            {name: 'تمرین مجدد', words: [], isSystem: true, id: 111}
-        ],
-        settings: {
-            targetLang: 'en'
-        }
-    };
 
-    if (!data.settings) {
-        data.settings = { targetLang: 'en' };
-    }
+export const ensureSystemFolders = (data) => {
+    if (!data) return data;
+    if (!data.folders) data.folders = [];
 
     // Robust Data Migration and De-duplication
     data.folders.forEach(f => { if(f.name === 'موفق‌ها') f.name = 'کلمات موفق'; });
@@ -93,11 +82,56 @@ export const getInitialData = () => {
         }
     });
 
+    const phraseSystemFolders = [
+        {name: 'همه عبارت‌ها', words: [], isSystem: true, id: 300, isPhrase: true},
+        {name: 'عبارت‌های موفق', words: [], isSystem: true, id: 322, isPhrase: true},
+        {name: 'تمرین مجدد (عبارت)', words: [], isSystem: true, id: 311, isPhrase: true}
+    ];
+
+    phraseSystemFolders.forEach(sys => {
+        const count = data.folders.filter(f => f.id === sys.id).length;
+        if (count === 0) {
+            // Unshift so they appear at the top
+            data.folders.unshift(sys);
+        } else if (count > 1) {
+            let found = false;
+            data.folders = data.folders.filter(f => {
+                if (f.id === sys.id) {
+                    if (!found) { found = true; return true; }
+                    return false;
+                }
+                return true;
+            });
+        }
+    });
+
     if (data.folders.filter(f => f.name === 'کلمات موفق').length > 1) {
         data.folders = data.folders.filter(f => !(f.name === 'کلمات موفق' && f.id !== 222));
     }
 
     return data;
+};
+
+export const getInitialData = () => {
+    let data = JSON.parse(localStorage.getItem(STORAGE_KEY)) || { 
+        folders: [
+            {name: 'همه کلمات', words: [], isSystem: true, id: 0},
+            {name: 'کلمات موفق', words: [], isSystem: true, id: 222},
+            {name: 'تمرین مجدد', words: [], isSystem: true, id: 111},
+            {name: 'همه عبارت‌ها', words: [], isSystem: true, id: 300, isPhrase: true},
+            {name: 'عبارت‌های موفق', words: [], isSystem: true, id: 322, isPhrase: true},
+            {name: 'تمرین مجدد (عبارت)', words: [], isSystem: true, id: 311, isPhrase: true}
+        ],
+        settings: {
+            targetLang: 'en'
+        }
+    };
+
+    if (!data.settings) {
+        data.settings = { targetLang: 'en' };
+    }
+
+    return ensureSystemFolders(data);
 };
 
 export const saveData = (data) => {

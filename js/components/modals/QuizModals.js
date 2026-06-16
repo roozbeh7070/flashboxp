@@ -19,7 +19,7 @@ export const QuizConfigModal = (words) => `
                     <label class="text-lg font-black block text-gray-800 text-right mr-2">محدوده پرسش:</label>
                     
                     <div class="quiz-tabs !bg-gray-200">
-                        <button onclick="app.setQuizScope('all', this)" class="quiz-tab-btn active">همه کلمات</button>
+                        <button onclick="app.setQuizScope('all', this)" class="quiz-tab-btn active">${(window.app && window.app.currentMode === 'phrase') ? 'همه عبارت‌ها' : 'همه کلمات'}</button>
                         <button onclick="app.setQuizScope('selected', this)" class="quiz-tab-btn">انتخاب خاص</button>
                     </div>
 
@@ -59,10 +59,13 @@ export const QuizFinishedModal = () => `
         </div>
     </div>`;
 
-export const QuizPickerWarningModal = () => `
+export const QuizPickerWarningModal = () => {
+    const isPhrase = window.app && window.app.currentMode === 'phrase';
+    return `
     <div class="ios-modal p-8 text-center">
         <div class="w-16 h-16 bg-orange-100 text-orange-500 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl"><i class="fas fa-exclamation-triangle"></i></div>
-        <h3 class="text-xl font-black mb-2">انتخاب کلمه</h3>
-        <p class="text-gray-500 mb-6 font-bold">لطفاً حداقل یک کلمه برای آزمون انتخاب کنید.</p>
+        <h3 class="text-xl font-black mb-2">${isPhrase ? 'انتخاب عبارت' : 'انتخاب کلمه'}</h3>
+        <p class="text-gray-500 mb-6 font-bold">لطفاً حداقل یک ${isPhrase ? 'عبارت' : 'کلمه'} برای آزمون انتخاب کنید.</p>
         <button onclick="app.showQuizConfig()" class="w-full p-4 blue-sharp rounded-2xl font-black">متوجه شدم</button>
     </div>`;
+};

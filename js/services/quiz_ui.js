@@ -46,6 +46,13 @@ export const quizUiMethods = {
         this.quizSession = new QuizSession(this.data, this.activeIdx, this.tempQMode, this.tempQuizScope, checkedIndices);
         this.closeModal();
         document.getElementById('quiz-screen').classList.remove('hidden');
+
+        // Dynamically update the next button text for phrases
+        const quizNextBtn = document.querySelector('#quiz-screen button[onclick="app.moveQuiz()"]');
+        if (quizNextBtn) {
+            quizNextBtn.innerText = this.currentMode === 'phrase' ? "مشاهده عبارت بعدی (بدون تغییر وضعیت)" : "مشاهده کلمه بعدی (بدون تغییر وضعیت)";
+        }
+
         this.showQuizCard();
     },
 
@@ -80,6 +87,7 @@ export const quizUiMethods = {
         if (wordInData) {
             wordInData.failed = !success;
             wordInData.success = success;
+            wordInData.updated_at = Date.now();
         }
 
         this.save(); // Save immediately to reflect status in system folders

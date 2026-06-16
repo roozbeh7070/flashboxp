@@ -9,31 +9,33 @@ export const SettingsModal = (user = null) => `
                 <div id="target-lang-dropdown"></div>
             </div>
 
-            ${user ? `
-            <div class="p-4 bg-white rounded-3xl border border-gray-100 shadow-sm flex justify-between items-center">
-                <div class="flex flex-col text-right">
-                    <span class="text-[10px] text-gray-400 font-black">حساب فعال (همگام‌سازی شده):</span>
-                    <span class="text-xs font-black text-gray-800 truncate max-w-[180px]" dir="ltr">${escapeHTML(user.email)}</span>
-                </div>
-                <button onclick="app.handleSignOut()" class="px-4 py-2 bg-red-50 text-red-500 border border-red-100 rounded-xl font-black text-xs active:scale-95 transition-all">خروج</button>
-            </div>
-            ` : `
-            <button onclick="app.openAuthModal()" class="w-full p-5 bg-blue-50 text-blue-600 rounded-3xl font-black flex justify-between items-center border border-blue-100 active:scale-95 transition-all">
-                <span>ورود / عضویت (همگام‌سازی ابری)</span>
-                <i class="fas fa-user-circle text-2xl"></i>
-            </button>
-            `}
-
-            <div class="grid grid-cols-2 gap-3 mb-2">
+            <div class="grid grid-cols-2 gap-3">
                 <button onclick="app.exportData()" class="p-4 bg-white text-gray-700 rounded-3xl font-black flex flex-col items-center justify-center gap-2 border border-gray-100 shadow-sm active:scale-95 transition-all">
                     <i class="fas fa-download text-2xl text-blue-500"></i>
-                    <span class="text-sm">خروجی کلمات</span>
+                    <span class="text-xs">خروجی کلمات و عبارت‌ها</span>
                 </button>
                 <label class="p-4 bg-white text-gray-700 rounded-3xl font-black flex flex-col items-center justify-center gap-2 border border-gray-100 shadow-sm cursor-pointer active:scale-95 transition-all">
                     <i class="fas fa-upload text-2xl text-green-500"></i>
-                    <span class="text-sm">لود کلمات</span>
+                    <span class="text-xs">لود کلمات و عبارت‌ها</span>
                     <input type="file" id="importFile" class="hidden" onchange="app.importData(event)">
                 </label>
+            </div>
+
+            <div>
+                ${user ? `
+                <div class="p-4 bg-white rounded-3xl border border-gray-100 shadow-sm flex justify-between items-center">
+                    <div class="flex flex-col text-right">
+                        <span class="text-[10px] text-gray-400 font-black">حساب فعال (همگام‌سازی شده):</span>
+                        <span class="text-xs font-black text-gray-800 truncate max-w-[180px]" dir="ltr">${escapeHTML(user.email)}</span>
+                    </div>
+                    <button onclick="app.handleSignOut()" class="px-4 py-2 bg-red-50 text-red-500 border border-red-100 rounded-xl font-black text-xs active:scale-95 transition-all">خروج</button>
+                </div>
+                ` : `
+                <button onclick="app.openAuthModal()" class="w-full p-5 bg-blue-50 text-blue-600 rounded-3xl font-black flex justify-between items-center border border-blue-100 active:scale-95 transition-all">
+                    <span>ورود / عضویت (همگام‌سازی ابری)</span>
+                    <i class="fas fa-user-circle text-2xl"></i>
+                </button>
+                `}
             </div>
             <button onclick="app.manualUpdateCheck(this)" class="w-full p-6 bg-blue-50 text-blue-600 rounded-3xl font-black flex justify-between items-center border border-blue-100 active:scale-95 transition-all">
                 <span>بروزرسانی</span>

@@ -18,7 +18,7 @@ export const wordMethods = {
                 if (this.currentFilter === 'failed') return item.word.failed;
                 return true;
             })
-            .map(item => WordCard(item.word, item.originalIndex))
+            .map(item => WordCard(item.word, item.originalIndex, this.currentMode === 'phrase' || folder.isPhrase))
             .join('');
     },
 
@@ -32,6 +32,7 @@ export const wordMethods = {
         if (source) {
             source.word.success = false;
             source.word.failed = false;
+            source.word.updated_at = Date.now();
             this.save();
             this.renderWords();
             this.closeModal();
@@ -117,7 +118,11 @@ export const wordMethods = {
         const eng = document.getElementById('eng-input').value.trim();
         const per = document.getElementById('per-input').value.trim();
         if (eng && per) {
-            this.data.folders[this.activeIdx].words.unshift({ eng, per, failed: false, success: false, id: Date.now() });
+            const wordObj = { eng, per, failed: false, success: false, id: Date.now(), updated_at: Date.now() };
+            if (this.currentMode === 'phrase' || this.data.folders[this.activeIdx].isPhrase) {
+                wordObj.isPhrase = true;
+            }
+            this.data.folders[this.activeIdx].words.unshift(wordObj);
             document.getElementById('eng-input').value = '';
             document.getElementById('per-input').value = '';
             document.getElementById('folder-word-count-box').innerText = this.data.folders[this.activeIdx].words.length;
@@ -169,9 +174,16 @@ export const wordMethods = {
             word.per = per;
             word.failed = failed;
             word.success = failed ? false : word.success;
+            word.updated_at = Date.now();
 
-            // Add to new folder
-            this.data.folders[newFolderIdx].words.unshift(word);
+            // Add to new folder and update its isPhrase flag
+            const destFolder = this.data.folders[newFolderIdx];
+            if (destFolder.isPhrase) {
+                word.isPhrase = true;
+            } else {
+                delete word.isPhrase;
+            }
+            destFolder.words.unshift(word);
             
             this.save();
             this.renderWords();
@@ -186,6 +198,8 @@ export const wordMethods = {
     deleteWord(wordId) {
         const source = this.findWordById(wordId);
         if (source) {
+            this.data.deletedWordIds = this.data.deletedWordIds || [];
+            this.data.deletedWordIds.push(wordId);
             source.folder.words.splice(source.wordIdx, 1);
             this.save();
             this.renderWords();

@@ -1,4 +1,4 @@
-import { getInitialData, saveData, loadDataFromIndexedDB } from './storage.js';
+import { getInitialData, saveData, loadDataFromIndexedDB, ensureSystemFolders } from './storage.js';
 import * as utils from './utils.js';
 import * as modals from './components/Modals.js';
 
@@ -19,6 +19,7 @@ class FlashcardApp {
         this.currentFilter = 'all';
         this.registration = null;
         this.user = null;
+        this.currentMode = 'word';
 
         this.init();
     }
@@ -27,7 +28,7 @@ class FlashcardApp {
         try {
             const dbData = await loadDataFromIndexedDB();
             if (dbData) {
-                this.data = dbData;
+                this.data = ensureSystemFolders(dbData);
             }
         } catch (e) {
             console.warn('Failed to load from IndexedDB, using localStorage:', e);
@@ -132,16 +133,17 @@ class FlashcardApp {
     }
 
     updateUILabels() {
+        const isPhrase = this.currentMode === 'phrase';
         const lang = this.data.settings.targetLang;
         const labels = {
-            'en': 'English',
-            'de': 'Deutsch',
-            'fr': 'Français'
+            'en': isPhrase ? 'Phrase / Sentence' : 'English',
+            'de': isPhrase ? 'Satz' : 'Deutsch',
+            'fr': isPhrase ? 'Phrase' : 'Français'
         };
         const perLabels = {
-            'en': 'انگلیسی',
-            'de': 'آلمانی',
-            'fr': 'فرانسوی'
+            'en': isPhrase ? 'جمله یا عبارت' : 'انگلیسی',
+            'de': isPhrase ? 'جمله یا عبارت' : 'آلمانی',
+            'fr': isPhrase ? 'جمله یا عبارت' : 'فرانسوی'
         };
         const engInput = document.getElementById('eng-input');
         if (engInput) engInput.placeholder = `${labels[lang]} (${perLabels[lang]})`;
@@ -163,6 +165,23 @@ class FlashcardApp {
         document.querySelectorAll('.nav-item').forEach(item => item.classList.remove('active'));
         document.getElementById('nav-home').classList.add('active');
         this.renderFolders();
+    }
+
+    toggleAppMode() {
+        this.currentMode = this.currentMode === 'word' ? 'phrase' : 'word';
+        
+        const modeText = document.getElementById('mode-text');
+        const modeIcon = document.getElementById('mode-icon');
+        
+        if (this.currentMode === 'phrase') {
+            modeText.innerText = 'عبارت';
+            modeIcon.className = 'fas fa-quote-right';
+        } else {
+            modeText.innerText = 'کلمه';
+            modeIcon.className = 'fas fa-font';
+        }
+        
+        this.goHome();
     }
 
     closeScreen(id) {

@@ -3,6 +3,8 @@ create table folders (
   id bigint primary key, -- شناسه عددی منطبق بر Timestamp جاوااسکریپت
   user_id uuid references auth.users not null, -- متصل به شناسه کاربر وارد شده
   name text not null,
+  updated_at bigint default 0 not null,
+  is_phrase boolean default false not null,
   created_at timestamp with time zone default timezone('utc'::text, now()) not null
 );
 
@@ -15,6 +17,8 @@ create table words (
   per text not null,
   failed boolean default false not null,
   success boolean default false not null,
+  updated_at bigint default 0 not null,
+  is_phrase boolean default false not null,
   created_at timestamp with time zone default timezone('utc'::text, now()) not null
 );
 

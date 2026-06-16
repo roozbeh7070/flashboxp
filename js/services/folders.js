@@ -8,12 +8,18 @@ export const folderMethods = {
         const systemList = document.getElementById('system-folder-list');
         const list = document.getElementById('folder-list');
         
-        const systemFolders = this.data.folders.filter(f => f.isSystem);
-        const regularFolders = this.data.folders.filter(f => !f.isSystem);
+        const isPhraseMode = this.currentMode === 'phrase';
+        
+        const systemFolders = this.data.folders.filter(f => f.isSystem && (isPhraseMode ? f.isPhrase === true : !f.isPhrase));
+        const regularFolders = this.data.folders.filter(f => !f.isSystem && (isPhraseMode ? f.isPhrase === true : !f.isPhrase));
 
-        // Sort system folders: Success (222), Needs Practice (111), All (0)
+        // Sort system folders: Success (222/322), Needs Practice (111/311), All (0/300)
         const sortedSystem = [];
-        [222, 111, 0].forEach(id => {
+        const successId = isPhraseMode ? 322 : 222;
+        const failedId = isPhraseMode ? 311 : 111;
+        const allId = isPhraseMode ? 300 : 0;
+        
+        [successId, failedId, allId].forEach(id => {
             const found = systemFolders.find(f => f.id === id);
             if (found) sortedSystem.push(found);
         });
@@ -55,6 +61,20 @@ export const folderMethods = {
             if (addWordContainer) addWordContainer.classList.remove('hidden');
         }
 
+        const exploreBtn = document.getElementById('explore-word-btn');
+        if (exploreBtn) {
+            if (this.currentMode === 'phrase') {
+                exploreBtn.classList.add('hidden');
+            } else {
+                exploreBtn.classList.remove('hidden');
+            }
+        }
+
+        const searchInput = document.getElementById('search-input');
+        if (searchInput) {
+            searchInput.placeholder = this.currentMode === 'phrase' ? "جستجو در این مجموعه (عبارت یا معنی)..." : "جستجو در این مجموعه (کلمه یا معنی)...";
+        }
+
         this.updateUILabels();
         this.renderWords();
     },
@@ -66,7 +86,11 @@ export const folderMethods = {
     createFolder() {
         const name = document.getElementById('folder-name-input').value;
         if (name) {
-            this.data.folders.push({ name, words: [], id: Date.now() });
+            const newFolder = { name, words: [], id: Date.now(), updated_at: Date.now() };
+            if (this.currentMode === 'phrase') {
+                newFolder.isPhrase = true;
+            }
+            this.data.folders.push(newFolder);
             this.save();
             this.closeModal();
         }
@@ -78,6 +102,13 @@ export const folderMethods = {
     },
 
     executeDeleteFolder() {
+        const folder = this.data.folders[this.activeIdx];
+        if (folder && !folder.isSystem) {
+            this.data.deletedFolderIds = this.data.deletedFolderIds || [];
+            this.data.deletedFolderIds.push(folder.id);
+            this.data.deletedWordIds = this.data.deletedWordIds || [];
+            folder.words.forEach(w => this.data.deletedWordIds.push(w.id));
+        }
         this.data.folders.splice(this.activeIdx, 1);
         this.save();
         this.closeScreen('word-screen');
