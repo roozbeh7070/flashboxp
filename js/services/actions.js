@@ -379,10 +379,17 @@ export const actionMethods = {
         if (this.user) {
             try {
                 // Delete all words and folders for the user from Supabase on factory reset
-                await supabase.from('words').delete().eq('user_id', this.user.id);
-                await supabase.from('folders').delete().eq('user_id', this.user.id);
+                const { error: wErr } = await supabase.from('words').delete().eq('user_id', this.user.id);
+                if (wErr) {
+                    alert("خطا در حذف کلمات از سرور: " + JSON.stringify(wErr));
+                }
+                const { error: fErr } = await supabase.from('folders').delete().eq('user_id', this.user.id);
+                if (fErr) {
+                    alert("خطا در حذف مجموعه‌ها از سرور: " + JSON.stringify(fErr));
+                }
             } catch (err) {
                 console.error("Failed to delete cloud data on factory reset:", err);
+                alert("خطای عمومی در حذف داده‌های ابری: " + err.message);
             }
         }
         await clearData();
