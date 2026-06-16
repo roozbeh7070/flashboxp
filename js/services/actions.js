@@ -376,6 +376,7 @@ export const actionMethods = {
     },
 
     async executeFactoryReset() {
+        alert("شروع فرآیند پاکسازی. کاربر: " + (this.user ? this.user.email : "مهمان (null)"));
         if (this.user) {
             try {
                 // Fetch all folders and words of the user from Supabase to delete them by ID (more reliable and matches individual deletion logic)
@@ -389,12 +390,17 @@ export const actionMethods = {
                     .select('id')
                     .eq('user_id', this.user.id);
 
-                if (fetchFoldErr || fetchWordsErr) {
-                    console.error("Failed to fetch user data for deletion on reset:", fetchFoldErr || fetchWordsErr);
+                if (fetchFoldErr) {
+                    alert("خطا در دریافت مجموعه‌ها: " + JSON.stringify(fetchFoldErr));
+                }
+                if (fetchWordsErr) {
+                    alert("خطا در دریافت کلمات: " + JSON.stringify(fetchWordsErr));
                 }
 
                 const folderIds = remoteFolders ? remoteFolders.map(f => f.id) : [];
                 const wordIds = remoteWords ? remoteWords.map(w => w.id) : [];
+
+                alert(`تعداد مجموعه‌ها برای حذف: ${folderIds.length}، تعداد کلمات: ${wordIds.length}`);
 
                 // Delete all words
                 if (wordIds.length > 0) {
@@ -405,6 +411,8 @@ export const actionMethods = {
                         .eq('user_id', this.user.id);
                     if (wErr) {
                         alert("خطا در حذف کلمات از سرور: " + JSON.stringify(wErr));
+                    } else {
+                        alert("کلمات با موفقیت از سرور حذف شدند.");
                     }
                 }
 
@@ -417,18 +425,23 @@ export const actionMethods = {
                         .eq('user_id', this.user.id);
                     if (fErr) {
                         alert("خطا در حذف مجموعه‌ها از سرور: " + JSON.stringify(fErr));
+                    } else {
+                        alert("مجموعه‌ها با موفقیت از سرور حذف شدند.");
                     }
                 }
 
                 // Sign out from Supabase to ensure the session is cleared
+                alert("در حال خروج از حساب کاربری...");
                 await supabase.auth.signOut();
                 this.user = null;
+                alert("خروج با موفقیت انجام شد.");
             } catch (err) {
                 console.error("Failed to delete cloud data on factory reset:", err);
                 alert("خطای عمومی در حذف داده‌های ابری: " + err.message);
             }
         }
         await clearData();
+        alert("اطلاعات محلی پاکسازی شد. برنامه ریلود می‌شود.");
         location.reload();
     },
 
