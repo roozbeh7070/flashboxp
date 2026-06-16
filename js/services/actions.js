@@ -1,5 +1,6 @@
 import { saveData, clearData } from '../storage.js';
 import { syncData } from './sync.js';
+import { supabase } from './supabase.js';
 import * as modals from '../components/Modals.js';
 import * as utils from '../utils.js';
 
@@ -375,6 +376,15 @@ export const actionMethods = {
     },
 
     async executeFactoryReset() {
+        if (this.user) {
+            try {
+                // Delete all words and folders for the user from Supabase on factory reset
+                await supabase.from('words').delete().eq('user_id', this.user.id);
+                await supabase.from('folders').delete().eq('user_id', this.user.id);
+            } catch (err) {
+                console.error("Failed to delete cloud data on factory reset:", err);
+            }
+        }
         await clearData();
         location.reload();
     },
