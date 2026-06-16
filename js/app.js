@@ -989,7 +989,7 @@ class FlashcardApp {
 
         try {
             if (mode === 'signup') {
-                const { error } = await supabase.auth.signUp({ 
+                const { data, error } = await supabase.auth.signUp({ 
                     email, 
                     password,
                     options: {
@@ -999,7 +999,13 @@ class FlashcardApp {
                     }
                 });
                 if (error) throw error;
-                alert("ثبت‌نام موفقیت‌آمیز بود! لطفا ایمیل خود را چک کنید و آن را تأیید کنید.");
+                
+                if (data && data.session) {
+                    this.user = data.user;
+                    alert("ثبت‌نام با موفقیت انجام شد! خوش آمدید.");
+                } else {
+                    alert("ثبت‌نام با موفقیت انجام شد! اکنون می‌توانید با اطلاعات کاربری خود وارد شوید.");
+                }
                 this.closeModal();
             } else {
                 const { data, error } = await supabase.auth.signInWithPassword({ email, password });
