@@ -1,0 +1,7061 @@
+{
+  "folders": [
+    {
+      "name": "همه کلمات",
+      "words": [
+        {
+          "eng": "purchase",
+          "per": "خرید",
+          "failed": false,
+          "success": false,
+          "id": 1781638968186,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "What do you think of",
+          "per": "نظرت چیه راجب …",
+          "failed": false,
+          "success": false,
+          "id": 1781630203830,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "I’m gonna",
+          "per": "من می خواهم",
+          "failed": false,
+          "success": false,
+          "id": 1781630003845,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "gave me",
+          "per": "به من داد",
+          "failed": false,
+          "success": false,
+          "id": 1781629931174,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "Presumed",
+          "per": "فرض شده است",
+          "failed": false,
+          "success": false,
+          "id": 1781579648890,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "prescribed",
+          "per": "تجویز شده است",
+          "failed": false,
+          "success": false,
+          "id": 1781467610235,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "ointment",
+          "per": "پماد",
+          "failed": false,
+          "success": false,
+          "id": 1781467592132,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "daily basis",
+          "per": "به صورت روزانه",
+          "failed": false,
+          "success": false,
+          "id": 1781467409072,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "during",
+          "per": "در طول",
+          "failed": false,
+          "success": false,
+          "id": 1781467377972,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "bowel",
+          "per": "روده",
+          "failed": false,
+          "success": false,
+          "id": 1781467300326,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "constipatio",
+          "per": "یبوست",
+          "failed": false,
+          "success": false,
+          "id": 1781467229207,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "anus",
+          "per": "مقعد",
+          "failed": false,
+          "success": false,
+          "id": 1781467134660,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "instructions",
+          "per": "دستورالعمل ها",
+          "failed": false,
+          "success": false,
+          "id": 1781466721989,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "Reduse",
+          "per": "استفاده مجدد",
+          "failed": false,
+          "success": false,
+          "id": 1781039801065,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "Permanently",
+          "per": "به طور دائم",
+          "failed": false,
+          "success": false,
+          "id": 1781038624654,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "Carrier",
+          "per": "حامل",
+          "failed": false,
+          "success": false,
+          "id": 1781038418085,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "Restrictions",
+          "per": "محدودیت ها",
+          "failed": false,
+          "success": false,
+          "id": 1781038389913,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "Firmware",
+          "per": "سیستم عامل",
+          "failed": false,
+          "success": false,
+          "id": 1781038355040,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "Expired",
+          "per": "منقضی شده است",
+          "failed": false,
+          "success": false,
+          "id": 1781038266887,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "Coverage",
+          "per": "پوشش",
+          "failed": false,
+          "success": false,
+          "id": 1781038246923,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "Preferences",
+          "per": "ترجیحات",
+          "failed": false,
+          "success": false,
+          "id": 1781038219344,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "Overall",
+          "per": "به طور کلی",
+          "failed": false,
+          "success": false,
+          "id": 1781038189715,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "intercept",
+          "per": "رهگیری، جلو گیری کردن",
+          "failed": false,
+          "success": false,
+          "id": 1780216501778,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "provider",
+          "per": "ارائه دهنده",
+          "failed": false,
+          "success": false,
+          "id": 1780216475145,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "relevant",
+          "per": "مربوطه، وابسته",
+          "failed": false,
+          "success": false,
+          "id": 1780216444463,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "entering",
+          "per": "وارد شدن",
+          "failed": false,
+          "success": false,
+          "id": 1780216429441,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "employer",
+          "per": "کارفرما",
+          "failed": false,
+          "success": false,
+          "id": 1780216384531,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "Institutions",
+          "per": "موسسات، نهاد",
+          "failed": false,
+          "success": false,
+          "id": 1780216358825,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "properly",
+          "per": "به درستی",
+          "failed": false,
+          "success": false,
+          "id": 1780216300920,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "function",
+          "per": "تابع، وظیفه داشتن",
+          "failed": false,
+          "success": false,
+          "id": 1780216285729,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "essential",
+          "per": "ضروری است",
+          "failed": false,
+          "success": false,
+          "id": 1780216253726,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "interact",
+          "per": "تعامل داشته باشند",
+          "failed": false,
+          "success": false,
+          "id": 1780216219912,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "Certain",
+          "per": "قطعی",
+          "failed": false,
+          "success": false,
+          "id": 1780216145421,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "Routing",
+          "per": "مسیریابی",
+          "failed": false,
+          "success": false,
+          "id": 1780216109936,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "Tries",
+          "per": "تلاش می کند",
+          "failed": false,
+          "success": false,
+          "id": 1780216034569,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "Cellular",
+          "per": "سلولی",
+          "failed": false,
+          "success": false,
+          "id": 1780215962016,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "Tap",
+          "per": "ضربه بزنید، شیر آب",
+          "failed": false,
+          "success": false,
+          "id": 1780215938853,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "Known",
+          "per": "شناخته شده",
+          "failed": false,
+          "success": false,
+          "id": 1780215828205,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "Across",
+          "per": "در سراسر، در میان",
+          "failed": false,
+          "success": false,
+          "id": 1780215771254,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "Disruption",
+          "per": "اختلال",
+          "failed": false,
+          "success": false,
+          "id": 1780215737361,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "Blazing",
+          "per": "شعله ور",
+          "failed": false,
+          "success": false,
+          "id": 1780215716222,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "Feature",
+          "per": "ویژگی",
+          "failed": false,
+          "success": false,
+          "id": 1780215692244,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "prevent",
+          "per": "جلوگیری کند",
+          "failed": false,
+          "success": false,
+          "id": 1779552223864,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "towel",
+          "per": "حوله",
+          "failed": false,
+          "success": false,
+          "id": 1779552209443,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "thoroughly",
+          "per": "به طور کامل",
+          "failed": false,
+          "success": false,
+          "id": 1779552071593,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "residue",
+          "per": "باقی مانده",
+          "failed": false,
+          "success": false,
+          "id": 1779552055159,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "exact",
+          "per": "دقیق",
+          "failed": false,
+          "success": false,
+          "id": 1779551983783,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "stains",
+          "per": "لکه ها",
+          "failed": false,
+          "success": false,
+          "id": 1779551966314,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "hassle",
+          "per": "دردسر، عذاب دادن",
+          "failed": false,
+          "success": false,
+          "id": 1779551948466,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "rigorously",
+          "per": "به شدت",
+          "failed": false,
+          "success": false,
+          "id": 1779551901245,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "crucially",
+          "per": "بسیار مهم است",
+          "failed": false,
+          "success": false,
+          "id": 1779551877618,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "crack",
+          "per": "شکاف",
+          "failed": false,
+          "success": false,
+          "id": 1779551865363,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "warp",
+          "per": "پیچ و تاب",
+          "failed": false,
+          "success": false,
+          "id": 1779551846079,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "aesthetic",
+          "per": "زیبایی شناختی",
+          "failed": false,
+          "success": false,
+          "id": 1779551764242,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "rustic",
+          "per": "روستایی",
+          "failed": false,
+          "success": false,
+          "id": 1779551753257,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "shed",
+          "per": "ریختن",
+          "failed": false,
+          "success": false,
+          "id": 1779551732318,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "last",
+          "per": "آخرین",
+          "failed": false,
+          "success": false,
+          "id": 1779551674869,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "sustainable",
+          "per": "پایدار",
+          "failed": false,
+          "success": false,
+          "id": 1779551618075,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "exception",
+          "per": "استثنا",
+          "failed": false,
+          "success": false,
+          "id": 1779551527635,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "behaviour",
+          "per": "رفتار",
+          "failed": false,
+          "success": false,
+          "id": 1779551499448,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "tear",
+          "per": "پاره کردن",
+          "failed": false,
+          "success": false,
+          "id": 1779551485729,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "wear",
+          "per": "پوشیدن",
+          "failed": false,
+          "success": false,
+          "id": 1779551474835,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "emotional",
+          "per": "احساسی",
+          "failed": false,
+          "success": false,
+          "id": 1779551460876,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "particularly",
+          "per": "به ویژه",
+          "failed": false,
+          "success": false,
+          "id": 1779551421828,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "accomplished",
+          "per": "انجام شده",
+          "failed": false,
+          "success": false,
+          "id": 1779551312320,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "approx",
+          "per": "تقریبا",
+          "failed": false,
+          "success": false,
+          "id": 1779551287133,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "justify",
+          "per": "توجیه کردن",
+          "failed": false,
+          "success": false,
+          "id": 1779551271181,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "settled",
+          "per": "قرار شد",
+          "failed": false,
+          "success": false,
+          "id": 1779551237664,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "redo",
+          "per": "دوباره انجام دادن",
+          "failed": false,
+          "success": false,
+          "id": 1779551214668,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "demanding",
+          "per": "مطالبه گر، خواستار",
+          "failed": false,
+          "success": false,
+          "id": 1779551190733,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "terse",
+          "per": "مختصر",
+          "failed": false,
+          "success": false,
+          "id": 1779551171473,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "weighing",
+          "per": "وزن کردن",
+          "failed": false,
+          "success": false,
+          "id": 1779551065163,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "irritant",
+          "per": "محرک، دلخراش",
+          "failed": false,
+          "success": false,
+          "id": 1779551032246,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "minor",
+          "per": "جزئی، خرد",
+          "failed": false,
+          "success": false,
+          "id": 1779551007727,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "Although",
+          "per": "هر چند، اگر چه",
+          "failed": false,
+          "success": false,
+          "id": 1779550979581,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "incivility",
+          "per": "بی ادبی",
+          "failed": false,
+          "success": false,
+          "id": 1779550957017,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "Per",
+          "per": "برای، برطبق",
+          "failed": false,
+          "success": false,
+          "id": 1779550939657,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "reliable",
+          "per": "قابل اعتماد",
+          "failed": false,
+          "success": false,
+          "id": 1779550685710,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "rather",
+          "per": "بلکه، ترجیحا",
+          "failed": false,
+          "success": false,
+          "id": 1779550647218,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "slight",
+          "per": "اندک، جزئی",
+          "failed": false,
+          "success": false,
+          "id": 1779550421965,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "fringe",
+          "per": "حاشیه",
+          "failed": false,
+          "success": false,
+          "id": 1779550385606,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "jester",
+          "per": "شوخی",
+          "failed": false,
+          "success": false,
+          "id": 1779550344194,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "fainted",
+          "per": "غش کرد",
+          "failed": false,
+          "success": false,
+          "id": 1779550330084,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "Incidentally",
+          "per": "اتفاقا",
+          "failed": false,
+          "success": false,
+          "id": 1779550216070,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "overuse",
+          "per": "استفاده بیش از حد",
+          "failed": false,
+          "success": false,
+          "id": 1779550205010,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "phrases",
+          "per": "عبارات",
+          "failed": false,
+          "success": false,
+          "id": 1779550173871,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "regrets",
+          "per": "پشیمانی",
+          "failed": false,
+          "success": false,
+          "id": 1779550142297,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "unappealing",
+          "per": "غیر جذاب",
+          "failed": false,
+          "success": false,
+          "id": 1779550105307,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "extinct",
+          "per": "منقرض شده",
+          "failed": false,
+          "success": false,
+          "id": 1779549887150,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "bewildered",
+          "per": "گیج شده، سر در گم",
+          "failed": false,
+          "success": false,
+          "id": 1779549864241,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "reaching",
+          "per": "رسیدن",
+          "failed": false,
+          "success": false,
+          "id": 1779549852225,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "Steady",
+          "per": "استوار",
+          "failed": false,
+          "success": false,
+          "id": 1779549838962,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "Outrage",
+          "per": "حرمت شکنی",
+          "failed": false,
+          "success": false,
+          "id": 1779549676181,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "Rumination",
+          "per": "نشخوار فکری",
+          "failed": false,
+          "success": false,
+          "id": 1779549642457,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "deplore",
+          "per": "ابراز تاسف",
+          "failed": false,
+          "success": false,
+          "id": 1779549630272,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "trait",
+          "per": "ویژگی، خاصیت",
+          "failed": false,
+          "success": false,
+          "id": 1779549615092,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "appeared",
+          "per": "ظاهر شد",
+          "failed": false,
+          "success": false,
+          "id": 1779549553718,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "Creditors",
+          "per": "طلبکاران",
+          "failed": false,
+          "success": false,
+          "id": 1779549511531,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "violently",
+          "per": "با خشونت",
+          "failed": false,
+          "success": false,
+          "id": 1779190578746,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "instincts",
+          "per": "غرایز",
+          "failed": false,
+          "success": false,
+          "id": 1779190562726,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "demarcated",
+          "per": "مرزبندی شده است",
+          "failed": false,
+          "success": false,
+          "id": 1779190518451,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "colonialists",
+          "per": "استعمارگران",
+          "failed": false,
+          "success": false,
+          "id": 1779190424731,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "garment",
+          "per": "لباس",
+          "failed": false,
+          "success": false,
+          "id": 1779190313020,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "swipe",
+          "per": "کش رفتن",
+          "failed": false,
+          "success": false,
+          "id": 1779190263080,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "creature",
+          "per": "موجود، مخلوق، جانور",
+          "failed": false,
+          "success": false,
+          "id": 1779190233763,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "barely",
+          "per": "به سختی",
+          "failed": false,
+          "success": false,
+          "id": 1779190208027,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "heels",
+          "per": "پاشنه پا",
+          "failed": false,
+          "success": false,
+          "id": 1779190192626,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "frightened",
+          "per": "ترسیده",
+          "failed": false,
+          "success": false,
+          "id": 1779190170680,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "nest",
+          "per": "لانه",
+          "failed": false,
+          "success": false,
+          "id": 1779190117420,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "spat",
+          "per": "تف",
+          "failed": false,
+          "success": false,
+          "id": 1779190089439,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "scattered",
+          "per": "پخش کردن، پراکندن",
+          "failed": false,
+          "success": false,
+          "id": 1779190065846,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "ominous",
+          "per": "شوم، بدیمن",
+          "failed": false,
+          "success": false,
+          "id": 1779190011933,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "rebuttal",
+          "per": "تکذیب",
+          "failed": false,
+          "success": false,
+          "id": 1779189454696,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "blades",
+          "per": "تیغه ها",
+          "failed": false,
+          "success": false,
+          "id": 1779189261906,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "stretch",
+          "per": "کشش",
+          "failed": false,
+          "success": false,
+          "id": 1779189236082,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "consecutive",
+          "per": "متوالی",
+          "failed": false,
+          "success": false,
+          "id": 1779189191423,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "deliberate",
+          "per": "عمدی، سنجیدن",
+          "failed": false,
+          "success": false,
+          "id": 1779189152444,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "perform",
+          "per": "انجام دادن",
+          "failed": false,
+          "success": false,
+          "id": 1779189109588,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "literally",
+          "per": "به معنای واقعی کلمه",
+          "failed": false,
+          "success": false,
+          "id": 1779189071023,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "coordination",
+          "per": "هماهنگی",
+          "failed": false,
+          "success": false,
+          "id": 1779189045562,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "genuine",
+          "per": "اصیل",
+          "failed": false,
+          "success": false,
+          "id": 1779189028466,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "satisfying",
+          "per": "راضی کننده",
+          "failed": false,
+          "success": false,
+          "id": 1779189005410,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "regarded",
+          "per": "در نظر گرفته شده است",
+          "failed": false,
+          "success": false,
+          "id": 1778944318219,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "conveying",
+          "per": "انتقال دادن",
+          "failed": false,
+          "success": false,
+          "id": 1778944130643,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "association",
+          "per": "انجمن",
+          "failed": false,
+          "success": false,
+          "id": 1778944098000,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "desirable",
+          "per": "مطلوب",
+          "failed": false,
+          "success": false,
+          "id": 1778943502313,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "appear",
+          "per": "ظاهر شود",
+          "failed": false,
+          "success": false,
+          "id": 1778943482097,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "heard",
+          "per": "شنیده شد",
+          "failed": false,
+          "success": false,
+          "id": 1778943327998,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "uptick",
+          "per": "بالا بردن",
+          "failed": false,
+          "success": false,
+          "id": 1778943309521,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "Exclaimed",
+          "per": "اعلام کردن",
+          "failed": false,
+          "success": false,
+          "id": 1778866664673,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "tight",
+          "per": "تنگ",
+          "failed": false,
+          "success": false,
+          "id": 1778866595407,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "briefcases",
+          "per": "کیف ها، کیف اسناد",
+          "failed": false,
+          "success": false,
+          "id": 1778866494047,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "crowds",
+          "per": "جمعیت",
+          "failed": false,
+          "success": false,
+          "id": 1778866464602,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "doomers",
+          "per": "محکومان",
+          "failed": false,
+          "success": false,
+          "id": 1778866432751,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "shivering",
+          "per": "لرزیدن",
+          "failed": false,
+          "success": false,
+          "id": 1778866411753,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "lining up",
+          "per": "ردیف کردن",
+          "failed": false,
+          "success": false,
+          "id": 1778866373463,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "perfidy",
+          "per": "خیانت",
+          "failed": false,
+          "success": false,
+          "id": 1778866322531,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "versus",
+          "per": "در مقابل",
+          "failed": false,
+          "success": false,
+          "id": 1778866305840,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "corporate",
+          "per": "بصورت شرکت درامده",
+          "failed": false,
+          "success": false,
+          "id": 1778866282020,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "clash",
+          "per": "برخورد",
+          "failed": false,
+          "success": false,
+          "id": 1778866256496,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "driest",
+          "per": "خشک ترین",
+          "failed": false,
+          "success": false,
+          "id": 1778866239340,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "enriching",
+          "per": "غنی کردن",
+          "failed": false,
+          "success": false,
+          "id": 1778866220393,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "swindling",
+          "per": "کلاهبرداری",
+          "failed": false,
+          "success": false,
+          "id": 1778866186394,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "deceiving",
+          "per": "فریب دادن",
+          "failed": false,
+          "success": false,
+          "id": 1778866177658,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "trial",
+          "per": "محاکمه",
+          "failed": false,
+          "success": false,
+          "id": 1778866158396,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "attorney",
+          "per": "وکیل",
+          "failed": false,
+          "success": false,
+          "id": 1778866132082,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "griped",
+          "per": "چنگ زد، گله کردن",
+          "failed": false,
+          "success": false,
+          "id": 1778866116322,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "spectacle",
+          "per": "تماشایی",
+          "failed": false,
+          "success": false,
+          "id": 1778866070789,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "unique",
+          "per": "منحصر به فرد",
+          "failed": false,
+          "success": false,
+          "id": 1778866060835,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "spectrum",
+          "per": "طیف",
+          "failed": false,
+          "success": false,
+          "id": 1778866026818,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "artificial",
+          "per": "مصنوعی",
+          "failed": false,
+          "success": false,
+          "id": 1778866001155,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "stern",
+          "per": "سختگیر",
+          "failed": false,
+          "success": false,
+          "id": 1778865964223,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "protests",
+          "per": "اعتراضات",
+          "failed": false,
+          "success": false,
+          "id": 1778865953117,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "petty",
+          "per": "خرده پا، غیر قابل ملاحظه",
+          "failed": false,
+          "success": false,
+          "id": 1778865940976,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "ditching",
+          "per": "خندق",
+          "failed": false,
+          "success": false,
+          "id": 1778865878265,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "urging",
+          "per": "اصرار",
+          "failed": false,
+          "success": false,
+          "id": 1778865797967,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "specific",
+          "per": "خاص",
+          "failed": false,
+          "success": false,
+          "id": 1778865735043,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "ensuring",
+          "per": "تضمین می کند",
+          "failed": false,
+          "success": false,
+          "id": 1778865653348,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "principle",
+          "per": "اصل، منشاء",
+          "failed": false,
+          "success": false,
+          "id": 1778865634213,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "robust",
+          "per": "قوی، تنومند",
+          "failed": false,
+          "success": false,
+          "id": 1778865611592,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "alongside",
+          "per": "در کنار",
+          "failed": false,
+          "success": false,
+          "id": 1778865587043,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "prominent",
+          "per": "برجسته",
+          "failed": false,
+          "success": false,
+          "id": 1778865543512,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "breached",
+          "per": "نقض شده است",
+          "failed": false,
+          "success": false,
+          "id": 1778865518980,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "individuals",
+          "per": "افراد",
+          "failed": false,
+          "success": false,
+          "id": 1778865487551,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "mitigate",
+          "per": "تسکین دادن",
+          "failed": false,
+          "success": false,
+          "id": 1778865471651,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "relating",
+          "per": "گزارش دادن",
+          "failed": false,
+          "success": false,
+          "id": 1778865446087,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "measures",
+          "per": "اقدامات، سنجیدن",
+          "failed": false,
+          "success": false,
+          "id": 1778865421517,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "proportionate",
+          "per": "متناسب",
+          "failed": false,
+          "success": false,
+          "id": 1778865392811,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "cited",
+          "per": "استناد شده است",
+          "failed": false,
+          "success": false,
+          "id": 1778865374156,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "efficacy",
+          "per": "اثربخشی",
+          "failed": false,
+          "success": false,
+          "id": 1778865351532,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "restricted",
+          "per": "محدود شده است",
+          "failed": false,
+          "success": false,
+          "id": 1778865311608,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "voluntarily",
+          "per": "به طور داوطلبانه",
+          "failed": false,
+          "success": false,
+          "id": 1778865299092,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "beneath",
+          "per": "در زیر",
+          "failed": false,
+          "success": false,
+          "id": 1778865264377,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "executive",
+          "per": "اجرایی",
+          "failed": false,
+          "success": false,
+          "id": 1778865195793,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "screeds",
+          "per": "درد دل",
+          "failed": false,
+          "success": false,
+          "id": 1778865153397,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "circumvent",
+          "per": "دور زدن افراد",
+          "failed": false,
+          "success": false,
+          "id": 1778865120440,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "accessed",
+          "per": "دسترسی پیدا کرد",
+          "failed": false,
+          "success": false,
+          "id": 1778865024122,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "significant",
+          "per": "قابل توجه است",
+          "failed": false,
+          "success": false,
+          "id": 1778865008209,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "operator",
+          "per": "اعامل",
+          "failed": false,
+          "success": false,
+          "id": 1778864987449,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "regulator",
+          "per": "تنظیم کننده",
+          "failed": false,
+          "success": false,
+          "id": 1778864946403,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "associated",
+          "per": "مرتبط است",
+          "failed": false,
+          "success": false,
+          "id": 1778864915856,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "breaching",
+          "per": "نقض",
+          "failed": false,
+          "success": false,
+          "id": 1778864883105,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "denied",
+          "per": "تکذیب کرد",
+          "failed": false,
+          "success": false,
+          "id": 1778864868982,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "commitment",
+          "per": "تعهد",
+          "failed": false,
+          "success": false,
+          "id": 1778689917959,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "engagement",
+          "per": "نامزدی",
+          "failed": false,
+          "success": false,
+          "id": 1778689892757,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "utility",
+          "per": "سودمندی",
+          "failed": false,
+          "success": false,
+          "id": 1778689738788,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "Rugged",
+          "per": "ناهموار",
+          "failed": false,
+          "success": false,
+          "id": 1778689710980,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "chore",
+          "per": "کار سخت",
+          "failed": false,
+          "success": false,
+          "id": 1778689697242,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "denim",
+          "per": "پارچه جین",
+          "failed": false,
+          "success": false,
+          "id": 1778689650523,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "tasteful",
+          "per": "خوش سلیقه",
+          "failed": false,
+          "success": false,
+          "id": 1778689531228,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "slightly",
+          "per": "کمی",
+          "failed": false,
+          "success": false,
+          "id": 1778580640207,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "emphatically",
+          "per": "با تاکید",
+          "failed": false,
+          "success": false,
+          "id": 1778580194380,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "Brat",
+          "per": "بچه لوس",
+          "failed": false,
+          "success": false,
+          "id": 1778578186821,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "unvarnished",
+          "per": "بدون لاک، بی جلا",
+          "failed": false,
+          "success": false,
+          "id": 1778577857072,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "viral",
+          "per": "ویروسی",
+          "failed": false,
+          "success": false,
+          "id": 1778577808697,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "buffet",
+          "per": "بوفه",
+          "failed": false,
+          "success": false,
+          "id": 1778577753141,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "insight",
+          "per": "بینش",
+          "failed": false,
+          "success": false,
+          "id": 1778520451267,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "appreciate",
+          "per": "قدردانی",
+          "failed": false,
+          "success": false,
+          "id": 1778520432834,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "emphatic",
+          "per": "تاکید شده",
+          "failed": false,
+          "success": false,
+          "id": 1778520338204,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "facsimile",
+          "per": "رونوشت",
+          "failed": false,
+          "success": false,
+          "id": 1778520293955,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "pale",
+          "per": "پژمرده",
+          "failed": false,
+          "success": false,
+          "id": 1778520272523,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "resemblance",
+          "per": "شباهت",
+          "failed": false,
+          "success": false,
+          "id": 1778520227007,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "proportion",
+          "per": "نسبت",
+          "failed": false,
+          "success": false,
+          "id": 1778520125132,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "sizeable",
+          "per": "قابل ملاحظه",
+          "failed": false,
+          "success": false,
+          "id": 1778520114028,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "endure",
+          "per": "تحمل کردن",
+          "failed": false,
+          "success": false,
+          "id": 1778520088735,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "torment",
+          "per": "عذاب",
+          "failed": false,
+          "success": false,
+          "id": 1778520020587,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "intensity",
+          "per": "شدت",
+          "failed": false,
+          "success": false,
+          "id": 1778520008107,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "sheer",
+          "per": "محض، مطلق",
+          "failed": false,
+          "success": false,
+          "id": 1778519989279,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "variety",
+          "per": "تنوع",
+          "failed": false,
+          "success": false,
+          "id": 1778519959585,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "assignments",
+          "per": "ماموریت",
+          "failed": false,
+          "success": false,
+          "id": 1778519938519,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "simplicity",
+          "per": "سادگی",
+          "failed": false,
+          "success": false,
+          "id": 1778519915335,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "apparent",
+          "per": "آشکار",
+          "failed": false,
+          "success": false,
+          "id": 1778519898881,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "despite",
+          "per": "با اینکه",
+          "failed": false,
+          "success": false,
+          "id": 1778519880854,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "tale",
+          "per": "داستان",
+          "failed": false,
+          "success": false,
+          "id": 1778519854151,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "utopia",
+          "per": "دولت یا کشور کامل و ایده الی",
+          "failed": false,
+          "success": false,
+          "id": 1778519824611,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "massive",
+          "per": "عظیم",
+          "failed": false,
+          "success": false,
+          "id": 1778519770979,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "identical",
+          "per": "یکسان",
+          "failed": false,
+          "success": false,
+          "id": 1778519741653,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "certainly",
+          "per": "قطعا",
+          "failed": false,
+          "success": false,
+          "id": 1778519676532,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "eluded",
+          "per": "فرار کرد، طفره رفتن",
+          "failed": false,
+          "success": false,
+          "id": 1778519633515,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "escalated",
+          "per": "تشدید شد",
+          "failed": false,
+          "success": false,
+          "id": 1778519578358,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "Dependence",
+          "per": "وابستگی",
+          "failed": false,
+          "success": false,
+          "id": 1778491836691,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "Punctuality",
+          "per": "وقت شناسی",
+          "failed": false,
+          "success": false,
+          "id": 1778491789281,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "Throat",
+          "per": "گلو",
+          "failed": false,
+          "success": false,
+          "id": 1778491758639,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "Contribute",
+          "per": "مشارکت کردن",
+          "failed": false,
+          "success": false,
+          "id": 1778491739263,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "Oral",
+          "per": "دهانی",
+          "failed": false,
+          "success": false,
+          "id": 1778491676985,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "divulged",
+          "per": "فاش کردن",
+          "failed": false,
+          "success": false,
+          "id": 1778484506594,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "concealing",
+          "per": "پنهان کردن",
+          "failed": false,
+          "success": false,
+          "id": 1778484461954,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "feasible",
+          "per": "امکان پذیر",
+          "failed": false,
+          "success": false,
+          "id": 1778484438018,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "addiction",
+          "per": "اعتیاد",
+          "failed": false,
+          "success": false,
+          "id": 1778484402477,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "explosive",
+          "per": "مواد منفجره",
+          "failed": false,
+          "success": false,
+          "id": 1778484387804,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "refined",
+          "per": "تصفیه شده",
+          "failed": false,
+          "success": false,
+          "id": 1778484346989,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "further",
+          "per": "بیشتر",
+          "failed": false,
+          "success": false,
+          "id": 1778484327019,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "commonly",
+          "per": "معمولا",
+          "failed": false,
+          "success": false,
+          "id": 1778484294817,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "intention",
+          "per": "قصد",
+          "failed": false,
+          "success": false,
+          "id": 1778484043207,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "popping up",
+          "per": "ظاهر شدن",
+          "failed": false,
+          "success": false,
+          "id": 1778483957340,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "itching",
+          "per": "خارش",
+          "failed": false,
+          "success": false,
+          "id": 1778483923320,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "secrecy",
+          "per": "رازداری",
+          "failed": false,
+          "success": false,
+          "id": 1778483895604,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "burden",
+          "per": "بار مسئوليت",
+          "failed": false,
+          "success": false,
+          "id": 1778483881836,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "familiar",
+          "per": "آشنا",
+          "failed": false,
+          "success": false,
+          "id": 1778483849606,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "conceal",
+          "per": "پنهان کردن",
+          "failed": false,
+          "success": false,
+          "id": 1778483770361,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "gossip",
+          "per": "شایعات",
+          "failed": false,
+          "success": false,
+          "id": 1778483734403,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "juicy",
+          "per": "باطراوت",
+          "failed": false,
+          "success": false,
+          "id": 1778483713104,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "anticipation",
+          "per": "پیش بینی",
+          "failed": false,
+          "success": false,
+          "id": 1778483684155,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "dismay",
+          "per": "ناراحتی",
+          "failed": false,
+          "success": false,
+          "id": 1778483668964,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "gleeful",
+          "per": "خوشحال",
+          "failed": false,
+          "success": false,
+          "id": 1778483650679,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "purely",
+          "per": "صرفا",
+          "failed": false,
+          "success": false,
+          "id": 1778483275217,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "embarked",
+          "per": "سوار شد، شروع کردن",
+          "failed": false,
+          "success": false,
+          "id": 1778483261261,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "approach",
+          "per": "رویکرد",
+          "failed": false,
+          "success": false,
+          "id": 1778483098868,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "thrilled",
+          "per": "هیجان زده",
+          "failed": false,
+          "success": false,
+          "id": 1778483072073,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "despise",
+          "per": "تحقیر کردن",
+          "failed": false,
+          "success": false,
+          "id": 1778482988817,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "retreat",
+          "per": "عقب نشینی",
+          "failed": false,
+          "success": false,
+          "id": 1778482871850,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "precedents",
+          "per": "سوابق",
+          "failed": false,
+          "success": false,
+          "id": 1778482795259,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "literary",
+          "per": "ادبی",
+          "failed": false,
+          "success": false,
+          "id": 1778482775973,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "appears",
+          "per": "ظاهر شدن",
+          "failed": false,
+          "success": false,
+          "id": 1778481887943,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "semicircular",
+          "per": "نیم دایره",
+          "failed": false,
+          "success": false,
+          "id": 1778481837064,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "halves",
+          "per": "نیمه ها",
+          "failed": false,
+          "success": false,
+          "id": 1778481785250,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "skewered",
+          "per": "سیخ زده",
+          "failed": false,
+          "success": false,
+          "id": 1778481765364,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "Ember",
+          "per": "خاکستر گرم",
+          "failed": false,
+          "success": false,
+          "id": 1778481727422,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "dine",
+          "per": "شام خوردن",
+          "failed": false,
+          "success": false,
+          "id": 1778481687699,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "brutally",
+          "per": "به طرز وحشیانه ای",
+          "failed": false,
+          "success": false,
+          "id": 1778481585121,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "fraction",
+          "per": "کسر شدن",
+          "failed": false,
+          "success": false,
+          "id": 1778481555534,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "leather",
+          "per": "چرم",
+          "failed": false,
+          "success": false,
+          "id": 1778481476275,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "magenta",
+          "per": "سرخابی",
+          "failed": false,
+          "success": false,
+          "id": 1778481462491,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "offended",
+          "per": "توهین شده",
+          "failed": false,
+          "success": false,
+          "id": 1778481336103,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "treat",
+          "per": "درمان",
+          "failed": false,
+          "success": false,
+          "id": 1778479929439,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "opinion",
+          "per": "نظر",
+          "failed": false,
+          "success": false,
+          "id": 1778479875068,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "scientific",
+          "per": "علمی",
+          "failed": false,
+          "success": false,
+          "id": 1778479856433,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "cognitive",
+          "per": "شناختی",
+          "failed": false,
+          "success": false,
+          "id": 1778479785593,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "debate",
+          "per": "مناظره",
+          "failed": false,
+          "success": false,
+          "id": 1778479764344,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "spark",
+          "per": "جرقه",
+          "failed": false,
+          "success": false,
+          "id": 1778479730016,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "course",
+          "per": "دوره",
+          "failed": false,
+          "success": false,
+          "id": 1778479695787,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "increasingly",
+          "per": "به طور فزاینده",
+          "failed": false,
+          "success": false,
+          "id": 1778479265692,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "fluent",
+          "per": "روان",
+          "failed": false,
+          "success": false,
+          "id": 1778479150960,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "surveyed",
+          "per": "بررسی کردن",
+          "failed": false,
+          "success": false,
+          "id": 1778479041646,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "conviction",
+          "per": "محکومیت",
+          "failed": false,
+          "success": false,
+          "id": 1778478543704,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "creatures",
+          "per": "موجودات",
+          "failed": false,
+          "success": false,
+          "id": 1778478510893,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "astonishing",
+          "per": "شگفت آور",
+          "failed": false,
+          "success": false,
+          "id": 1778478465235,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "mimicry",
+          "per": "تقلید، ادا در اوردن",
+          "failed": false,
+          "success": false,
+          "id": 1778478282500,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "uncanny",
+          "per": "غیر معمول",
+          "failed": false,
+          "success": false,
+          "id": 1778478188639,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "scepticism",
+          "per": "شک و تردید",
+          "failed": false,
+          "success": false,
+          "id": 1778477966946,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "flattery",
+          "per": "چاپلوسی",
+          "failed": false,
+          "success": false,
+          "id": 1778477891632,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "mutual",
+          "per": "متقابل",
+          "failed": false,
+          "success": false,
+          "id": 1778477876074,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "delightful",
+          "per": "لذت بخش",
+          "failed": false,
+          "success": false,
+          "id": 1778477833754,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "manner",
+          "per": "روش",
+          "failed": false,
+          "success": false,
+          "id": 1778477479447,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "evolutionary",
+          "per": "تکاملی",
+          "failed": false,
+          "success": false,
+          "id": 1778477436989,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "bounced",
+          "per": "بالا گرفتن بحث",
+          "failed": false,
+          "success": false,
+          "id": 1778477390090,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "whirlwind",
+          "per": "گردباد",
+          "failed": false,
+          "success": false,
+          "id": 1778477301118,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "hefty",
+          "per": "سنگین",
+          "failed": false,
+          "id": 1771020423936,
+          "sourceFolderIdx": 4,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "recoup",
+          "per": "جبران",
+          "failed": false,
+          "id": 1771020395906,
+          "sourceFolderIdx": 4,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "indicator",
+          "per": "نشانگر",
+          "failed": false,
+          "id": 1771020326139,
+          "sourceFolderIdx": 4,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "Cons",
+          "per": "معایب",
+          "failed": false,
+          "id": 1771020238196,
+          "sourceFolderIdx": 4,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "amplify",
+          "per": "تقویت کنند",
+          "failed": false,
+          "id": 1771020155448,
+          "sourceFolderIdx": 4,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "implementing",
+          "per": "اجرا کردن",
+          "failed": false,
+          "id": 1771020121916,
+          "sourceFolderIdx": 4,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "core",
+          "per": "هسته",
+          "failed": false,
+          "id": 1771020112507,
+          "sourceFolderIdx": 4,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "outsized",
+          "per": "بزرگتر",
+          "failed": false,
+          "id": 1771020008277,
+          "sourceFolderIdx": 4,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "forgo",
+          "per": "چشم پوشی",
+          "failed": false,
+          "id": 1771019975176,
+          "sourceFolderIdx": 4,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "complexities",
+          "per": "پیچیدگی ها",
+          "failed": false,
+          "id": 1771019854552,
+          "sourceFolderIdx": 4,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "ruin",
+          "per": "خراب کردن",
+          "failed": false,
+          "id": 1771019785786,
+          "sourceFolderIdx": 4,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "diversity",
+          "per": "تنوع",
+          "failed": false,
+          "id": 1771019724537,
+          "sourceFolderIdx": 4,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "Annual",
+          "per": "سالانه",
+          "failed": false,
+          "id": 1771019697927,
+          "sourceFolderIdx": 4,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "lure",
+          "per": "فریب دادن",
+          "failed": false,
+          "id": 1771019677536,
+          "sourceFolderIdx": 4,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "prevents",
+          "per": "جلوگیری می کند",
+          "failed": false,
+          "id": 1771019471020,
+          "sourceFolderIdx": 4,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "relying",
+          "per": "با تکیه",
+          "failed": false,
+          "id": 1771019443889,
+          "sourceFolderIdx": 4,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "conditions",
+          "per": "شرایط",
+          "failed": false,
+          "id": 1771019300041,
+          "sourceFolderIdx": 4,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "specifies",
+          "per": "مشخص می کند",
+          "failed": false,
+          "id": 1771019246989,
+          "sourceFolderIdx": 4,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "able",
+          "per": "قادر است",
+          "failed": false,
+          "id": 1771019103520,
+          "sourceFolderIdx": 4,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "reps",
+          "per": "تکرارها",
+          "failed": false,
+          "id": 1771019024473,
+          "sourceFolderIdx": 4,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "intervention",
+          "per": "مداخله",
+          "failed": false,
+          "id": 1771018991825,
+          "sourceFolderIdx": 4,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "onboarding",
+          "per": "سوار شدن",
+          "failed": false,
+          "id": 1771018849440,
+          "sourceFolderIdx": 4,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "essential",
+          "per": "ضروری",
+          "failed": false,
+          "id": 1771018755283,
+          "sourceFolderIdx": 4,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "hassle",
+          "per": "دردسر",
+          "failed": false,
+          "id": 1771018717087,
+          "sourceFolderIdx": 4,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "frictionless",
+          "per": "بدون اصطکاک",
+          "failed": false,
+          "id": 1771018650578,
+          "sourceFolderIdx": 4,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "evaluate",
+          "per": "ارزیابی کنید",
+          "failed": false,
+          "id": 1771018626020,
+          "sourceFolderIdx": 4,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "Gainsight",
+          "per": "بینایی",
+          "failed": false,
+          "id": 1771018600794,
+          "sourceFolderIdx": 4,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "representative",
+          "per": "نماینده",
+          "failed": false,
+          "id": 1771018549580,
+          "sourceFolderIdx": 4,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "rather",
+          "per": "ترجیها ",
+          "failed": false,
+          "id": 1771018504905,
+          "sourceFolderIdx": 4,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "churn",
+          "per": "سر خوردن",
+          "failed": false,
+          "id": 1771018440899,
+          "sourceFolderIdx": 4,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "profitability",
+          "per": "سودآوری",
+          "failed": false,
+          "id": 1771018423547,
+          "sourceFolderIdx": 4,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "financial",
+          "per": "مالی",
+          "failed": false,
+          "id": 1771018389616,
+          "sourceFolderIdx": 4,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "willingness",
+          "per": "تمایل",
+          "failed": false,
+          "id": 1771018372220,
+          "sourceFolderIdx": 4,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "rising",
+          "per": "در حال افزایش",
+          "failed": false,
+          "id": 1771018347702,
+          "sourceFolderIdx": 4,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "During",
+          "per": "در طول",
+          "failed": false,
+          "id": 1771018281970,
+          "sourceFolderIdx": 4,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "According",
+          "per": "با توجه به",
+          "failed": false,
+          "id": 1771018248906,
+          "sourceFolderIdx": 4,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "Increase",
+          "per": "افزایش دهید",
+          "failed": false,
+          "id": 1771018205600,
+          "sourceFolderIdx": 4,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "Impressions",
+          "per": "برداشت ها",
+          "failed": false,
+          "id": 1771018196868,
+          "sourceFolderIdx": 4,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "shortage",
+          "per": "کمبود",
+          "failed": false,
+          "id": 1771018152451,
+          "sourceFolderIdx": 4,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "barrier",
+          "per": "مانع",
+          "failed": false,
+          "id": 1771018132662,
+          "sourceFolderIdx": 4,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "counterintuitive",
+          "per": "غیر شهودی",
+          "failed": false,
+          "id": 1771018098847,
+          "sourceFolderIdx": 4,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "disastrous",
+          "per": "فاجعه بار",
+          "failed": false,
+          "id": 1771018033907,
+          "sourceFolderIdx": 4,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "ashore",
+          "per": "در ساحل",
+          "failed": false,
+          "id": 1771017930075,
+          "sourceFolderIdx": 4,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "tidal",
+          "per": "جزر و مد",
+          "failed": false,
+          "id": 1771017915874,
+          "sourceFolderIdx": 4,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "through",
+          "per": "از طریق",
+          "failed": false,
+          "id": 1771017897312,
+          "sourceFolderIdx": 4,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "wipe out",
+          "per": "محو کردن",
+          "failed": true,
+          "id": 1771017876760,
+          "sourceFolderIdx": 4,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "disrupting",
+          "per": "مختل کردن",
+          "failed": false,
+          "id": 1771017842641,
+          "sourceFolderIdx": 4,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "Acquisition",
+          "per": "کسب",
+          "failed": false,
+          "id": 1771017801402,
+          "sourceFolderIdx": 4,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "Revenue",
+          "per": "درآمد",
+          "failed": false,
+          "id": 1771017791222,
+          "sourceFolderIdx": 4,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "enduring",
+          "per": "ماندگار",
+          "failed": false,
+          "id": 1771017718079,
+          "sourceFolderIdx": 4,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "beyond",
+          "per": "فراتر از",
+          "failed": false,
+          "id": 1771017691818,
+          "sourceFolderIdx": 4,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "prospects",
+          "per": "چشم انداز",
+          "failed": false,
+          "id": 1771017669645,
+          "sourceFolderIdx": 4,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "demand",
+          "per": "تقاضا",
+          "failed": false,
+          "id": 1771017638189,
+          "sourceFolderIdx": 4,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "communication",
+          "per": "ارتباط",
+          "failed": false,
+          "id": 1771017566994,
+          "sourceFolderIdx": 4,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "internal",
+          "per": "داخلی",
+          "failed": false,
+          "id": 1771017557770,
+          "sourceFolderIdx": 4,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "witnessed",
+          "per": "شاهد بود",
+          "failed": false,
+          "id": 1771017509473,
+          "sourceFolderIdx": 4,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "retain",
+          "per": "حفظ کند",
+          "failed": false,
+          "id": 1771017484349,
+          "sourceFolderIdx": 4,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "acquire",
+          "per": "بدست آوردن",
+          "failed": false,
+          "id": 1771017467715,
+          "sourceFolderIdx": 4,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "relies",
+          "per": "متکی است",
+          "failed": false,
+          "id": 1771017447840,
+          "sourceFolderIdx": 4,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "coined",
+          "per": "ساخته شده است",
+          "failed": false,
+          "id": 1771017398269,
+          "sourceFolderIdx": 4,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "Initially",
+          "per": "در ابتدا",
+          "failed": false,
+          "id": 1771017379642,
+          "sourceFolderIdx": 4,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "irst off",
+          "per": "قبل از هرچیزی",
+          "failed": false,
+          "id": 1771016987419,
+          "sourceFolderIdx": 4,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "PRODUCT",
+          "per": "محصول",
+          "failed": false,
+          "id": 1771016848581,
+          "sourceFolderIdx": 4,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "Peered",
+          "per": "با دقت دیدن",
+          "failed": false,
+          "id": 1770854481504,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "Firmly",
+          "per": "محکم",
+          "failed": false,
+          "id": 1770854432902,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "Wrapped ",
+          "per": "پیچیده شده",
+          "failed": false,
+          "id": 1770854415394,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "Tightly ",
+          "per": "محکم",
+          "failed": false,
+          "id": 1770854404208,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "Braced",
+          "per": "مقاومت جلوی فشار",
+          "failed": false,
+          "id": 1770854380089,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "Accomplish ",
+          "per": "انجام دادن",
+          "failed": false,
+          "id": 1770854297824,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "Thrilled ",
+          "per": "هیجان زده",
+          "failed": true,
+          "id": 1770854242287,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "chaotic",
+          "per": "آشفته",
+          "failed": false,
+          "id": 1770853641186,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "struggle",
+          "per": "مبارزه",
+          "failed": false,
+          "id": 1770853598594,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "affordability",
+          "per": "مقرون به صرفه بودن",
+          "failed": false,
+          "id": 1770853582639,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "due",
+          "per": "به دلیل",
+          "failed": false,
+          "id": 1770853537390,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "folks",
+          "per": "مردمی",
+          "failed": false,
+          "id": 1770853511636,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "sufficiency",
+          "per": "مقدار کافی",
+          "failed": false,
+          "id": 1770853473018,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "cottage",
+          "per": "کلبه",
+          "failed": false,
+          "id": 1770853456992,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "suburbs",
+          "per": "حومه شهر",
+          "failed": false,
+          "id": 1770853443536,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "mediocre",
+          "per": "متوسط",
+          "failed": false,
+          "id": 1770853428258,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "settling",
+          "per": "حل و فصل",
+          "failed": false,
+          "id": 1770853413639,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "pioneered",
+          "per": "پیشگام شد",
+          "failed": false,
+          "id": 1770853376549,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "crumbling",
+          "per": "در حال فرو ریختن",
+          "failed": false,
+          "id": 1770853347191,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "unmoored",
+          "per": "مهار نشده",
+          "failed": false,
+          "id": 1770853328005,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "tend",
+          "per": "تمایل دارند",
+          "failed": false,
+          "id": 1770853272915,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "towards",
+          "per": "به سمت",
+          "failed": false,
+          "id": 1770853205895,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "flirty",
+          "per": "معاشقه",
+          "failed": false,
+          "id": 1770853138491,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "occasions",
+          "per": "مناسبت ها",
+          "failed": false,
+          "id": 1770852794557,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "interaction",
+          "per": "تعامل",
+          "failed": false,
+          "id": 1770852779174,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "intend",
+          "per": "قصد دارند",
+          "failed": false,
+          "id": 1770852765799,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "beyond",
+          "per": "فراتر از",
+          "failed": false,
+          "id": 1770852747125,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "reiterate",
+          "per": "تکرار کنید",
+          "failed": false,
+          "id": 1770852736996,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        }
+      ],
+      "isSystem": true,
+      "id": 0
+    },
+    {
+      "name": "کلمات موفق",
+      "words": [],
+      "isSystem": true,
+      "id": 222
+    },
+    {
+      "name": "تمرین مجدد",
+      "words": [
+        {
+          "eng": "wipe out",
+          "per": "محو کردن",
+          "failed": true,
+          "id": 1771017876760,
+          "sourceFolderIdx": 4,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "Thrilled ",
+          "per": "هیجان زده",
+          "failed": true,
+          "id": 1770854242287,
+          "sourceFolderIdx": 3,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        }
+      ],
+      "isSystem": true,
+      "id": 111
+    },
+    {
+      "name": "جدید",
+      "words": [
+        {
+          "eng": "purchase",
+          "per": "خرید",
+          "failed": false,
+          "success": false,
+          "id": 1781638968186,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "What do you think of",
+          "per": "نظرت چیه راجب …",
+          "failed": false,
+          "success": false,
+          "id": 1781630203830,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "I’m gonna",
+          "per": "من می خواهم",
+          "failed": false,
+          "success": false,
+          "id": 1781630003845,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "gave me",
+          "per": "به من داد",
+          "failed": false,
+          "success": false,
+          "id": 1781629931174,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "Presumed",
+          "per": "فرض شده است",
+          "failed": false,
+          "success": false,
+          "id": 1781579648890,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "prescribed",
+          "per": "تجویز شده است",
+          "failed": false,
+          "success": false,
+          "id": 1781467610235,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "ointment",
+          "per": "پماد",
+          "failed": false,
+          "success": false,
+          "id": 1781467592132,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "daily basis",
+          "per": "به صورت روزانه",
+          "failed": false,
+          "success": false,
+          "id": 1781467409072,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "during",
+          "per": "در طول",
+          "failed": false,
+          "success": false,
+          "id": 1781467377972,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "bowel",
+          "per": "روده",
+          "failed": false,
+          "success": false,
+          "id": 1781467300326,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "constipatio",
+          "per": "یبوست",
+          "failed": false,
+          "success": false,
+          "id": 1781467229207,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "anus",
+          "per": "مقعد",
+          "failed": false,
+          "success": false,
+          "id": 1781467134660,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "instructions",
+          "per": "دستورالعمل ها",
+          "failed": false,
+          "success": false,
+          "id": 1781466721989,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "Reduse",
+          "per": "استفاده مجدد",
+          "failed": false,
+          "success": false,
+          "id": 1781039801065,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "Permanently",
+          "per": "به طور دائم",
+          "failed": false,
+          "success": false,
+          "id": 1781038624654,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "Carrier",
+          "per": "حامل",
+          "failed": false,
+          "success": false,
+          "id": 1781038418085,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "Restrictions",
+          "per": "محدودیت ها",
+          "failed": false,
+          "success": false,
+          "id": 1781038389913,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "Firmware",
+          "per": "سیستم عامل",
+          "failed": false,
+          "success": false,
+          "id": 1781038355040,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "Expired",
+          "per": "منقضی شده است",
+          "failed": false,
+          "success": false,
+          "id": 1781038266887,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "Coverage",
+          "per": "پوشش",
+          "failed": false,
+          "success": false,
+          "id": 1781038246923,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "Preferences",
+          "per": "ترجیحات",
+          "failed": false,
+          "success": false,
+          "id": 1781038219344,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "Overall",
+          "per": "به طور کلی",
+          "failed": false,
+          "success": false,
+          "id": 1781038189715,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "intercept",
+          "per": "رهگیری، جلو گیری کردن",
+          "failed": false,
+          "success": false,
+          "id": 1780216501778,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "provider",
+          "per": "ارائه دهنده",
+          "failed": false,
+          "success": false,
+          "id": 1780216475145,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "relevant",
+          "per": "مربوطه، وابسته",
+          "failed": false,
+          "success": false,
+          "id": 1780216444463,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "entering",
+          "per": "وارد شدن",
+          "failed": false,
+          "success": false,
+          "id": 1780216429441,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "employer",
+          "per": "کارفرما",
+          "failed": false,
+          "success": false,
+          "id": 1780216384531,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "Institutions",
+          "per": "موسسات، نهاد",
+          "failed": false,
+          "success": false,
+          "id": 1780216358825,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "properly",
+          "per": "به درستی",
+          "failed": false,
+          "success": false,
+          "id": 1780216300920,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "function",
+          "per": "تابع، وظیفه داشتن",
+          "failed": false,
+          "success": false,
+          "id": 1780216285729,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "essential",
+          "per": "ضروری است",
+          "failed": false,
+          "success": false,
+          "id": 1780216253726,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "interact",
+          "per": "تعامل داشته باشند",
+          "failed": false,
+          "success": false,
+          "id": 1780216219912,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "Certain",
+          "per": "قطعی",
+          "failed": false,
+          "success": false,
+          "id": 1780216145421,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "Routing",
+          "per": "مسیریابی",
+          "failed": false,
+          "success": false,
+          "id": 1780216109936,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "Tries",
+          "per": "تلاش می کند",
+          "failed": false,
+          "success": false,
+          "id": 1780216034569,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "Cellular",
+          "per": "سلولی",
+          "failed": false,
+          "success": false,
+          "id": 1780215962016,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "Tap",
+          "per": "ضربه بزنید، شیر آب",
+          "failed": false,
+          "success": false,
+          "id": 1780215938853,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "Known",
+          "per": "شناخته شده",
+          "failed": false,
+          "success": false,
+          "id": 1780215828205,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "Across",
+          "per": "در سراسر، در میان",
+          "failed": false,
+          "success": false,
+          "id": 1780215771254,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "Disruption",
+          "per": "اختلال",
+          "failed": false,
+          "success": false,
+          "id": 1780215737361,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "Blazing",
+          "per": "شعله ور",
+          "failed": false,
+          "success": false,
+          "id": 1780215716222,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "Feature",
+          "per": "ویژگی",
+          "failed": false,
+          "success": false,
+          "id": 1780215692244,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "prevent",
+          "per": "جلوگیری کند",
+          "failed": false,
+          "success": false,
+          "id": 1779552223864,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "towel",
+          "per": "حوله",
+          "failed": false,
+          "success": false,
+          "id": 1779552209443,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "thoroughly",
+          "per": "به طور کامل",
+          "failed": false,
+          "success": false,
+          "id": 1779552071593,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "residue",
+          "per": "باقی مانده",
+          "failed": false,
+          "success": false,
+          "id": 1779552055159,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "exact",
+          "per": "دقیق",
+          "failed": false,
+          "success": false,
+          "id": 1779551983783,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "stains",
+          "per": "لکه ها",
+          "failed": false,
+          "success": false,
+          "id": 1779551966314,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "hassle",
+          "per": "دردسر، عذاب دادن",
+          "failed": false,
+          "success": false,
+          "id": 1779551948466,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "rigorously",
+          "per": "به شدت",
+          "failed": false,
+          "success": false,
+          "id": 1779551901245,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "crucially",
+          "per": "بسیار مهم است",
+          "failed": false,
+          "success": false,
+          "id": 1779551877618,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "crack",
+          "per": "شکاف",
+          "failed": false,
+          "success": false,
+          "id": 1779551865363,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "warp",
+          "per": "پیچ و تاب",
+          "failed": false,
+          "success": false,
+          "id": 1779551846079,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "aesthetic",
+          "per": "زیبایی شناختی",
+          "failed": false,
+          "success": false,
+          "id": 1779551764242,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "rustic",
+          "per": "روستایی",
+          "failed": false,
+          "success": false,
+          "id": 1779551753257,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "shed",
+          "per": "ریختن",
+          "failed": false,
+          "success": false,
+          "id": 1779551732318,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "last",
+          "per": "آخرین",
+          "failed": false,
+          "success": false,
+          "id": 1779551674869,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "sustainable",
+          "per": "پایدار",
+          "failed": false,
+          "success": false,
+          "id": 1779551618075,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "exception",
+          "per": "استثنا",
+          "failed": false,
+          "success": false,
+          "id": 1779551527635,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "behaviour",
+          "per": "رفتار",
+          "failed": false,
+          "success": false,
+          "id": 1779551499448,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "tear",
+          "per": "پاره کردن",
+          "failed": false,
+          "success": false,
+          "id": 1779551485729,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "wear",
+          "per": "پوشیدن",
+          "failed": false,
+          "success": false,
+          "id": 1779551474835,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "emotional",
+          "per": "احساسی",
+          "failed": false,
+          "success": false,
+          "id": 1779551460876,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "particularly",
+          "per": "به ویژه",
+          "failed": false,
+          "success": false,
+          "id": 1779551421828,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "accomplished",
+          "per": "انجام شده",
+          "failed": false,
+          "success": false,
+          "id": 1779551312320,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "approx",
+          "per": "تقریبا",
+          "failed": false,
+          "success": false,
+          "id": 1779551287133,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "justify",
+          "per": "توجیه کردن",
+          "failed": false,
+          "success": false,
+          "id": 1779551271181,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "settled",
+          "per": "قرار شد",
+          "failed": false,
+          "success": false,
+          "id": 1779551237664,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "redo",
+          "per": "دوباره انجام دادن",
+          "failed": false,
+          "success": false,
+          "id": 1779551214668,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "demanding",
+          "per": "مطالبه گر، خواستار",
+          "failed": false,
+          "success": false,
+          "id": 1779551190733,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "terse",
+          "per": "مختصر",
+          "failed": false,
+          "success": false,
+          "id": 1779551171473,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "weighing",
+          "per": "وزن کردن",
+          "failed": false,
+          "success": false,
+          "id": 1779551065163,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "irritant",
+          "per": "محرک، دلخراش",
+          "failed": false,
+          "success": false,
+          "id": 1779551032246,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "minor",
+          "per": "جزئی، خرد",
+          "failed": false,
+          "success": false,
+          "id": 1779551007727,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "Although",
+          "per": "هر چند، اگر چه",
+          "failed": false,
+          "success": false,
+          "id": 1779550979581,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "incivility",
+          "per": "بی ادبی",
+          "failed": false,
+          "success": false,
+          "id": 1779550957017,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "Per",
+          "per": "برای، برطبق",
+          "failed": false,
+          "success": false,
+          "id": 1779550939657,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "reliable",
+          "per": "قابل اعتماد",
+          "failed": false,
+          "success": false,
+          "id": 1779550685710,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "rather",
+          "per": "بلکه، ترجیحا",
+          "failed": false,
+          "success": false,
+          "id": 1779550647218,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "slight",
+          "per": "اندک، جزئی",
+          "failed": false,
+          "success": false,
+          "id": 1779550421965,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "fringe",
+          "per": "حاشیه",
+          "failed": false,
+          "success": false,
+          "id": 1779550385606,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "jester",
+          "per": "شوخی",
+          "failed": false,
+          "success": false,
+          "id": 1779550344194,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "fainted",
+          "per": "غش کرد",
+          "failed": false,
+          "success": false,
+          "id": 1779550330084,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "Incidentally",
+          "per": "اتفاقا",
+          "failed": false,
+          "success": false,
+          "id": 1779550216070,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "overuse",
+          "per": "استفاده بیش از حد",
+          "failed": false,
+          "success": false,
+          "id": 1779550205010,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "phrases",
+          "per": "عبارات",
+          "failed": false,
+          "success": false,
+          "id": 1779550173871,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "regrets",
+          "per": "پشیمانی",
+          "failed": false,
+          "success": false,
+          "id": 1779550142297,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "unappealing",
+          "per": "غیر جذاب",
+          "failed": false,
+          "success": false,
+          "id": 1779550105307,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "extinct",
+          "per": "منقرض شده",
+          "failed": false,
+          "success": false,
+          "id": 1779549887150,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "bewildered",
+          "per": "گیج شده، سر در گم",
+          "failed": false,
+          "success": false,
+          "id": 1779549864241,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "reaching",
+          "per": "رسیدن",
+          "failed": false,
+          "success": false,
+          "id": 1779549852225,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "Steady",
+          "per": "استوار",
+          "failed": false,
+          "success": false,
+          "id": 1779549838962,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "Outrage",
+          "per": "حرمت شکنی",
+          "failed": false,
+          "success": false,
+          "id": 1779549676181,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "Rumination",
+          "per": "نشخوار فکری",
+          "failed": false,
+          "success": false,
+          "id": 1779549642457,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "deplore",
+          "per": "ابراز تاسف",
+          "failed": false,
+          "success": false,
+          "id": 1779549630272,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "trait",
+          "per": "ویژگی، خاصیت",
+          "failed": false,
+          "success": false,
+          "id": 1779549615092,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "appeared",
+          "per": "ظاهر شد",
+          "failed": false,
+          "success": false,
+          "id": 1779549553718,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "Creditors",
+          "per": "طلبکاران",
+          "failed": false,
+          "success": false,
+          "id": 1779549511531,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "violently",
+          "per": "با خشونت",
+          "failed": false,
+          "success": false,
+          "id": 1779190578746,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "instincts",
+          "per": "غرایز",
+          "failed": false,
+          "success": false,
+          "id": 1779190562726,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "demarcated",
+          "per": "مرزبندی شده است",
+          "failed": false,
+          "success": false,
+          "id": 1779190518451,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "colonialists",
+          "per": "استعمارگران",
+          "failed": false,
+          "success": false,
+          "id": 1779190424731,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "garment",
+          "per": "لباس",
+          "failed": false,
+          "success": false,
+          "id": 1779190313020,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "swipe",
+          "per": "کش رفتن",
+          "failed": false,
+          "success": false,
+          "id": 1779190263080,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "creature",
+          "per": "موجود، مخلوق، جانور",
+          "failed": false,
+          "success": false,
+          "id": 1779190233763,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "barely",
+          "per": "به سختی",
+          "failed": false,
+          "success": false,
+          "id": 1779190208027,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "heels",
+          "per": "پاشنه پا",
+          "failed": false,
+          "success": false,
+          "id": 1779190192626,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "frightened",
+          "per": "ترسیده",
+          "failed": false,
+          "success": false,
+          "id": 1779190170680,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "nest",
+          "per": "لانه",
+          "failed": false,
+          "success": false,
+          "id": 1779190117420,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "spat",
+          "per": "تف",
+          "failed": false,
+          "success": false,
+          "id": 1779190089439,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "scattered",
+          "per": "پخش کردن، پراکندن",
+          "failed": false,
+          "success": false,
+          "id": 1779190065846,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "ominous",
+          "per": "شوم، بدیمن",
+          "failed": false,
+          "success": false,
+          "id": 1779190011933,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "rebuttal",
+          "per": "تکذیب",
+          "failed": false,
+          "success": false,
+          "id": 1779189454696,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "blades",
+          "per": "تیغه ها",
+          "failed": false,
+          "success": false,
+          "id": 1779189261906,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "stretch",
+          "per": "کشش",
+          "failed": false,
+          "success": false,
+          "id": 1779189236082,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "consecutive",
+          "per": "متوالی",
+          "failed": false,
+          "success": false,
+          "id": 1779189191423,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "deliberate",
+          "per": "عمدی، سنجیدن",
+          "failed": false,
+          "success": false,
+          "id": 1779189152444,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "perform",
+          "per": "انجام دادن",
+          "failed": false,
+          "success": false,
+          "id": 1779189109588,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "literally",
+          "per": "به معنای واقعی کلمه",
+          "failed": false,
+          "success": false,
+          "id": 1779189071023,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "coordination",
+          "per": "هماهنگی",
+          "failed": false,
+          "success": false,
+          "id": 1779189045562,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "genuine",
+          "per": "اصیل",
+          "failed": false,
+          "success": false,
+          "id": 1779189028466,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "satisfying",
+          "per": "راضی کننده",
+          "failed": false,
+          "success": false,
+          "id": 1779189005410,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "regarded",
+          "per": "در نظر گرفته شده است",
+          "failed": false,
+          "success": false,
+          "id": 1778944318219,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "conveying",
+          "per": "انتقال دادن",
+          "failed": false,
+          "success": false,
+          "id": 1778944130643,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "association",
+          "per": "انجمن",
+          "failed": false,
+          "success": false,
+          "id": 1778944098000,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "desirable",
+          "per": "مطلوب",
+          "failed": false,
+          "success": false,
+          "id": 1778943502313,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "appear",
+          "per": "ظاهر شود",
+          "failed": false,
+          "success": false,
+          "id": 1778943482097,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "heard",
+          "per": "شنیده شد",
+          "failed": false,
+          "success": false,
+          "id": 1778943327998,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "uptick",
+          "per": "بالا بردن",
+          "failed": false,
+          "success": false,
+          "id": 1778943309521,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "Exclaimed",
+          "per": "اعلام کردن",
+          "failed": false,
+          "success": false,
+          "id": 1778866664673,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "tight",
+          "per": "تنگ",
+          "failed": false,
+          "success": false,
+          "id": 1778866595407,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "briefcases",
+          "per": "کیف ها، کیف اسناد",
+          "failed": false,
+          "success": false,
+          "id": 1778866494047,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "crowds",
+          "per": "جمعیت",
+          "failed": false,
+          "success": false,
+          "id": 1778866464602,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "doomers",
+          "per": "محکومان",
+          "failed": false,
+          "success": false,
+          "id": 1778866432751,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "shivering",
+          "per": "لرزیدن",
+          "failed": false,
+          "success": false,
+          "id": 1778866411753,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "lining up",
+          "per": "ردیف کردن",
+          "failed": false,
+          "success": false,
+          "id": 1778866373463,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "perfidy",
+          "per": "خیانت",
+          "failed": false,
+          "success": false,
+          "id": 1778866322531,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "versus",
+          "per": "در مقابل",
+          "failed": false,
+          "success": false,
+          "id": 1778866305840,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "corporate",
+          "per": "بصورت شرکت درامده",
+          "failed": false,
+          "success": false,
+          "id": 1778866282020,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "clash",
+          "per": "برخورد",
+          "failed": false,
+          "success": false,
+          "id": 1778866256496,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "driest",
+          "per": "خشک ترین",
+          "failed": false,
+          "success": false,
+          "id": 1778866239340,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "enriching",
+          "per": "غنی کردن",
+          "failed": false,
+          "success": false,
+          "id": 1778866220393,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "swindling",
+          "per": "کلاهبرداری",
+          "failed": false,
+          "success": false,
+          "id": 1778866186394,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "deceiving",
+          "per": "فریب دادن",
+          "failed": false,
+          "success": false,
+          "id": 1778866177658,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "trial",
+          "per": "محاکمه",
+          "failed": false,
+          "success": false,
+          "id": 1778866158396,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "attorney",
+          "per": "وکیل",
+          "failed": false,
+          "success": false,
+          "id": 1778866132082,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "griped",
+          "per": "چنگ زد، گله کردن",
+          "failed": false,
+          "success": false,
+          "id": 1778866116322,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "spectacle",
+          "per": "تماشایی",
+          "failed": false,
+          "success": false,
+          "id": 1778866070789,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "unique",
+          "per": "منحصر به فرد",
+          "failed": false,
+          "success": false,
+          "id": 1778866060835,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "spectrum",
+          "per": "طیف",
+          "failed": false,
+          "success": false,
+          "id": 1778866026818,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "artificial",
+          "per": "مصنوعی",
+          "failed": false,
+          "success": false,
+          "id": 1778866001155,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "stern",
+          "per": "سختگیر",
+          "failed": false,
+          "success": false,
+          "id": 1778865964223,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "protests",
+          "per": "اعتراضات",
+          "failed": false,
+          "success": false,
+          "id": 1778865953117,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "petty",
+          "per": "خرده پا، غیر قابل ملاحظه",
+          "failed": false,
+          "success": false,
+          "id": 1778865940976,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "ditching",
+          "per": "خندق",
+          "failed": false,
+          "success": false,
+          "id": 1778865878265,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "urging",
+          "per": "اصرار",
+          "failed": false,
+          "success": false,
+          "id": 1778865797967,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "specific",
+          "per": "خاص",
+          "failed": false,
+          "success": false,
+          "id": 1778865735043,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "ensuring",
+          "per": "تضمین می کند",
+          "failed": false,
+          "success": false,
+          "id": 1778865653348,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "principle",
+          "per": "اصل، منشاء",
+          "failed": false,
+          "success": false,
+          "id": 1778865634213,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "robust",
+          "per": "قوی، تنومند",
+          "failed": false,
+          "success": false,
+          "id": 1778865611592,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "alongside",
+          "per": "در کنار",
+          "failed": false,
+          "success": false,
+          "id": 1778865587043,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "prominent",
+          "per": "برجسته",
+          "failed": false,
+          "success": false,
+          "id": 1778865543512,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "breached",
+          "per": "نقض شده است",
+          "failed": false,
+          "success": false,
+          "id": 1778865518980,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "individuals",
+          "per": "افراد",
+          "failed": false,
+          "success": false,
+          "id": 1778865487551,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "mitigate",
+          "per": "تسکین دادن",
+          "failed": false,
+          "success": false,
+          "id": 1778865471651,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "relating",
+          "per": "گزارش دادن",
+          "failed": false,
+          "success": false,
+          "id": 1778865446087,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "measures",
+          "per": "اقدامات، سنجیدن",
+          "failed": false,
+          "success": false,
+          "id": 1778865421517,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "proportionate",
+          "per": "متناسب",
+          "failed": false,
+          "success": false,
+          "id": 1778865392811,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "cited",
+          "per": "استناد شده است",
+          "failed": false,
+          "success": false,
+          "id": 1778865374156,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "efficacy",
+          "per": "اثربخشی",
+          "failed": false,
+          "success": false,
+          "id": 1778865351532,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "restricted",
+          "per": "محدود شده است",
+          "failed": false,
+          "success": false,
+          "id": 1778865311608,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "voluntarily",
+          "per": "به طور داوطلبانه",
+          "failed": false,
+          "success": false,
+          "id": 1778865299092,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "beneath",
+          "per": "در زیر",
+          "failed": false,
+          "success": false,
+          "id": 1778865264377,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "executive",
+          "per": "اجرایی",
+          "failed": false,
+          "success": false,
+          "id": 1778865195793,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "screeds",
+          "per": "درد دل",
+          "failed": false,
+          "success": false,
+          "id": 1778865153397,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "circumvent",
+          "per": "دور زدن افراد",
+          "failed": false,
+          "success": false,
+          "id": 1778865120440,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "accessed",
+          "per": "دسترسی پیدا کرد",
+          "failed": false,
+          "success": false,
+          "id": 1778865024122,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "significant",
+          "per": "قابل توجه است",
+          "failed": false,
+          "success": false,
+          "id": 1778865008209,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "operator",
+          "per": "اعامل",
+          "failed": false,
+          "success": false,
+          "id": 1778864987449,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "regulator",
+          "per": "تنظیم کننده",
+          "failed": false,
+          "success": false,
+          "id": 1778864946403,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "associated",
+          "per": "مرتبط است",
+          "failed": false,
+          "success": false,
+          "id": 1778864915856,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "breaching",
+          "per": "نقض",
+          "failed": false,
+          "success": false,
+          "id": 1778864883105,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "denied",
+          "per": "تکذیب کرد",
+          "failed": false,
+          "success": false,
+          "id": 1778864868982,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "commitment",
+          "per": "تعهد",
+          "failed": false,
+          "success": false,
+          "id": 1778689917959,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "engagement",
+          "per": "نامزدی",
+          "failed": false,
+          "success": false,
+          "id": 1778689892757,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "utility",
+          "per": "سودمندی",
+          "failed": false,
+          "success": false,
+          "id": 1778689738788,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "Rugged",
+          "per": "ناهموار",
+          "failed": false,
+          "success": false,
+          "id": 1778689710980,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "chore",
+          "per": "کار سخت",
+          "failed": false,
+          "success": false,
+          "id": 1778689697242,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "denim",
+          "per": "پارچه جین",
+          "failed": false,
+          "success": false,
+          "id": 1778689650523,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "tasteful",
+          "per": "خوش سلیقه",
+          "failed": false,
+          "success": false,
+          "id": 1778689531228,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "slightly",
+          "per": "کمی",
+          "failed": false,
+          "success": false,
+          "id": 1778580640207,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "emphatically",
+          "per": "با تاکید",
+          "failed": false,
+          "success": false,
+          "id": 1778580194380,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "Brat",
+          "per": "بچه لوس",
+          "failed": false,
+          "success": false,
+          "id": 1778578186821,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "Peered",
+          "per": "با دقت دیدن",
+          "failed": false,
+          "id": 1770854481504,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "Firmly",
+          "per": "محکم",
+          "failed": false,
+          "id": 1770854432902,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "Wrapped ",
+          "per": "پیچیده شده",
+          "failed": false,
+          "id": 1770854415394,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "Tightly ",
+          "per": "محکم",
+          "failed": false,
+          "id": 1770854404208,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "Braced",
+          "per": "مقاومت جلوی فشار",
+          "failed": false,
+          "id": 1770854380089,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "Accomplish ",
+          "per": "انجام دادن",
+          "failed": false,
+          "id": 1770854297824,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "Thrilled ",
+          "per": "هیجان زده",
+          "failed": true,
+          "id": 1770854242287,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "chaotic",
+          "per": "آشفته",
+          "failed": false,
+          "id": 1770853641186,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "struggle",
+          "per": "مبارزه",
+          "failed": false,
+          "id": 1770853598594,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "affordability",
+          "per": "مقرون به صرفه بودن",
+          "failed": false,
+          "id": 1770853582639,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "due",
+          "per": "به دلیل",
+          "failed": false,
+          "id": 1770853537390,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "folks",
+          "per": "مردمی",
+          "failed": false,
+          "id": 1770853511636,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "sufficiency",
+          "per": "مقدار کافی",
+          "failed": false,
+          "id": 1770853473018,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "cottage",
+          "per": "کلبه",
+          "failed": false,
+          "id": 1770853456992,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "suburbs",
+          "per": "حومه شهر",
+          "failed": false,
+          "id": 1770853443536,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "mediocre",
+          "per": "متوسط",
+          "failed": false,
+          "id": 1770853428258,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "settling",
+          "per": "حل و فصل",
+          "failed": false,
+          "id": 1770853413639,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "pioneered",
+          "per": "پیشگام شد",
+          "failed": false,
+          "id": 1770853376549,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "crumbling",
+          "per": "در حال فرو ریختن",
+          "failed": false,
+          "id": 1770853347191,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "unmoored",
+          "per": "مهار نشده",
+          "failed": false,
+          "id": 1770853328005,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "tend",
+          "per": "تمایل دارند",
+          "failed": false,
+          "id": 1770853272915,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "towards",
+          "per": "به سمت",
+          "failed": false,
+          "id": 1770853205895,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "flirty",
+          "per": "معاشقه",
+          "failed": false,
+          "id": 1770853138491,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "occasions",
+          "per": "مناسبت ها",
+          "failed": false,
+          "id": 1770852794557,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "interaction",
+          "per": "تعامل",
+          "failed": false,
+          "id": 1770852779174,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "intend",
+          "per": "قصد دارند",
+          "failed": false,
+          "id": 1770852765799,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "beyond",
+          "per": "فراتر از",
+          "failed": false,
+          "id": 1770852747125,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "reiterate",
+          "per": "تکرار کنید",
+          "failed": false,
+          "id": 1770852736996,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "unvarnished",
+          "per": "بدون لاک، بی جلا",
+          "failed": false,
+          "success": false,
+          "id": 1778577857072,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "viral",
+          "per": "ویروسی",
+          "failed": false,
+          "success": false,
+          "id": 1778577808697,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "buffet",
+          "per": "بوفه",
+          "failed": false,
+          "success": false,
+          "id": 1778577753141,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "insight",
+          "per": "بینش",
+          "failed": false,
+          "success": false,
+          "id": 1778520451267,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "appreciate",
+          "per": "قدردانی",
+          "failed": false,
+          "success": false,
+          "id": 1778520432834,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "emphatic",
+          "per": "تاکید شده",
+          "failed": false,
+          "success": false,
+          "id": 1778520338204,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "facsimile",
+          "per": "رونوشت",
+          "failed": false,
+          "success": false,
+          "id": 1778520293955,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "pale",
+          "per": "پژمرده",
+          "failed": false,
+          "success": false,
+          "id": 1778520272523,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "resemblance",
+          "per": "شباهت",
+          "failed": false,
+          "success": false,
+          "id": 1778520227007,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "proportion",
+          "per": "نسبت",
+          "failed": false,
+          "success": false,
+          "id": 1778520125132,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "sizeable",
+          "per": "قابل ملاحظه",
+          "failed": false,
+          "success": false,
+          "id": 1778520114028,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "endure",
+          "per": "تحمل کردن",
+          "failed": false,
+          "success": false,
+          "id": 1778520088735,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "torment",
+          "per": "عذاب",
+          "failed": false,
+          "success": false,
+          "id": 1778520020587,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "intensity",
+          "per": "شدت",
+          "failed": false,
+          "success": false,
+          "id": 1778520008107,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "sheer",
+          "per": "محض، مطلق",
+          "failed": false,
+          "success": false,
+          "id": 1778519989279,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "variety",
+          "per": "تنوع",
+          "failed": false,
+          "success": false,
+          "id": 1778519959585,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "assignments",
+          "per": "ماموریت",
+          "failed": false,
+          "success": false,
+          "id": 1778519938519,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "simplicity",
+          "per": "سادگی",
+          "failed": false,
+          "success": false,
+          "id": 1778519915335,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "apparent",
+          "per": "آشکار",
+          "failed": false,
+          "success": false,
+          "id": 1778519898881,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "despite",
+          "per": "با اینکه",
+          "failed": false,
+          "success": false,
+          "id": 1778519880854,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "tale",
+          "per": "داستان",
+          "failed": false,
+          "success": false,
+          "id": 1778519854151,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "utopia",
+          "per": "دولت یا کشور کامل و ایده الی",
+          "failed": false,
+          "success": false,
+          "id": 1778519824611,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "massive",
+          "per": "عظیم",
+          "failed": false,
+          "success": false,
+          "id": 1778519770979,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "identical",
+          "per": "یکسان",
+          "failed": false,
+          "success": false,
+          "id": 1778519741653,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "certainly",
+          "per": "قطعا",
+          "failed": false,
+          "success": false,
+          "id": 1778519676532,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "eluded",
+          "per": "فرار کرد، طفره رفتن",
+          "failed": false,
+          "success": false,
+          "id": 1778519633515,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "escalated",
+          "per": "تشدید شد",
+          "failed": false,
+          "success": false,
+          "id": 1778519578358,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "Dependence",
+          "per": "وابستگی",
+          "failed": false,
+          "success": false,
+          "id": 1778491836691,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "Punctuality",
+          "per": "وقت شناسی",
+          "failed": false,
+          "success": false,
+          "id": 1778491789281,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "Throat",
+          "per": "گلو",
+          "failed": false,
+          "success": false,
+          "id": 1778491758639,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "Contribute",
+          "per": "مشارکت کردن",
+          "failed": false,
+          "success": false,
+          "id": 1778491739263,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "Oral",
+          "per": "دهانی",
+          "failed": false,
+          "success": false,
+          "id": 1778491676985,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "divulged",
+          "per": "فاش کردن",
+          "failed": false,
+          "success": false,
+          "id": 1778484506594,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "concealing",
+          "per": "پنهان کردن",
+          "failed": false,
+          "success": false,
+          "id": 1778484461954,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "feasible",
+          "per": "امکان پذیر",
+          "failed": false,
+          "success": false,
+          "id": 1778484438018,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "addiction",
+          "per": "اعتیاد",
+          "failed": false,
+          "success": false,
+          "id": 1778484402477,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "explosive",
+          "per": "مواد منفجره",
+          "failed": false,
+          "success": false,
+          "id": 1778484387804,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "refined",
+          "per": "تصفیه شده",
+          "failed": false,
+          "success": false,
+          "id": 1778484346989,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "further",
+          "per": "بیشتر",
+          "failed": false,
+          "success": false,
+          "id": 1778484327019,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "commonly",
+          "per": "معمولا",
+          "failed": false,
+          "success": false,
+          "id": 1778484294817,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "intention",
+          "per": "قصد",
+          "failed": false,
+          "success": false,
+          "id": 1778484043207,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "popping up",
+          "per": "ظاهر شدن",
+          "failed": false,
+          "success": false,
+          "id": 1778483957340,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "itching",
+          "per": "خارش",
+          "failed": false,
+          "success": false,
+          "id": 1778483923320,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "secrecy",
+          "per": "رازداری",
+          "failed": false,
+          "success": false,
+          "id": 1778483895604,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "burden",
+          "per": "بار مسئوليت",
+          "failed": false,
+          "success": false,
+          "id": 1778483881836,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "familiar",
+          "per": "آشنا",
+          "failed": false,
+          "success": false,
+          "id": 1778483849606,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "conceal",
+          "per": "پنهان کردن",
+          "failed": false,
+          "success": false,
+          "id": 1778483770361,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "gossip",
+          "per": "شایعات",
+          "failed": false,
+          "success": false,
+          "id": 1778483734403,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "juicy",
+          "per": "باطراوت",
+          "failed": false,
+          "success": false,
+          "id": 1778483713104,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "anticipation",
+          "per": "پیش بینی",
+          "failed": false,
+          "success": false,
+          "id": 1778483684155,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "dismay",
+          "per": "ناراحتی",
+          "failed": false,
+          "success": false,
+          "id": 1778483668964,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "gleeful",
+          "per": "خوشحال",
+          "failed": false,
+          "success": false,
+          "id": 1778483650679,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "purely",
+          "per": "صرفا",
+          "failed": false,
+          "success": false,
+          "id": 1778483275217,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "embarked",
+          "per": "سوار شد، شروع کردن",
+          "failed": false,
+          "success": false,
+          "id": 1778483261261,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "approach",
+          "per": "رویکرد",
+          "failed": false,
+          "success": false,
+          "id": 1778483098868,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "thrilled",
+          "per": "هیجان زده",
+          "failed": false,
+          "success": false,
+          "id": 1778483072073,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "despise",
+          "per": "تحقیر کردن",
+          "failed": false,
+          "success": false,
+          "id": 1778482988817,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "retreat",
+          "per": "عقب نشینی",
+          "failed": false,
+          "success": false,
+          "id": 1778482871850,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "precedents",
+          "per": "سوابق",
+          "failed": false,
+          "success": false,
+          "id": 1778482795259,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "literary",
+          "per": "ادبی",
+          "failed": false,
+          "success": false,
+          "id": 1778482775973,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "appears",
+          "per": "ظاهر شدن",
+          "failed": false,
+          "success": false,
+          "id": 1778481887943,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "semicircular",
+          "per": "نیم دایره",
+          "failed": false,
+          "success": false,
+          "id": 1778481837064,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "halves",
+          "per": "نیمه ها",
+          "failed": false,
+          "success": false,
+          "id": 1778481785250,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "skewered",
+          "per": "سیخ زده",
+          "failed": false,
+          "success": false,
+          "id": 1778481765364,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "Ember",
+          "per": "خاکستر گرم",
+          "failed": false,
+          "success": false,
+          "id": 1778481727422,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "dine",
+          "per": "شام خوردن",
+          "failed": false,
+          "success": false,
+          "id": 1778481687699,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "brutally",
+          "per": "به طرز وحشیانه ای",
+          "failed": false,
+          "success": false,
+          "id": 1778481585121,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "fraction",
+          "per": "کسر شدن",
+          "failed": false,
+          "success": false,
+          "id": 1778481555534,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "leather",
+          "per": "چرم",
+          "failed": false,
+          "success": false,
+          "id": 1778481476275,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "magenta",
+          "per": "سرخابی",
+          "failed": false,
+          "success": false,
+          "id": 1778481462491,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "offended",
+          "per": "توهین شده",
+          "failed": false,
+          "success": false,
+          "id": 1778481336103,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "treat",
+          "per": "درمان",
+          "failed": false,
+          "success": false,
+          "id": 1778479929439,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "opinion",
+          "per": "نظر",
+          "failed": false,
+          "success": false,
+          "id": 1778479875068,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "scientific",
+          "per": "علمی",
+          "failed": false,
+          "success": false,
+          "id": 1778479856433,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "cognitive",
+          "per": "شناختی",
+          "failed": false,
+          "success": false,
+          "id": 1778479785593,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "debate",
+          "per": "مناظره",
+          "failed": false,
+          "success": false,
+          "id": 1778479764344,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "spark",
+          "per": "جرقه",
+          "failed": false,
+          "success": false,
+          "id": 1778479730016,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "course",
+          "per": "دوره",
+          "failed": false,
+          "success": false,
+          "id": 1778479695787,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "increasingly",
+          "per": "به طور فزاینده",
+          "failed": false,
+          "success": false,
+          "id": 1778479265692,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "fluent",
+          "per": "روان",
+          "failed": false,
+          "success": false,
+          "id": 1778479150960,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "surveyed",
+          "per": "بررسی کردن",
+          "failed": false,
+          "success": false,
+          "id": 1778479041646,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "conviction",
+          "per": "محکومیت",
+          "failed": false,
+          "success": false,
+          "id": 1778478543704,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "creatures",
+          "per": "موجودات",
+          "failed": false,
+          "success": false,
+          "id": 1778478510893,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "astonishing",
+          "per": "شگفت آور",
+          "failed": false,
+          "success": false,
+          "id": 1778478465235,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "mimicry",
+          "per": "تقلید، ادا در اوردن",
+          "failed": false,
+          "success": false,
+          "id": 1778478282500,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "uncanny",
+          "per": "غیر معمول",
+          "failed": false,
+          "success": false,
+          "id": 1778478188639,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "scepticism",
+          "per": "شک و تردید",
+          "failed": false,
+          "success": false,
+          "id": 1778477966946,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "flattery",
+          "per": "چاپلوسی",
+          "failed": false,
+          "success": false,
+          "id": 1778477891632,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "mutual",
+          "per": "متقابل",
+          "failed": false,
+          "success": false,
+          "id": 1778477876074,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "delightful",
+          "per": "لذت بخش",
+          "failed": false,
+          "success": false,
+          "id": 1778477833754,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "manner",
+          "per": "روش",
+          "failed": false,
+          "success": false,
+          "id": 1778477479447,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "evolutionary",
+          "per": "تکاملی",
+          "failed": false,
+          "success": false,
+          "id": 1778477436989,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "bounced",
+          "per": "بالا گرفتن بحث",
+          "failed": false,
+          "success": false,
+          "id": 1778477390090,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "whirlwind",
+          "per": "گردباد",
+          "failed": false,
+          "success": false,
+          "id": 1778477301118,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        }
+      ],
+      "id": 1770852725798,
+      "updated_at": 1781648676490,
+      "isPhrase": false
+    },
+    {
+      "name": "PLG",
+      "words": [
+        {
+          "eng": "hefty",
+          "per": "سنگین",
+          "failed": false,
+          "id": 1771020423936,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "recoup",
+          "per": "جبران",
+          "failed": false,
+          "id": 1771020395906,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "indicator",
+          "per": "نشانگر",
+          "failed": false,
+          "id": 1771020326139,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "Cons",
+          "per": "معایب",
+          "failed": false,
+          "id": 1771020238196,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "amplify",
+          "per": "تقویت کنند",
+          "failed": false,
+          "id": 1771020155448,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "implementing",
+          "per": "اجرا کردن",
+          "failed": false,
+          "id": 1771020121916,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "core",
+          "per": "هسته",
+          "failed": false,
+          "id": 1771020112507,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "outsized",
+          "per": "بزرگتر",
+          "failed": false,
+          "id": 1771020008277,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "forgo",
+          "per": "چشم پوشی",
+          "failed": false,
+          "id": 1771019975176,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "complexities",
+          "per": "پیچیدگی ها",
+          "failed": false,
+          "id": 1771019854552,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "ruin",
+          "per": "خراب کردن",
+          "failed": false,
+          "id": 1771019785786,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "diversity",
+          "per": "تنوع",
+          "failed": false,
+          "id": 1771019724537,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "Annual",
+          "per": "سالانه",
+          "failed": false,
+          "id": 1771019697927,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "lure",
+          "per": "فریب دادن",
+          "failed": false,
+          "id": 1771019677536,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "prevents",
+          "per": "جلوگیری می کند",
+          "failed": false,
+          "id": 1771019471020,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "relying",
+          "per": "با تکیه",
+          "failed": false,
+          "id": 1771019443889,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "conditions",
+          "per": "شرایط",
+          "failed": false,
+          "id": 1771019300041,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "specifies",
+          "per": "مشخص می کند",
+          "failed": false,
+          "id": 1771019246989,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "able",
+          "per": "قادر است",
+          "failed": false,
+          "id": 1771019103520,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "reps",
+          "per": "تکرارها",
+          "failed": false,
+          "id": 1771019024473,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "intervention",
+          "per": "مداخله",
+          "failed": false,
+          "id": 1771018991825,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "onboarding",
+          "per": "سوار شدن",
+          "failed": false,
+          "id": 1771018849440,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "essential",
+          "per": "ضروری",
+          "failed": false,
+          "id": 1771018755283,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "hassle",
+          "per": "دردسر",
+          "failed": false,
+          "id": 1771018717087,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "frictionless",
+          "per": "بدون اصطکاک",
+          "failed": false,
+          "id": 1771018650578,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "evaluate",
+          "per": "ارزیابی کنید",
+          "failed": false,
+          "id": 1771018626020,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "Gainsight",
+          "per": "بینایی",
+          "failed": false,
+          "id": 1771018600794,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "representative",
+          "per": "نماینده",
+          "failed": false,
+          "id": 1771018549580,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "rather",
+          "per": "ترجیها ",
+          "failed": false,
+          "id": 1771018504905,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "churn",
+          "per": "سر خوردن",
+          "failed": false,
+          "id": 1771018440899,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "profitability",
+          "per": "سودآوری",
+          "failed": false,
+          "id": 1771018423547,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "financial",
+          "per": "مالی",
+          "failed": false,
+          "id": 1771018389616,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "willingness",
+          "per": "تمایل",
+          "failed": false,
+          "id": 1771018372220,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "rising",
+          "per": "در حال افزایش",
+          "failed": false,
+          "id": 1771018347702,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "During",
+          "per": "در طول",
+          "failed": false,
+          "id": 1771018281970,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "According",
+          "per": "با توجه به",
+          "failed": false,
+          "id": 1771018248906,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "Increase",
+          "per": "افزایش دهید",
+          "failed": false,
+          "id": 1771018205600,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "Impressions",
+          "per": "برداشت ها",
+          "failed": false,
+          "id": 1771018196868,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "shortage",
+          "per": "کمبود",
+          "failed": false,
+          "id": 1771018152451,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "barrier",
+          "per": "مانع",
+          "failed": false,
+          "id": 1771018132662,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "counterintuitive",
+          "per": "غیر شهودی",
+          "failed": false,
+          "id": 1771018098847,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "disastrous",
+          "per": "فاجعه بار",
+          "failed": false,
+          "id": 1771018033907,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "ashore",
+          "per": "در ساحل",
+          "failed": false,
+          "id": 1771017930075,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "tidal",
+          "per": "جزر و مد",
+          "failed": false,
+          "id": 1771017915874,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "through",
+          "per": "از طریق",
+          "failed": false,
+          "id": 1771017897312,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "wipe out",
+          "per": "محو کردن",
+          "failed": true,
+          "id": 1771017876760,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "disrupting",
+          "per": "مختل کردن",
+          "failed": false,
+          "id": 1771017842641,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "Acquisition",
+          "per": "کسب",
+          "failed": false,
+          "id": 1771017801402,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "Revenue",
+          "per": "درآمد",
+          "failed": false,
+          "id": 1771017791222,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "enduring",
+          "per": "ماندگار",
+          "failed": false,
+          "id": 1771017718079,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "beyond",
+          "per": "فراتر از",
+          "failed": false,
+          "id": 1771017691818,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "prospects",
+          "per": "چشم انداز",
+          "failed": false,
+          "id": 1771017669645,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "demand",
+          "per": "تقاضا",
+          "failed": false,
+          "id": 1771017638189,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "communication",
+          "per": "ارتباط",
+          "failed": false,
+          "id": 1771017566994,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "internal",
+          "per": "داخلی",
+          "failed": false,
+          "id": 1771017557770,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "witnessed",
+          "per": "شاهد بود",
+          "failed": false,
+          "id": 1771017509473,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "retain",
+          "per": "حفظ کند",
+          "failed": false,
+          "id": 1771017484349,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "acquire",
+          "per": "بدست آوردن",
+          "failed": false,
+          "id": 1771017467715,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "relies",
+          "per": "متکی است",
+          "failed": false,
+          "id": 1771017447840,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "coined",
+          "per": "ساخته شده است",
+          "failed": false,
+          "id": 1771017398269,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "Initially",
+          "per": "در ابتدا",
+          "failed": false,
+          "id": 1771017379642,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "irst off",
+          "per": "قبل از هرچیزی",
+          "failed": false,
+          "id": 1771016987419,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        },
+        {
+          "eng": "PRODUCT",
+          "per": "محصول",
+          "failed": false,
+          "id": 1771016848581,
+          "updated_at": 1781648676490,
+          "isPhrase": false
+        }
+      ],
+      "id": 1771016826683,
+      "updated_at": 1781648676490,
+      "isPhrase": false
+    }
+  ],
+  "settings": {
+    "targetLang": "en"
+  }
+}

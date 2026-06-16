@@ -241,18 +241,12 @@ export const syncData = async (localData, user) => {
         // 7. Execute cloud upserts
         if (foldersToUpsert.length > 0) {
             const { error: upFoldErr } = await supabase.from('folders').upsert(foldersToUpsert);
-            if (upFoldErr) {
-                console.error("Error upserting folders to cloud:", upFoldErr);
-                alert("خطا در آپلود مجموعه‌ها: " + JSON.stringify(upFoldErr));
-            }
+            if (upFoldErr) console.error("Error upserting folders to cloud:", upFoldErr);
         }
 
         if (wordsToUpsert.length > 0) {
             const { error: upWordErr } = await supabase.from('words').upsert(wordsToUpsert);
-            if (upWordErr) {
-                console.error("Error upserting words to cloud:", upWordErr);
-                alert("خطا در آپلود کلمات: " + JSON.stringify(upWordErr));
-            }
+            if (upWordErr) console.error("Error upserting words to cloud:", upWordErr);
         }
 
         // 8. Update synchronization timestamp
@@ -263,7 +257,6 @@ export const syncData = async (localData, user) => {
 
     } catch (err) {
         console.error('Sync error:', err);
-        alert('خطای عمومی همگام‌سازی: ' + err.message);
     }
 
     return localData;
