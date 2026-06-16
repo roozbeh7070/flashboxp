@@ -110,8 +110,9 @@ export const folderMethods = {
             folder.words.forEach(w => this.data.deletedWordIds.push(w.id));
         }
         this.data.folders.splice(this.activeIdx, 1);
+        this.activeIdx = null;
         this.save();
-        this.closeScreen('word-screen');
+        this.goHome();
         this.closeModal();
     }
 };
