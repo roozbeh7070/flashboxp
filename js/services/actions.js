@@ -289,13 +289,41 @@ export const actionMethods = {
         if (!this.tempImportData) return;
         
         const systemFolderIds = [0, 111, 222, 300, 311, 322];
+        const now = Date.now();
 
         if (mode === 'replace') {
+            // Mark all existing regular folders and their words as deleted so they get deleted from Supabase on sync
+            this.data.deletedFolderIds = this.data.deletedFolderIds || [];
+            this.data.deletedWordIds = this.data.deletedWordIds || [];
+            
+            this.data.folders.forEach(f => {
+                if (!f.isSystem) {
+                    this.data.deletedFolderIds.push(f.id);
+                    if (f.words) {
+                        f.words.forEach(w => {
+                            this.data.deletedWordIds.push(w.id);
+                        });
+                    }
+                }
+            });
+
             const currentSystemFolders = this.data.folders.filter(f => systemFolderIds.includes(f.id));
             currentSystemFolders.forEach(f => f.words = []);
 
             const newRegularFolders = (this.tempImportData.folders || []).filter(f => !systemFolderIds.includes(f.id));
             
+            // Ensure all imported folders and words have updated_at = now
+            newRegularFolders.forEach(f => {
+                f.updated_at = now;
+                f.isPhrase = f.isPhrase === true;
+                if (f.words) {
+                    f.words.forEach(w => {
+                        w.updated_at = now;
+                        w.isPhrase = w.isPhrase === true;
+                    });
+                }
+            });
+
             this.data.folders = [...currentSystemFolders, ...newRegularFolders];
             if (this.tempImportData.settings) {
                 this.data.settings = this.tempImportData.settings;
@@ -307,12 +335,23 @@ export const actionMethods = {
                 
                 const existingFolder = this.data.folders.find(f => f.name === newFolder.name && !f.isSystem);
                 if (existingFolder) {
+                    existingFolder.updated_at = now;
                     newFolder.words.forEach(newWord => {
                         if (!existingFolder.words.some(w => w.eng.toLowerCase() === newWord.eng.toLowerCase())) {
+                            newWord.updated_at = now;
+                            newWord.isPhrase = newWord.isPhrase === true;
                             existingFolder.words.push(newWord);
                         }
                     });
                 } else {
+                    newFolder.updated_at = now;
+                    newFolder.isPhrase = newFolder.isPhrase === true;
+                    if (newFolder.words) {
+                        newFolder.words.forEach(w => {
+                            w.updated_at = now;
+                            w.isPhrase = w.isPhrase === true;
+                        });
+                    }
                     this.data.folders.push(newFolder);
                 }
             });
