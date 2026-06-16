@@ -42,6 +42,13 @@ class FlashcardApp {
             await this.triggerSync();
         }
 
+        // Automatic synchronization when connection is restored
+        window.addEventListener('online', () => {
+            if (this.user) {
+                this.triggerSync();
+            }
+        });
+
         // Hide Persian mic button in Safari as it's not supported
         if (utils.isSafari()) {
             const perMicBtn = document.getElementById('per-mic-btn');
@@ -651,8 +658,7 @@ class FlashcardApp {
         await utils.pasteFromClipboard(id);
     }
 
-    startVoiceInput(inputId, lang) {
-        const btn = event.currentTarget;
+    startVoiceInput(btn, inputId, lang) {
         const icon = btn.querySelector('i');
         icon.classList.replace('fa-microphone', 'fa-spinner');
         icon.classList.add('fa-spin');

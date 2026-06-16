@@ -34,7 +34,7 @@ export const WordDetailsModal = (word) => `
             <button onclick="app.closeModal(); app.openDeleteWordModal(${word.id})" class="w-10 h-10 bg-white shadow-sm border border-gray-100 rounded-xl text-red-500 flex items-center justify-center active:scale-90 transition-all">
                 <i class="fas fa-trash-alt"></i>
             </button>
-            <button onclick="app.speakAny(event.currentTarget.getAttribute('data-text'))" data-text="${escapeHTML(word.eng)}" class="w-10 h-10 bg-white shadow-sm border border-gray-100 rounded-xl text-blue-500 flex items-center justify-center active:scale-90 transition-all">
+            <button onclick="app.speakAny(this.getAttribute('data-text'))" data-text="${escapeHTML(word.eng)}" class="w-10 h-10 bg-white shadow-sm border border-gray-100 rounded-xl text-blue-500 flex items-center justify-center active:scale-90 transition-all">
                 <i class="fas fa-volume-up"></i>
             </button>
         </div>

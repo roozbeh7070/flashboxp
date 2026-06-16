@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-    <title>flashboxp</title>
+    <title>فلش باکس پی - جعبه لایتنر هوشمند یادگیری زبان</title>
+    <meta name="description" content="فلش باکس پی (flashboxp) یک وب‌اپلیکیشن پیشرو (PWA) برای یادگیری کلمات زبان انگلیسی، آلمانی و فرانسوی به همراه تلفظ صوتی، تشخیص گفتار، دیکشنری پیشرفته و همگام‌سازی ابری است.">
     
     <!-- PWA Meta Tags -->
     <meta name="mobile-web-app-capable" content="yes">
@@ -20,6 +21,7 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body class="pb-28 overflow-x-hidden">
+    <h1 class="sr-only">فلش باکس پی - جعبه لایتنر هوشمند یادگیری زبان</h1>
 
     <div class="pt-8 px-4 relative z-10">
         <img src="./doc/logo.png" alt="Logo" class="h-24 mx-auto object-contain" style="image-rendering: -webkit-optimize-contrast;">
@@ -76,7 +78,7 @@
                     <div class="relative w-full">
                         <input id="eng-input" type="text" placeholder="Word (English)" dir="ltr" class="w-full p-4 pr-24 bg-gray-200 rounded-xl outline-none font-bold text-lg text-gray-900">
                         <div class="absolute inset-y-0 right-0 flex items-center gap-1 pr-2">
-                            <button onclick="app.startVoiceInput('eng-input', 'en-US')" class="w-10 h-10 text-orange-500 flex items-center justify-center transition-all active:scale-90"><i class="fas fa-microphone text-lg"></i></button>
+                            <button onclick="app.startVoiceInput(this, 'eng-input', 'en-US')" class="w-10 h-10 text-orange-500 flex items-center justify-center transition-all active:scale-90"><i class="fas fa-microphone text-lg"></i></button>
                             <button onclick="app.pasteFromClipboard('eng-input')" class="w-10 h-10 text-gray-600 flex items-center justify-center"><i class="fas fa-paste text-lg"></i></button>
                         </div>
                     </div>
@@ -85,7 +87,7 @@
                             <input id="per-input" type="text" placeholder="معنی (فارسی)" class="w-full p-4 pl-24 bg-gray-200 rounded-xl outline-none font-bold text-right text-lg text-gray-900">
                             <div class="absolute inset-y-0 left-0 flex items-center gap-1 pl-2">
                                 <button onclick="app.pasteFromClipboard('per-input')" class="w-10 h-10 text-gray-600 flex items-center justify-center"><i class="fas fa-paste text-lg"></i></button>
-                                <button id="per-mic-btn" onclick="app.startVoiceInput('per-input', 'fa-IR')" class="w-10 h-10 text-orange-500 flex items-center justify-center transition-all active:scale-90"><i class="fas fa-microphone text-lg"></i></button>
+                                <button id="per-mic-btn" onclick="app.startVoiceInput(this, 'per-input', 'fa-IR')" class="w-10 h-10 text-orange-500 flex items-center justify-center transition-all active:scale-90"><i class="fas fa-microphone text-lg"></i></button>
                             </div>
                         </div>
                         <button onclick="app.getTranslation()" class="w-14 h-14 bg-orange-500 text-white rounded-xl flex items-center justify-center shadow-sm active:scale-95"><i class="fas fa-exchange-alt text-lg"></i></button>

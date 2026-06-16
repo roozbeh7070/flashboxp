@@ -3,8 +3,14 @@ import { escapeHTML } from '../utils.js';
 export const SystemFolderCard = (folder, index) => {
     let icon = 'fa-layer-group';
     let color = 'text-orange-500';
-    if (folder.id === 222) icon = 'fa-check-circle';
-    if (folder.id === 111) icon = 'fa-bolt';
+    if (folder.id === 222) {
+        icon = 'fa-check-circle';
+        color = 'text-green-500';
+    }
+    if (folder.id === 111) {
+        icon = 'fa-bolt';
+        color = 'text-red-500';
+    }
     
     return `
         <div class="system-box" onclick="app.openFolder(${index})">
