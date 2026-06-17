@@ -156,7 +156,7 @@ export const SettingsPage = (user = null) => {
             <div class="settings-section-content">
                 <div class="p-5 space-y-4">
                     <div class="p-3 bg-gray-100 text-gray-400 rounded-2xl text-center font-black text-[10px] tracking-widest uppercase">
-                        Software Version 1.2.7
+                        Software Version 1.2.8
                     </div>
                     
                     <a href="https://boxp.ir" target="_blank" class="w-full p-5 bg-orange-500 text-white rounded-2xl font-black flex justify-center items-center gap-2 shadow-md active:scale-[0.98] transition-all no-underline">

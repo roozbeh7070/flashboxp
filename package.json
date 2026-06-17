@@ -1,6 +1,6 @@
 {
   "name": "flashboxp",
-  "version": "1.2.7",
+  "version": "1.2.8",
   "description": "Flashcards Learning PWA Web App",
   "type": "module",
   "scripts": {

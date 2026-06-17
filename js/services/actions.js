@@ -1379,6 +1379,7 @@ export const actionMethods = {
                 name: folderName,
                 isSystem: false,
                 isPhrase: false,
+                updated_at: folderId,
                 words: []
             };
 
@@ -1388,7 +1389,8 @@ export const actionMethods = {
                     eng: w.eng,
                     per: w.per,
                     success: false,
-                    failed: false
+                    failed: false,
+                    updated_at: folderId
                 });
             });
 
