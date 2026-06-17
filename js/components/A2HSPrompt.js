@@ -82,11 +82,7 @@ export const showA2HSPrompt = (force = false) => {
                 <div id="a2hs-content"></div>
                 
                 <div class="flex flex-col gap-2 pt-2">
-                    <button id="a2hs-action-btn" class="a2hs-btn-primary hidden">
-                        <span>نصب وب‌اپلیکیشن</span>
-                        <i class="fas fa-rocket"></i>
-                    </button>
-                    <button id="a2hs-close-btn" class="a2hs-btn-secondary">بعداً یادآوری کن</button>
+                    <button id="a2hs-close-btn" class="a2hs-btn-primary">متوجه شدم</button>
                 </div>
             </div>
         `;
@@ -98,7 +94,6 @@ export const showA2HSPrompt = (force = false) => {
     }
 
     const contentDiv = document.getElementById('a2hs-content');
-    const actionBtn = document.getElementById('a2hs-action-btn');
     const closeBtn = document.getElementById('a2hs-close-btn');
 
     // Build platform-specific UI
@@ -128,42 +123,30 @@ export const showA2HSPrompt = (force = false) => {
                 </div>
             </div>
         `;
-        actionBtn.classList.add('hidden');
-        closeBtn.innerText = 'متوجه شدم (بستن)';
+        closeBtn.innerText = 'متوجه شدم';
     } else {
         // Android / Windows / Chrome / Samsung Internet Flow
-        if (deferredPrompt) {
-            // Native install is ready
-            contentDiv.innerHTML = `
-                <p class="text-xs font-bold text-gray-500 leading-relaxed mb-5 text-right">
-                    با نصب نسخه وب‌اپلیکیشن (PWA)، برنامه در لیست برنامه‌های گوشی یا دسکتاپ شما قرار می‌گیرد و سریع‌تر و مصرف اینترنت کمتری خواهد داشت.
-                </p>
-            `;
-            actionBtn.classList.remove('hidden');
-            actionBtn.querySelector('span').innerText = 'نصب مستقیم برنامه';
-            closeBtn.innerText = 'بعداً یادآوری کن';
-        } else {
-            // Show manual instructions for Android/Chrome
-            contentDiv.innerHTML = `
-                <div class="a2hs-steps">
-                    <div class="a2hs-step">
-                        <div class="a2hs-step-icon">۱</div>
-                        <div class="a2hs-step-desc">
-                            در بالای صفحه مرورگر خود روی دکمه منو **سه نقطه** 
-                            <i class="fa-solid fa-ellipsis-vertical text-gray-800 mx-1"></i> ضربه بزنید.
-                        </div>
-                    </div>
-                    <div class="a2hs-step">
-                        <div class="a2hs-step-icon">۲</div>
-                        <div class="a2hs-step-desc">
-                            گزینه **نصب برنامه (Install app)** یا **افزودن به صفحه اصلی (Add to Home Screen)** را انتخاب کنید.
-                        </div>
+        contentDiv.innerHTML = `
+            <p class="text-xs font-bold text-gray-500 leading-relaxed mb-4 text-right">
+                با نصب نسخه وب‌اپلیکیشن (PWA)، برنامه در لیست برنامه‌های گوشی یا دسکتاپ شما قرار می‌گیرد و سریع‌تر و مصرف اینترنت کمتری خواهد داشت.
+            </p>
+            <div class="a2hs-steps">
+                <div class="a2hs-step">
+                    <div class="a2hs-step-icon">۱</div>
+                    <div class="a2hs-step-desc">
+                        در بالای صفحه مرورگر خود روی دکمه منو **سه نقطه** 
+                        <i class="fa-solid fa-ellipsis-vertical text-gray-800 mx-1"></i> ضربه بزنید.
                     </div>
                 </div>
-            `;
-            actionBtn.classList.add('hidden');
-            closeBtn.innerText = 'بستن راهنما';
-        }
+                <div class="a2hs-step">
+                    <div class="a2hs-step-icon">۲</div>
+                    <div class="a2hs-step-desc">
+                        گزینه **نصب برنامه (Install app)** یا **افزودن به صفحه اصلی (Add to Home Screen)** را انتخاب کنید.
+                    </div>
+                </div>
+            </div>
+        `;
+        closeBtn.innerText = 'متوجه شدم';
     }
 
     // Set up dismiss action
@@ -177,17 +160,6 @@ export const showA2HSPrompt = (force = false) => {
 
     overlay.onclick = dismissPrompt;
     closeBtn.onclick = dismissPrompt;
-
-    // Set up native install action
-    actionBtn.onclick = async () => {
-        if (!deferredPrompt) return;
-        dismissPrompt();
-        deferredPrompt.prompt();
-        const { outcome } = await deferredPrompt.userChoice;
-        console.log(`User response to install prompt: ${outcome}`);
-        deferredPrompt = null;
-        actionBtn.classList.add('hidden');
-    };
 
     // Trigger animation
     setTimeout(() => {

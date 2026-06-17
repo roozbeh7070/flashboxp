@@ -3,10 +3,14 @@ export const AuthModal = (mode = 'signin') => `
         <div class="modal-title-box">${mode === 'signin' ? 'ورود به حساب' : 'ساخت حساب کاربری'}</div>
         <form id="auth-form" onsubmit="app.handleAuthSubmit(event, '${mode}')" class="space-y-4">
             <input id="auth-email" type="email" placeholder="ایمیل" required class="w-full p-4 bg-gray-100 rounded-2xl font-black outline-none border-2 border-transparent focus:border-blue-500 transition-all text-right">
-            <input id="auth-password" type="password" placeholder="کلمه عبور (حداقل ۶ کاراکتر)" required minlength="6" class="w-full p-4 bg-gray-100 rounded-2xl font-black outline-none border-2 border-transparent focus:border-blue-500 transition-all text-right">
             
             ${mode === 'signup' ? `
             <input id="auth-name" type="text" placeholder="نام و نام خانوادگی" required class="w-full p-4 bg-gray-100 rounded-2xl font-black outline-none border-2 border-transparent focus:border-blue-500 transition-all text-right">
+            ` : ''}
+
+            <input id="auth-password" type="password" placeholder="کلمه عبور (حداقل ۶ کاراکتر)" required minlength="6" class="w-full p-4 bg-gray-100 rounded-2xl font-black outline-none border-2 border-transparent focus:border-blue-500 transition-all text-right">
+            
+            ${mode === 'signup' ? `
             <input id="auth-confirm-password" type="password" placeholder="تکرار کلمه عبور" required minlength="6" class="w-full p-4 bg-gray-100 rounded-2xl font-black outline-none border-2 border-transparent focus:border-blue-500 transition-all text-right">
             <input id="auth-phone" type="tel" placeholder="شماره همراه (مثال: 09123456789)" required class="w-full p-4 bg-gray-100 rounded-2xl font-black outline-none border-2 border-transparent focus:border-blue-500 transition-all text-right">
             ` : ''}

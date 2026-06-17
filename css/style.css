@@ -154,6 +154,38 @@ input, button, select { font-family: var(--apple-font) !important; }
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
+/* Mode Toggle Tabs */
+.mode-toggle-tabs {
+    display: flex;
+    background: rgba(228, 228, 231, 0.75);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 5px;
+    border-radius: 20px;
+    gap: 5px;
+    direction: rtl;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+.mode-toggle-btn {
+    flex: 1;
+    padding: 12px;
+    border-radius: 15px;
+    font-size: 14px;
+    font-weight: 900;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    color: #71717a;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    background: transparent;
+}
+.mode-toggle-btn.active {
+    background: white;
+    color: #1c4849;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08), 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
 /* Settings Accordion Styles */
 .settings-section-card {
     background: white;

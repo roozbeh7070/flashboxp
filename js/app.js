@@ -70,6 +70,7 @@ class FlashcardApp {
 
         // Check Add to Home Screen (A2HS) PWA install on launch
         checkA2HSOnLaunch();
+        this.updateModeToggleUI();
     }
 
     registerServiceWorker() {
@@ -208,21 +209,30 @@ class FlashcardApp {
         this.renderFolders();
     }
 
-    toggleAppMode() {
-        this.currentMode = this.currentMode === 'word' ? 'phrase' : 'word';
-        
-        const modeText = document.getElementById('mode-text');
-        const modeIcon = document.getElementById('mode-icon');
-        
-        if (this.currentMode === 'phrase') {
-            modeText.innerText = 'عبارت';
-            modeIcon.className = 'fas fa-quote-right';
-        } else {
-            modeText.innerText = 'کلمه';
-            modeIcon.className = 'fas fa-font';
-        }
-        
+    setAppMode(mode) {
+        if (this.currentMode === mode) return;
+        this.currentMode = mode;
+        this.updateModeToggleUI();
         this.goHome();
+    }
+
+    updateModeToggleUI() {
+        const btnWord = document.getElementById('mode-btn-word');
+        const btnPhrase = document.getElementById('mode-btn-phrase');
+        if (btnWord && btnPhrase) {
+            if (this.currentMode === 'phrase') {
+                btnWord.classList.remove('active');
+                btnPhrase.classList.add('active');
+            } else {
+                btnPhrase.classList.remove('active');
+                btnWord.classList.add('active');
+            }
+        }
+    }
+
+    toggleAppMode() {
+        const newMode = this.currentMode === 'word' ? 'phrase' : 'word';
+        this.setAppMode(newMode);
     }
 
     closeScreen(id) {
