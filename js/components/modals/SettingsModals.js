@@ -47,7 +47,7 @@ export const SettingsModal = (user = null) => `
             </button>
             <div class="space-y-2 pt-2">
                 <div class="p-3 bg-gray-50 text-gray-400 rounded-2xl text-center font-black text-[10px] tracking-widest uppercase">
-                    Software Version 1.2.5
+                    Software Version 1.2.6
                 </div>
                 <a href="https://boxp.ir" target="_blank" class="w-full p-5 bg-orange-500 text-white rounded-3xl font-black flex justify-center items-center gap-2 shadow-lg active:scale-[0.98] transition-all no-underline">
                     <span class="text-xs">توسعه یافته توسط پلتفرم جعبه (باکسپی)</span>
@@ -103,3 +103,17 @@ export const ImportOptionsModal = () => `
             <button onclick="app.closeModal()" class="p-4 bg-gray-100 text-gray-500 rounded-2xl font-black">انصراف</button>
         </div>
     </div>`;
+
+export const PushPermissionModal = () => `
+    <div class="ios-modal p-8 text-center">
+        <div class="w-20 h-20 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center mx-auto mb-6 text-3xl">
+            <i class="fas fa-bell fa-bounce"></i>
+        </div>
+        <h3 class="text-2xl font-black mb-2 text-gray-900">فعال‌سازی یادآور هوشمند</h3>
+        <p class="text-gray-400 mb-8 font-bold leading-relaxed">با فعال‌سازی نوتیفیکیشن، به راحتی مرورهای روزانه و زمان مناسب مرور فلش‌کارت‌ها را روی گوشی خود دریافت کنید.</p>
+        <div class="flex gap-3">
+            <button onclick="app.closeModal()" class="flex-1 p-4 bg-gray-100 text-gray-500 rounded-2xl font-black">بعداً</button>
+            <button onclick="app.requestPushPermission()" class="flex-1 p-5 bg-purple-600 text-white rounded-2xl font-black shadow-xl active:scale-95 transition-transform">فعال‌سازی</button>
+        </div>
+    </div>`;
+

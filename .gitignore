@@ -1,5 +1,10 @@
 node_modules/
 dist/
 .env
+.env.production
 .DS_Store
 *.log
+scripts/push/
+scripts/send_push.py
+scripts/send_push.js
+

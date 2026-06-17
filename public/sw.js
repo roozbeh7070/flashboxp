@@ -1,4 +1,4 @@
-const CACHE_NAME = 'lang-app-v15';
+const CACHE_NAME = 'lang-app-v16';
 const ASSETS = [
     './',
     './index.html',
@@ -74,3 +74,52 @@ self.addEventListener('message', (event) => {
         self.skipWaiting();
     }
 });
+
+// Listen for Push Notifications
+self.addEventListener('push', (event) => {
+    let data = { title: 'یادآوری جعبه لایتنر', body: 'وقت مرور فلش‌کارت‌های جدید است!' };
+    if (event.data) {
+        try {
+            data = event.data.json();
+        } catch (e) {
+            data = { title: 'یادآوری جعبه لایتنر', body: event.data.text() };
+        }
+    }
+
+    const options = {
+        body: data.body,
+        icon: './doc/logo.png',
+        badge: './doc/icon.png',
+        vibrate: [100, 50, 100],
+        data: {
+            url: data.url || './'
+        }
+    };
+
+    event.waitUntil(
+        self.registration.showNotification(data.title, options)
+    );
+});
+
+// Handle Notification Click
+self.addEventListener('notificationclick', (event) => {
+    event.notification.close();
+    event.waitUntil(
+        clients.matchAll({ type: 'window', includeUncontrolled: true }).then((clientList) => {
+            const targetUrl = event.notification.data?.url || './';
+            for (const client of clientList) {
+                if (client.url.includes(self.location.origin) && 'focus' in client) {
+                    return client.focus().then((focusedClient) => {
+                        if (focusedClient && 'navigate' in focusedClient) {
+                            return focusedClient.navigate(targetUrl);
+                        }
+                    });
+                }
+            }
+            if (clients.openWindow) {
+                return clients.openWindow(targetUrl);
+            }
+        })
+    );
+});
+

@@ -14,6 +14,7 @@ export const authMethods = {
             if (event === 'SIGNED_IN') {
                 console.log('User signed in:', this.user);
                 await this.triggerSync();
+                this.checkPushPermissionOnLaunch();
             }
             if (typeof this.renderSettingsPageContent === 'function') {
                 this.renderSettingsPageContent();

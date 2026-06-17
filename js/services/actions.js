@@ -1241,5 +1241,107 @@ export const actionMethods = {
             this.closeGrammarSuggestions(inputId);
             this.checkGrammar(inputId);
         }
+    },
+
+    checkPushPermissionOnLaunch() {
+        if (!navigator.onLine) return;
+        if (!this.user) return;
+        if (!('serviceWorker' in navigator && 'PushManager' in window)) return;
+        
+        if (Notification.permission === 'granted') {
+            this.syncPushSubscription();
+            return;
+        }
+
+        if (Notification.permission === 'default') {
+            const lastPrompt = localStorage.getItem('push_prompt_last_time');
+            const now = Date.now();
+            if (!lastPrompt || (now - parseInt(lastPrompt, 10)) > 24 * 3600 * 1000) {
+                setTimeout(() => {
+                    // Only show if no other modal is currently visible
+                    const modalContainer = document.getElementById('modal-container');
+                    if (modalContainer && modalContainer.classList.contains('hidden')) {
+                        localStorage.setItem('push_prompt_last_time', now.toString());
+                        this.showModal(modals.PushPermissionModal());
+                    }
+                }, 3000);
+            }
+        }
+    },
+
+    async requestPushPermission() {
+        this.closeModal();
+        try {
+            const permission = await Notification.requestPermission();
+            if (permission === 'granted') {
+                await this.syncPushSubscription();
+                this.showAlert('یادآور هوشمند فعال شد! از این پس یادآوری‌های روزانه را دریافت خواهید کرد.', 'success');
+            } else {
+                console.log('Push permission denied/dismissed:', permission);
+            }
+        } catch (error) {
+            console.error('Error requesting push permission:', error);
+            this.showAlert('خطا در فعال‌سازی نوتیفیکیشن: ' + error.message, 'error');
+        }
+    },
+
+    async syncPushSubscription() {
+        try {
+            if (!this.user) return;
+            if (!this.registration) {
+                this.registration = await navigator.serviceWorker.getRegistration();
+            }
+            if (!this.registration) return;
+
+            const publicVapidKey = import.meta.env.VITE_VAPID_PUBLIC_KEY;
+            if (!publicVapidKey) {
+                console.warn('VITE_VAPID_PUBLIC_KEY is not defined in env.');
+                return;
+            }
+
+            const convertedVapidKey = utils.urlBase64ToUint8Array(publicVapidKey);
+
+            let subscription = await this.registration.pushManager.getSubscription();
+            if (!subscription) {
+                subscription = await this.registration.pushManager.subscribe({
+                    userVisibleOnly: true,
+                    applicationServerKey: convertedVapidKey
+                });
+            }
+
+            const subJson = subscription.toJSON();
+            
+            const { data: existing, error: fetchError } = await supabase
+                .from('push_subscriptions')
+                .select('id')
+                .eq('subscription->>endpoint', subJson.endpoint)
+                .maybeSingle();
+
+            if (fetchError) throw fetchError;
+
+            if (!existing) {
+                const { error: insertError } = await supabase
+                    .from('push_subscriptions')
+                    .insert({
+                        user_id: this.user.id,
+                        subscription: subJson
+                    });
+                if (insertError) throw insertError;
+                console.log('Push subscription saved to Supabase successfully.');
+            } else {
+                const { error: updateError } = await supabase
+                    .from('push_subscriptions')
+                    .update({
+                        user_id: this.user.id
+                    })
+                    .eq('id', existing.id);
+                if (updateError) throw updateError;
+                console.log('Push subscription updated in Supabase.');
+            }
+
+        } catch (error) {
+            console.error('Error syncing push subscription:', error);
+        }
     }
 };
+
