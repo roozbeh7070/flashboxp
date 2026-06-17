@@ -1,4 +1,4 @@
-import { escapeHTML } from '../utils.js';
+import { escapeHTML, getUserDisplayName } from '../utils.js';
 
 export const SettingsPage = (user = null) => {
     return `
@@ -113,8 +113,9 @@ export const SettingsPage = (user = null) => {
                     ` : `
                     <div class="space-y-4">
                         <div class="p-4 bg-blue-50 border border-blue-100 rounded-2xl flex flex-col text-right">
-                            <span class="text-[10px] text-gray-400 font-black">حساب فعال (همگام‌سازی شده):</span>
-                            <span class="text-xs font-black text-blue-800 truncate text-left" dir="ltr">${escapeHTML(user.email)}</span>
+                            <span class="text-[10px] text-gray-400 font-black">کاربر فعال:</span>
+                            <span class="text-xs font-black text-blue-800 truncate text-right">${escapeHTML(getUserDisplayName(user))}</span>
+                            <span class="text-[9px] text-gray-400 font-bold text-left" dir="ltr">${escapeHTML(user.email)}</span>
                         </div>
                         
                         <!-- ویرایش ایمیل -->
@@ -156,7 +157,7 @@ export const SettingsPage = (user = null) => {
             <div class="settings-section-content">
                 <div class="p-5 space-y-4">
                     <div class="p-3 bg-gray-100 text-gray-400 rounded-2xl text-center font-black text-[10px] tracking-widest uppercase">
-                        Software Version 1.2.8
+                        Software Version 1.2.9
                     </div>
                     
                     <a href="https://boxp.ir" target="_blank" class="w-full p-5 bg-orange-500 text-white rounded-2xl font-black flex justify-center items-center gap-2 shadow-md active:scale-[0.98] transition-all no-underline">

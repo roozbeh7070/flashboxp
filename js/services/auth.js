@@ -2,6 +2,7 @@ import { supabase } from './supabase.js';
 import { syncData } from './sync.js';
 import { saveData } from '../storage.js';
 import * as modals from '../components/Modals.js';
+import * as utils from '../utils.js';
 
 export const authMethods = {
     // --- Supabase Authentication Handlers ---
@@ -48,8 +49,10 @@ export const authMethods = {
         submitBtn.disabled = true;
         submitBtn.innerHTML = `<span>در حال پردازش...</span><i class="fas fa-spinner fa-spin mr-2"></i>`;
 
+        let name = '';
         let phone = '';
         if (mode === 'signup') {
+            name = document.getElementById('auth-name').value.trim();
             const confirmPassword = document.getElementById('auth-confirm-password').value;
             phone = document.getElementById('auth-phone').value.trim();
             if (password !== confirmPassword) {
@@ -67,6 +70,7 @@ export const authMethods = {
                     password,
                     options: {
                         data: {
+                            name: name,
                             phone: phone
                         }
                     }
@@ -75,7 +79,8 @@ export const authMethods = {
                 
                 if (data && data.session) {
                     this.user = data.user;
-                    this.showAlert("ثبت‌نام با موفقیت انجام شد! خوش آمدید.", "success", () => {
+                    const displayName = utils.getUserDisplayName(data.user);
+                    this.showAlert(`ثبت‌نام با موفقیت انجام شد! ${displayName} عزیز، خوش آمدید.`, "success", () => {
                         this.closeModal();
                     });
                 } else {
@@ -87,7 +92,8 @@ export const authMethods = {
                 const { data, error } = await supabase.auth.signInWithPassword({ email, password });
                 if (error) throw error;
                 this.user = data.user;
-                this.showAlert("خوش آمدید!", "success", () => {
+                const displayName = utils.getUserDisplayName(data.user);
+                this.showAlert(`خوش آمدید، ${displayName}!`, "success", () => {
                     this.closeModal();
                 });
             }
@@ -113,13 +119,26 @@ export const authMethods = {
         }
     },
 
-    async handleSignOut() {
-        if (confirm("آیا مایلید از حساب کاربری خود خارج شوید؟")) {
+    handleSignOut() {
+        this.openSignOutModal();
+    },
+    
+    openSignOutModal() {
+        this.showModal(modals.ConfirmSignOutModal());
+    },
+    
+    async executeSignOut() {
+        this.closeModal();
+        try {
             await supabase.auth.signOut();
             this.user = null;
             this.showAlert("از حساب خود خارج شدید.", "info", () => {
-                this.closeModal();
+                if (typeof this.renderSettingsPageContent === 'function') {
+                    this.renderSettingsPageContent();
+                }
             });
+        } catch (e) {
+            this.showAlert("خطا در خروج: " + e.message, "error");
         }
     }
 };

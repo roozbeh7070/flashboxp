@@ -452,24 +452,29 @@ export const actionMethods = {
         }
     },
 
-    async confirmDeleteAccount() {
-        if (confirm("آیا از حذف کامل حساب کاربری خود اطمینان دارید؟ با این کار تمامی مجموعه‌ها و کلمات شما به صورت دائمی از روی سرور حذف خواهند شد و این عمل غیرقابل بازگشت است.")) {
-            if (confirm("برای تایید نهایی، آیا واقعاً می‌خواهید کل داده‌ها و حساب کاربری خود را حذف کنید؟")) {
-                try {
-                    const { error } = await supabase.rpc('delete_user');
-                    if (error) throw error;
+    confirmDeleteAccount() {
+        this.showModal(modals.ConfirmDeleteAccountModal());
+    },
 
-                    await supabase.auth.signOut();
-                    this.user = null;
+    openDeleteAccountFinalModal() {
+        this.showModal(modals.ConfirmDeleteAccountFinalModal());
+    },
 
-                    await clearData();
-                    this.showAlert("حساب کاربری و کلیه اطلاعات شما با موفقیت حذف شد. برنامه ریستارت می‌شود.", "success", () => {
-                        location.reload();
-                    });
-                } catch (err) {
-                    this.showAlert("خطا در حذف حساب کاربری: " + err.message, "error");
-                }
-            }
+    async executeDeleteAccount() {
+        this.closeModal();
+        try {
+            const { error } = await supabase.rpc('delete_user');
+            if (error) throw error;
+
+            await supabase.auth.signOut();
+            this.user = null;
+
+            await clearData();
+            this.showAlert("حساب کاربری و کلیه اطلاعات شما با موفقیت حذف شد. برنامه ریستارت می‌شود.", "success", () => {
+                location.reload();
+            });
+        } catch (err) {
+            this.showAlert("خطا در حذف حساب کاربری: " + err.message, "error");
         }
     },
 
@@ -1343,7 +1348,7 @@ export const actionMethods = {
         }
     },
 
-    async loadPredefinedWords(isModal = false) {
+    loadPredefinedWords(isModal = false) {
         const selectId = isModal ? 'auto-load-select-modal' : 'auto-load-select';
         const selectEl = document.getElementById(selectId);
         if (!selectEl) return;
@@ -1351,17 +1356,11 @@ export const actionMethods = {
         const val = selectEl.value;
         const label = selectEl.options[selectEl.selectedIndex].text;
 
-        if (!confirm(`آیا مطمئن هستید که می‌خواهید مجموعه کلمات "${label}" را بارگذاری کنید؟`)) {
-            return;
-        }
+        this.showModal(modals.ConfirmLoadPredefinedModal(val, label));
+    },
 
-        const btn = document.activeElement;
-        const originalContent = btn ? btn.innerHTML : null;
-        if (btn) {
-            btn.disabled = true;
-            btn.innerHTML = `<span>در حال بارگذاری...</span><i class="fas fa-spinner fa-spin mr-2"></i>`;
-        }
-
+    async executeLoadPredefinedWords(val) {
+        this.closeModal();
         try {
             const res = await fetch(`./data/${val}.json`);
             if (!res.ok) throw new Error(`خطا در دانلود فایل: ${res.statusText}`);
@@ -1401,11 +1400,6 @@ export const actionMethods = {
         } catch (e) {
             console.error(e);
             this.showAlert("خطا در بارگذاری کلمات: " + e.message, "error");
-        } finally {
-            if (btn && originalContent) {
-                btn.disabled = false;
-                btn.innerHTML = originalContent;
-            }
         }
     }
 };

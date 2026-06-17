@@ -1,4 +1,4 @@
-import { escapeHTML } from '../../utils.js';
+import { escapeHTML, getUserDisplayName } from '../../utils.js';
 
 export const SettingsModal = (user = null) => `
     <div class="ios-modal">
@@ -41,10 +41,11 @@ export const SettingsModal = (user = null) => `
                 ${user ? `
                 <div class="p-4 bg-white rounded-3xl border border-gray-100 shadow-sm flex justify-between items-center">
                     <div class="flex flex-col text-right">
-                        <span class="text-[10px] text-gray-400 font-black">حساب فعال (همگام‌سازی شده):</span>
-                        <span class="text-xs font-black text-gray-800 truncate max-w-[180px]" dir="ltr">${escapeHTML(user.email)}</span>
+                        <span class="text-[10px] text-gray-400 font-black">کاربر فعال:</span>
+                        <span class="text-xs font-black text-gray-800 truncate max-w-[180px]">${escapeHTML(getUserDisplayName(user))}</span>
+                        <span class="text-[9px] text-gray-400 font-bold text-left" dir="ltr">${escapeHTML(user.email)}</span>
                     </div>
-                    <button onclick="app.handleSignOut()" class="px-4 py-2 bg-red-50 text-red-500 border border-red-100 rounded-xl font-black text-xs active:scale-95 transition-all">خروج</button>
+                    <button onclick="app.openSignOutModal()" class="px-4 py-2 bg-red-50 text-red-500 border border-red-100 rounded-xl font-black text-xs active:scale-95 transition-all">خروج</button>
                 </div>
                 ` : `
                 <button onclick="app.openAuthModal()" class="w-full p-5 bg-blue-50 text-blue-600 rounded-3xl font-black flex justify-between items-center border border-blue-100 active:scale-95 transition-all">
@@ -63,7 +64,7 @@ export const SettingsModal = (user = null) => `
             </button>
             <div class="space-y-2 pt-2">
                 <div class="p-3 bg-gray-50 text-gray-400 rounded-2xl text-center font-black text-[10px] tracking-widest uppercase">
-                    Software Version 1.2.8
+                    Software Version 1.2.9
                 </div>
                 <a href="https://boxp.ir" target="_blank" class="w-full p-5 bg-orange-500 text-white rounded-3xl font-black flex justify-center items-center gap-2 shadow-lg active:scale-[0.98] transition-all no-underline">
                     <span class="text-xs">توسعه یافته توسط پلتفرم جعبه (باکسپی)</span>
@@ -130,6 +131,58 @@ export const PushPermissionModal = () => `
         <div class="flex gap-3">
             <button onclick="app.closeModal()" class="flex-1 p-4 bg-gray-100 text-gray-500 rounded-2xl font-black">بعداً</button>
             <button onclick="app.requestPushPermission()" class="flex-1 p-5 bg-purple-600 text-white rounded-2xl font-black shadow-xl active:scale-95 transition-transform">فعال‌سازی</button>
+        </div>
+    </div>`;
+
+export const ConfirmLoadPredefinedModal = (val, label) => `
+    <div class="ios-modal p-8 text-center">
+        <div class="w-20 h-20 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center mx-auto mb-6 text-3xl">
+            <i class="fas fa-download"></i>
+        </div>
+        <h3 class="text-xl font-black mb-2 text-gray-900">بارگذاری مجموعه واژگان</h3>
+        <p class="text-gray-400 mb-8 font-bold leading-relaxed">آیا مایلید مجموعه کلمات "${label}" را بارگذاری کنید؟ این کلمات به لیست کارت‌های شما اضافه خواهند شد.</p>
+        <div class="flex gap-3">
+            <button onclick="app.closeModal()" class="flex-1 p-4 bg-gray-100 text-gray-500 rounded-2xl font-black">انصراف</button>
+            <button onclick="app.executeLoadPredefinedWords('${val}')" class="flex-1 p-5 bg-purple-600 text-white rounded-2xl font-black shadow-xl active:scale-95 transition-transform">بله، بارگذاری</button>
+        </div>
+    </div>`;
+
+export const ConfirmSignOutModal = () => `
+    <div class="ios-modal p-8 text-center">
+        <div class="w-20 h-20 bg-orange-100 text-orange-600 rounded-full flex items-center justify-center mx-auto mb-6 text-3xl">
+            <i class="fas fa-sign-out-alt"></i>
+        </div>
+        <h3 class="text-xl font-black mb-2 text-gray-900">خروج از حساب کاربری</h3>
+        <p class="text-gray-400 mb-8 font-bold leading-relaxed">آیا واقعاً می‌خواهید از حساب کاربری خود خارج شوید؟ همگام‌سازی ابری متوقف خواهد شد.</p>
+        <div class="flex gap-3">
+            <button onclick="app.closeModal()" class="flex-1 p-4 bg-gray-100 text-gray-500 rounded-2xl font-black">انصراف</button>
+            <button onclick="app.executeSignOut()" class="flex-1 p-5 bg-orange-500 text-white rounded-2xl font-black shadow-xl active:scale-95 transition-transform">بله، خروج</button>
+        </div>
+    </div>`;
+
+export const ConfirmDeleteAccountModal = () => `
+    <div class="ios-modal p-8 text-center">
+        <div class="w-20 h-20 bg-red-100 text-red-600 rounded-full flex items-center justify-center mx-auto mb-6 text-3xl">
+            <i class="fas fa-trash-alt"></i>
+        </div>
+        <h3 class="text-xl font-black mb-2 text-gray-900">حذف کامل حساب کاربری</h3>
+        <p class="text-gray-400 mb-8 font-bold leading-relaxed">آیا از حذف کامل حساب خود اطمینان دارید؟ با این کار تمامی مجموعه‌ها و کلمات شما به صورت دائمی از روی سرور حذف خواهند شد و این عمل غیرقابل بازگشت است.</p>
+        <div class="flex gap-3">
+            <button onclick="app.closeModal()" class="flex-1 p-4 bg-gray-100 text-gray-500 rounded-2xl font-black">انصراف</button>
+            <button onclick="app.openDeleteAccountFinalModal()" class="flex-1 p-5 bg-red-600 text-white rounded-2xl font-black shadow-xl active:scale-95 transition-transform">ادامه حذف</button>
+        </div>
+    </div>`;
+
+export const ConfirmDeleteAccountFinalModal = () => `
+    <div class="ios-modal p-8 text-center">
+        <div class="w-20 h-20 bg-red-200 text-red-700 rounded-full flex items-center justify-center mx-auto mb-6 text-3xl">
+            <i class="fas fa-exclamation-triangle fa-flash"></i>
+        </div>
+        <h3 class="text-xl font-black mb-2 text-gray-900">تایید نهایی حذف حساب</h3>
+        <p class="text-gray-400 mb-8 font-bold leading-relaxed">آیا واقعاً و قطعاً می‌خواهید کل داده‌ها و حساب کاربری خود را حذف کنید؟ این آخرین هشدار است.</p>
+        <div class="flex gap-3">
+            <button onclick="app.closeModal()" class="flex-1 p-4 bg-gray-100 text-gray-500 rounded-2xl font-black">انصراف</button>
+            <button onclick="app.executeDeleteAccount()" class="flex-1 p-5 bg-red-700 text-white rounded-2xl font-black shadow-xl active:scale-95 transition-transform">بله، حذف قطعی</button>
         </div>
     </div>`;
 
