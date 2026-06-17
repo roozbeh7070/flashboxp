@@ -21,6 +21,22 @@ export const SettingsModal = (user = null) => `
                 </label>
             </div>
 
+            <!-- بارگذاری کلمات خودکار -->
+            <div class="p-5 bg-purple-50 rounded-3xl border border-purple-100 shadow-sm space-y-3">
+                <label class="text-xs font-black text-purple-600 uppercase block mr-1 text-right">بارگذاری کلمات خودکار:</label>
+                <p class="text-[10px] text-purple-400 font-bold text-right leading-relaxed">کلمات طبقه‌بندی شده انگلیسی آکسفورد را به مجموعه‌های خود اضافه کنید.</p>
+                <div class="flex gap-2">
+                    <select id="auto-load-select-modal" class="flex-1 p-3 bg-white border border-purple-100 rounded-2xl font-bold text-xs text-right outline-none" dir="rtl">
+                        <option value="b1-oxford">Oxford B1 (۸۰۲ کلمه)</option>
+                        <option value="b2-oxford">Oxford B2 (۷۳۰ کلمه)</option>
+                    </select>
+                    <button onclick="app.loadPredefinedWords(true)" class="px-5 py-3 bg-purple-600 text-white rounded-2xl font-black text-xs active:scale-95 transition-all flex items-center gap-1.5">
+                        <span>بارگذاری</span>
+                        <i class="fas fa-download"></i>
+                    </button>
+                </div>
+            </div>
+
             <div>
                 ${user ? `
                 <div class="p-4 bg-white rounded-3xl border border-gray-100 shadow-sm flex justify-between items-center">
@@ -47,7 +63,7 @@ export const SettingsModal = (user = null) => `
             </button>
             <div class="space-y-2 pt-2">
                 <div class="p-3 bg-gray-50 text-gray-400 rounded-2xl text-center font-black text-[10px] tracking-widest uppercase">
-                    Software Version 1.2.6
+                    Software Version 1.2.7
                 </div>
                 <a href="https://boxp.ir" target="_blank" class="w-full p-5 bg-orange-500 text-white rounded-3xl font-black flex justify-center items-center gap-2 shadow-lg active:scale-[0.98] transition-all no-underline">
                     <span class="text-xs">توسعه یافته توسط پلتفرم جعبه (باکسپی)</span>

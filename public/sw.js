@@ -1,4 +1,4 @@
-const CACHE_NAME = 'lang-app-v16';
+const CACHE_NAME = 'lang-app-v17';
 const ASSETS = [
     './',
     './index.html',
@@ -8,7 +8,9 @@ const ASSETS = [
     './font/Vazirmatn-Regular.ttf',
     './font/Vazirmatn-Bold.ttf',
     './doc/logo.png',
-    './doc/icon.png'
+    './doc/icon.png',
+    './data/b1-oxford.json',
+    './data/b2-oxford.json'
 ];
 
 // Install Service Worker

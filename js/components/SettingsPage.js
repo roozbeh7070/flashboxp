@@ -56,6 +56,35 @@ export const SettingsPage = (user = null) => {
             </div>
         </div>
 
+        <!-- ۲.۵. بارگذاری کلمات خودکار -->
+        <div id="section-auto-load" class="settings-section-card">
+            <div class="settings-section-header" onclick="app.toggleSettingsSection('section-auto-load')">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl bg-purple-50 text-purple-500 flex items-center justify-center">
+                        <i class="fas fa-book-reader text-lg"></i>
+                    </div>
+                    <span class="text-sm font-black text-gray-800">بارگذاری کلمات خودکار</span>
+                </div>
+                <i class="fas fa-chevron-down chevron text-xs"></i>
+            </div>
+            <div class="settings-section-content">
+                <div class="p-5 space-y-4">
+                    <p class="text-xs font-bold text-gray-500 leading-relaxed">یک مجموعه لغات از پیش آماده شده را انتخاب کنید و به مجموعه‌های خود اضافه کنید:</p>
+                    <div class="p-4 bg-white rounded-2xl border border-gray-100 shadow-sm">
+                        <label class="text-xs font-black text-gray-400 uppercase mb-2 block mr-1">انتخاب مجموعه کلمات:</label>
+                        <select id="auto-load-select" class="w-full p-3 bg-gray-50 border border-gray-100 rounded-xl font-bold text-xs outline-none text-right" dir="rtl">
+                            <option value="b1-oxford">Oxford B1 (۸۰۲ کلمه)</option>
+                            <option value="b2-oxford">Oxford B2 (۷۳۰ کلمه)</option>
+                        </select>
+                    </div>
+                    <button onclick="app.loadPredefinedWords()" class="w-full p-4 bg-purple-600 text-white rounded-2xl font-black flex justify-between items-center shadow-md active:scale-95 transition-all">
+                        <span>بارگذاری کلمات به برنامه</span>
+                        <i class="fas fa-download text-lg"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
         <!-- ۳. حساب کاربری -->
         <div id="section-account" class="settings-section-card">
             <div class="settings-section-header" onclick="app.toggleSettingsSection('section-account')">
@@ -127,7 +156,7 @@ export const SettingsPage = (user = null) => {
             <div class="settings-section-content">
                 <div class="p-5 space-y-4">
                     <div class="p-3 bg-gray-100 text-gray-400 rounded-2xl text-center font-black text-[10px] tracking-widest uppercase">
-                        Software Version 1.2.6
+                        Software Version 1.2.7
                     </div>
                     
                     <a href="https://boxp.ir" target="_blank" class="w-full p-5 bg-orange-500 text-white rounded-2xl font-black flex justify-center items-center gap-2 shadow-md active:scale-[0.98] transition-all no-underline">

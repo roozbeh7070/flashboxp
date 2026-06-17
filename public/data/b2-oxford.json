@@ -1,0 +1,2918 @@
+[
+  {
+    "eng": "abandon",
+    "per": "رها کردن"
+  },
+  {
+    "eng": "absolute",
+    "per": "مطلق"
+  },
+  {
+    "eng": "academic",
+    "per": "دانشگاهی"
+  },
+  {
+    "eng": "acceptable",
+    "per": "قابل قبول"
+  },
+  {
+    "eng": "accompany",
+    "per": "همراهی کنند"
+  },
+  {
+    "eng": "account",
+    "per": "حساب کاربری"
+  },
+  {
+    "eng": "accurate",
+    "per": "دقیق"
+  },
+  {
+    "eng": "accuse",
+    "per": "متهم کردن"
+  },
+  {
+    "eng": "acknowledge",
+    "per": "تصدیق کند"
+  },
+  {
+    "eng": "acquire",
+    "per": "بدست آوردن"
+  },
+  {
+    "eng": "actual",
+    "per": "واقعی"
+  },
+  {
+    "eng": "adapt",
+    "per": "تطبیق دادن"
+  },
+  {
+    "eng": "additional",
+    "per": "اضافی"
+  },
+  {
+    "eng": "address",
+    "per": "آدرس"
+  },
+  {
+    "eng": "administration",
+    "per": "مدیریت"
+  },
+  {
+    "eng": "adopt",
+    "per": "اتخاذ"
+  },
+  {
+    "eng": "advance",
+    "per": "پیشبرد"
+  },
+  {
+    "eng": "affair",
+    "per": "امر"
+  },
+  {
+    "eng": "afterwards",
+    "per": "پس از آن"
+  },
+  {
+    "eng": "agency",
+    "per": "آژانس"
+  },
+  {
+    "eng": "agenda",
+    "per": "دستور کار"
+  },
+  {
+    "eng": "aggressive",
+    "per": "تهاجمی"
+  },
+  {
+    "eng": "aid",
+    "per": "کمک"
+  },
+  {
+    "eng": "aircraft",
+    "per": "هواپیما"
+  },
+  {
+    "eng": "alarm",
+    "per": "زنگ هشدار"
+  },
+  {
+    "eng": "alter",
+    "per": "تغییر دهید"
+  },
+  {
+    "eng": "amount",
+    "per": "مقدار"
+  },
+  {
+    "eng": "anger",
+    "per": "عصبانیت"
+  },
+  {
+    "eng": "angle",
+    "per": "زاویه"
+  },
+  {
+    "eng": "anniversary",
+    "per": "سالگرد"
+  },
+  {
+    "eng": "annual",
+    "per": "سالانه"
+  },
+  {
+    "eng": "anxious",
+    "per": "مضطرب"
+  },
+  {
+    "eng": "apparent",
+    "per": "آشکار"
+  },
+  {
+    "eng": "apparently",
+    "per": "ظاهرا"
+  },
+  {
+    "eng": "appeal",
+    "per": "درخواست تجدید نظر"
+  },
+  {
+    "eng": "approach",
+    "per": "رویکرد"
+  },
+  {
+    "eng": "appropriate",
+    "per": "مناسب"
+  },
+  {
+    "eng": "approval",
+    "per": "تایید"
+  },
+  {
+    "eng": "approve",
+    "per": "تایید کند"
+  },
+  {
+    "eng": "arise",
+    "per": "بوجود می آیند"
+  },
+  {
+    "eng": "armed",
+    "per": "مسلح"
+  },
+  {
+    "eng": "arms",
+    "per": "بازوها"
+  },
+  {
+    "eng": "artificial",
+    "per": "مصنوعی"
+  },
+  {
+    "eng": "artistic",
+    "per": "هنری"
+  },
+  {
+    "eng": "ashamed",
+    "per": "شرمنده"
+  },
+  {
+    "eng": "aspect",
+    "per": "جنبه"
+  },
+  {
+    "eng": "assess",
+    "per": "ارزیابی کنید"
+  },
+  {
+    "eng": "assessment",
+    "per": "ارزیابی"
+  },
+  {
+    "eng": "associate",
+    "per": "همکار"
+  },
+  {
+    "eng": "associated",
+    "per": "مرتبط است"
+  },
+  {
+    "eng": "association",
+    "per": "انجمن"
+  },
+  {
+    "eng": "assume",
+    "per": "فرض کنید"
+  },
+  {
+    "eng": "attempt",
+    "per": "تلاش"
+  },
+  {
+    "eng": "back",
+    "per": "برگشت"
+  },
+  {
+    "eng": "bacteria",
+    "per": "باکتری ها"
+  },
+  {
+    "eng": "bar",
+    "per": "نوار"
+  },
+  {
+    "eng": "barrier",
+    "per": "مانع"
+  },
+  {
+    "eng": "basically",
+    "per": "اساسا"
+  },
+  {
+    "eng": "battle",
+    "per": "نبرد"
+  },
+  {
+    "eng": "bear",
+    "per": "خرس"
+  },
+  {
+    "eng": "beat",
+    "per": "ضرب و شتم"
+  },
+  {
+    "eng": "beg",
+    "per": "التماس کردن"
+  },
+  {
+    "eng": "being",
+    "per": "بودن"
+  },
+  {
+    "eng": "bent",
+    "per": "خم شده"
+  },
+  {
+    "eng": "bet",
+    "per": "شرط بندی"
+  },
+  {
+    "eng": "beyond",
+    "per": "فراتر از"
+  },
+  {
+    "eng": "bill",
+    "per": "صورت حساب"
+  },
+  {
+    "eng": "bitter",
+    "per": "تلخ"
+  },
+  {
+    "eng": "blame",
+    "per": "سرزنش کردن"
+  },
+  {
+    "eng": "blind",
+    "per": "کور"
+  },
+  {
+    "eng": "bond",
+    "per": "اوراق قرضه"
+  },
+  {
+    "eng": "border",
+    "per": "مرز"
+  },
+  {
+    "eng": "breast",
+    "per": "سینه"
+  },
+  {
+    "eng": "brief",
+    "per": "مختصر"
+  },
+  {
+    "eng": "broad",
+    "per": "گسترده"
+  },
+  {
+    "eng": "broadcast",
+    "per": "پخش شود"
+  },
+  {
+    "eng": "budget",
+    "per": "بودجه"
+  },
+  {
+    "eng": "bullet",
+    "per": "گلوله"
+  },
+  {
+    "eng": "bunch",
+    "per": "دسته"
+  },
+  {
+    "eng": "burn",
+    "per": "سوختن"
+  },
+  {
+    "eng": "bush",
+    "per": "بوش"
+  },
+  {
+    "eng": "but",
+    "per": "اما"
+  },
+  {
+    "eng": "cable",
+    "per": "کابل"
+  },
+  {
+    "eng": "calculate",
+    "per": "محاسبه کنید"
+  },
+  {
+    "eng": "cancel",
+    "per": "لغو"
+  },
+  {
+    "eng": "cancer",
+    "per": "سرطان"
+  },
+  {
+    "eng": "capable",
+    "per": "توانا"
+  },
+  {
+    "eng": "capacity",
+    "per": "ظرفیت"
+  },
+  {
+    "eng": "capture",
+    "per": "گرفتن"
+  },
+  {
+    "eng": "cast",
+    "per": "بازیگران"
+  },
+  {
+    "eng": "catch",
+    "per": "گرفتن"
+  },
+  {
+    "eng": "cell",
+    "per": "سلول"
+  },
+  {
+    "eng": "chain",
+    "per": "زنجیره ای"
+  },
+  {
+    "eng": "chair",
+    "per": "صندلی"
+  },
+  {
+    "eng": "chairman",
+    "per": "رئیس"
+  },
+  {
+    "eng": "challenge",
+    "per": "چالش"
+  },
+  {
+    "eng": "characteristic",
+    "per": "مشخصه"
+  },
+  {
+    "eng": "chart",
+    "per": "نمودار"
+  },
+  {
+    "eng": "chief",
+    "per": "رئیس"
+  },
+  {
+    "eng": "circumstance",
+    "per": "شرایط"
+  },
+  {
+    "eng": "cite",
+    "per": "نقل قول"
+  },
+  {
+    "eng": "citizen",
+    "per": "شهروند"
+  },
+  {
+    "eng": "civil",
+    "per": "مدنی"
+  },
+  {
+    "eng": "classic",
+    "per": "کلاسیک"
+  },
+  {
+    "eng": "close",
+    "per": "بستن"
+  },
+  {
+    "eng": "closely",
+    "per": "از نزدیک"
+  },
+  {
+    "eng": "collapse",
+    "per": "فروپاشی"
+  },
+  {
+    "eng": "combination",
+    "per": "ترکیبی"
+  },
+  {
+    "eng": "comfort",
+    "per": "راحتی"
+  },
+  {
+    "eng": "command",
+    "per": "فرمان"
+  },
+  {
+    "eng": "commission",
+    "per": "کمیسیون"
+  },
+  {
+    "eng": "commitment",
+    "per": "تعهد"
+  },
+  {
+    "eng": "committee",
+    "per": "کمیته"
+  },
+  {
+    "eng": "commonly",
+    "per": "معمولا"
+  },
+  {
+    "eng": "complex",
+    "per": "مجتمع"
+  },
+  {
+    "eng": "complicated",
+    "per": "پیچیده"
+  },
+  {
+    "eng": "component",
+    "per": "جزء"
+  },
+  {
+    "eng": "concentration",
+    "per": "تمرکز"
+  },
+  {
+    "eng": "concept",
+    "per": "مفهوم"
+  },
+  {
+    "eng": "concern",
+    "per": "نگرانی"
+  },
+  {
+    "eng": "concerned",
+    "per": "نگران است"
+  },
+  {
+    "eng": "conduct",
+    "per": "رفتار"
+  },
+  {
+    "eng": "confidence",
+    "per": "اعتماد به نفس"
+  },
+  {
+    "eng": "conflict",
+    "per": "درگیری"
+  },
+  {
+    "eng": "confusing",
+    "per": "گیج کننده"
+  },
+  {
+    "eng": "conscious",
+    "per": "آگاهانه"
+  },
+  {
+    "eng": "conservative",
+    "per": "محافظه کار"
+  },
+  {
+    "eng": "consideration",
+    "per": "در نظر گرفتن"
+  },
+  {
+    "eng": "consistent",
+    "per": "سازگار"
+  },
+  {
+    "eng": "constant",
+    "per": "ثابت"
+  },
+  {
+    "eng": "constantly",
+    "per": "دائما"
+  },
+  {
+    "eng": "construct",
+    "per": "ساخت"
+  },
+  {
+    "eng": "construction",
+    "per": "ساخت و ساز"
+  },
+  {
+    "eng": "contemporary",
+    "per": "معاصر"
+  },
+  {
+    "eng": "contest",
+    "per": "مسابقه"
+  },
+  {
+    "eng": "contract",
+    "per": "قرارداد"
+  },
+  {
+    "eng": "contribute",
+    "per": "کمک کند"
+  },
+  {
+    "eng": "contribution",
+    "per": "سهم"
+  },
+  {
+    "eng": "convert",
+    "per": "تبدیل کنید"
+  },
+  {
+    "eng": "convinced",
+    "per": "متقاعد شده است"
+  },
+  {
+    "eng": "core",
+    "per": "هسته"
+  },
+  {
+    "eng": "corporate",
+    "per": "شرکتی"
+  },
+  {
+    "eng": "council",
+    "per": "شورا"
+  },
+  {
+    "eng": "county",
+    "per": "شهرستان"
+  },
+  {
+    "eng": "courage",
+    "per": "شجاعت"
+  },
+  {
+    "eng": "crash",
+    "per": "سقوط"
+  },
+  {
+    "eng": "creation",
+    "per": "ایجاد"
+  },
+  {
+    "eng": "creature",
+    "per": "موجود"
+  },
+  {
+    "eng": "credit",
+    "per": "اعتبار"
+  },
+  {
+    "eng": "crew",
+    "per": "خدمه"
+  },
+  {
+    "eng": "crisis",
+    "per": "بحران"
+  },
+  {
+    "eng": "criterion",
+    "per": "معیار"
+  },
+  {
+    "eng": "critic",
+    "per": "منتقد"
+  },
+  {
+    "eng": "critical",
+    "per": "انتقادی"
+  },
+  {
+    "eng": "criticism",
+    "per": "انتقاد"
+  },
+  {
+    "eng": "criticize",
+    "per": "انتقاد کنید"
+  },
+  {
+    "eng": "crop",
+    "per": "محصول"
+  },
+  {
+    "eng": "crucial",
+    "per": "حیاتی"
+  },
+  {
+    "eng": "cry",
+    "per": "گریه کن"
+  },
+  {
+    "eng": "cure",
+    "per": "درمان"
+  },
+  {
+    "eng": "current",
+    "per": "جاری"
+  },
+  {
+    "eng": "curve",
+    "per": "منحنی"
+  },
+  {
+    "eng": "curved",
+    "per": "منحنی"
+  },
+  {
+    "eng": "date",
+    "per": "تاریخ"
+  },
+  {
+    "eng": "debate",
+    "per": "مناظره"
+  },
+  {
+    "eng": "debt",
+    "per": "بدهی"
+  },
+  {
+    "eng": "decent",
+    "per": "شایسته"
+  },
+  {
+    "eng": "declare",
+    "per": "اعلام کند"
+  },
+  {
+    "eng": "decline",
+    "per": "کاهش می یابد"
+  },
+  {
+    "eng": "decoration",
+    "per": "دکوراسیون"
+  },
+  {
+    "eng": "decrease",
+    "per": "کاهش یابد"
+  },
+  {
+    "eng": "deeply",
+    "per": "عمیقا"
+  },
+  {
+    "eng": "defeat",
+    "per": "شکست"
+  },
+  {
+    "eng": "defence",
+    "per": "دفاع"
+  },
+  {
+    "eng": "defend",
+    "per": "دفاع کند"
+  },
+  {
+    "eng": "delay",
+    "per": "تاخیر"
+  },
+  {
+    "eng": "deliberate",
+    "per": "عمدی"
+  },
+  {
+    "eng": "deliberately",
+    "per": "به عمد"
+  },
+  {
+    "eng": "delight",
+    "per": "لذت بردن"
+  },
+  {
+    "eng": "delighted",
+    "per": "خوشحال"
+  },
+  {
+    "eng": "delivery",
+    "per": "تحویل"
+  },
+  {
+    "eng": "demand",
+    "per": "تقاضا"
+  },
+  {
+    "eng": "demonstrate",
+    "per": "نشان دادن"
+  },
+  {
+    "eng": "deny",
+    "per": "انکار کند"
+  },
+  {
+    "eng": "depressed",
+    "per": "افسرده"
+  },
+  {
+    "eng": "depressing",
+    "per": "افسرده کننده"
+  },
+  {
+    "eng": "depth",
+    "per": "عمق"
+  },
+  {
+    "eng": "desert",
+    "per": "بیابان"
+  },
+  {
+    "eng": "deserve",
+    "per": "سزاوار"
+  },
+  {
+    "eng": "desire",
+    "per": "میل"
+  },
+  {
+    "eng": "desperate",
+    "per": "ناامید"
+  },
+  {
+    "eng": "detail",
+    "per": "جزئیات"
+  },
+  {
+    "eng": "detailed",
+    "per": "دقیق"
+  },
+  {
+    "eng": "detect",
+    "per": "تشخیص دهد"
+  },
+  {
+    "eng": "dig",
+    "per": "حفاری"
+  },
+  {
+    "eng": "disc",
+    "per": "دیسک"
+  },
+  {
+    "eng": "discipline",
+    "per": "نظم و انضباط"
+  },
+  {
+    "eng": "discount",
+    "per": "تخفیف"
+  },
+  {
+    "eng": "dishonest",
+    "per": "بی صداقت"
+  },
+  {
+    "eng": "disk",
+    "per": "دیسک"
+  },
+  {
+    "eng": "dismiss",
+    "per": "اخراج کردن"
+  },
+  {
+    "eng": "display",
+    "per": "نمایش داده شود"
+  },
+  {
+    "eng": "distribute",
+    "per": "توزیع کنید"
+  },
+  {
+    "eng": "distribution",
+    "per": "توزیع"
+  },
+  {
+    "eng": "district",
+    "per": "منطقه"
+  },
+  {
+    "eng": "divide",
+    "per": "تقسیم کنید"
+  },
+  {
+    "eng": "division",
+    "per": "تقسیم"
+  },
+  {
+    "eng": "document",
+    "per": "سند"
+  },
+  {
+    "eng": "domestic",
+    "per": "داخلی"
+  },
+  {
+    "eng": "dominate",
+    "per": "مسلط شوند"
+  },
+  {
+    "eng": "downwards",
+    "per": "به سمت پایین"
+  },
+  {
+    "eng": "dozen",
+    "per": "دوجین"
+  },
+  {
+    "eng": "draft",
+    "per": "پیش نویس"
+  },
+  {
+    "eng": "drag",
+    "per": "بکشید"
+  },
+  {
+    "eng": "dramatic",
+    "per": "دراماتیک"
+  },
+  {
+    "eng": "edit",
+    "per": "ویرایش کنید"
+  },
+  {
+    "eng": "edition",
+    "per": "نسخه"
+  },
+  {
+    "eng": "efficient",
+    "per": "کارآمد"
+  },
+  {
+    "eng": "elderly",
+    "per": "سالمندان"
+  },
+  {
+    "eng": "elect",
+    "per": "انتخاب کنید"
+  },
+  {
+    "eng": "elsewhere",
+    "per": "در جای دیگر"
+  },
+  {
+    "eng": "emerge",
+    "per": "ظهور کند"
+  },
+  {
+    "eng": "emotional",
+    "per": "احساسی"
+  },
+  {
+    "eng": "emphasis",
+    "per": "تاکید"
+  },
+  {
+    "eng": "emphasize",
+    "per": "تاکید کنید"
+  },
+  {
+    "eng": "enable",
+    "per": "فعال کردن"
+  },
+  {
+    "eng": "encounter",
+    "per": "برخورد"
+  },
+  {
+    "eng": "engage",
+    "per": "درگیر شدن"
+  },
+  {
+    "eng": "enhance",
+    "per": "افزایش دهد"
+  },
+  {
+    "eng": "enquiry",
+    "per": "استعلام"
+  },
+  {
+    "eng": "ensure",
+    "per": "اطمینان حاصل شود"
+  },
+  {
+    "eng": "enthusiasm",
+    "per": "شور و شوق"
+  },
+  {
+    "eng": "enthusiastic",
+    "per": "مشتاق"
+  },
+  {
+    "eng": "entire",
+    "per": "کل"
+  },
+  {
+    "eng": "entirely",
+    "per": "به طور کامل"
+  },
+  {
+    "eng": "equal",
+    "per": "برابر"
+  },
+  {
+    "eng": "establish",
+    "per": "ایجاد کند"
+  },
+  {
+    "eng": "estate",
+    "per": "املاک"
+  },
+  {
+    "eng": "estimate",
+    "per": "برآورد"
+  },
+  {
+    "eng": "ethical",
+    "per": "اخلاقی"
+  },
+  {
+    "eng": "evaluate",
+    "per": "ارزیابی کنید"
+  },
+  {
+    "eng": "even",
+    "per": "حتی"
+  },
+  {
+    "eng": "evil",
+    "per": "بد"
+  },
+  {
+    "eng": "examination",
+    "per": "معاینه"
+  },
+  {
+    "eng": "excuse",
+    "per": "بهانه"
+  },
+  {
+    "eng": "executive",
+    "per": "اجرایی"
+  },
+  {
+    "eng": "existence",
+    "per": "وجود"
+  },
+  {
+    "eng": "expectation",
+    "per": "انتظار"
+  },
+  {
+    "eng": "expense",
+    "per": "هزینه"
+  },
+  {
+    "eng": "exploration",
+    "per": "اکتشاف"
+  },
+  {
+    "eng": "expose",
+    "per": "افشا کند"
+  },
+  {
+    "eng": "extend",
+    "per": "تمدید کنید"
+  },
+  {
+    "eng": "extent",
+    "per": "وسعت"
+  },
+  {
+    "eng": "external",
+    "per": "خارجی"
+  },
+  {
+    "eng": "extraordinary",
+    "per": "فوق العاده"
+  },
+  {
+    "eng": "extreme",
+    "per": "افراطی"
+  },
+  {
+    "eng": "facility",
+    "per": "تسهیلات"
+  },
+  {
+    "eng": "failure",
+    "per": "شکست"
+  },
+  {
+    "eng": "faith",
+    "per": "ایمان"
+  },
+  {
+    "eng": "fault",
+    "per": "تقصیر"
+  },
+  {
+    "eng": "favour",
+    "per": "به نفع"
+  },
+  {
+    "eng": "feather",
+    "per": "پر"
+  },
+  {
+    "eng": "fee",
+    "per": "هزینه"
+  },
+  {
+    "eng": "feed",
+    "per": "خوراک"
+  },
+  {
+    "eng": "feedback",
+    "per": "بازخورد"
+  },
+  {
+    "eng": "feel",
+    "per": "احساس کنید"
+  },
+  {
+    "eng": "fellow",
+    "per": "همکار"
+  },
+  {
+    "eng": "figure",
+    "per": "شکل"
+  },
+  {
+    "eng": "file",
+    "per": "فایل"
+  },
+  {
+    "eng": "finance",
+    "per": "امور مالی"
+  },
+  {
+    "eng": "finding",
+    "per": "پیدا کردن"
+  },
+  {
+    "eng": "firm",
+    "per": "محکم"
+  },
+  {
+    "eng": "fix",
+    "per": "رفع کنید"
+  },
+  {
+    "eng": "flame",
+    "per": "شعله"
+  },
+  {
+    "eng": "flash",
+    "per": "فلش"
+  },
+  {
+    "eng": "flexible",
+    "per": "قابل انعطاف"
+  },
+  {
+    "eng": "float",
+    "per": "شناور"
+  },
+  {
+    "eng": "fold",
+    "per": "بریزید"
+  },
+  {
+    "eng": "folding",
+    "per": "تاشو"
+  },
+  {
+    "eng": "following",
+    "per": "دنبال کردن"
+  },
+  {
+    "eng": "forgive",
+    "per": "ببخش"
+  },
+  {
+    "eng": "former",
+    "per": "سابق"
+  },
+  {
+    "eng": "fortune",
+    "per": "ثروت"
+  },
+  {
+    "eng": "forward",
+    "per": "به جلو"
+  },
+  {
+    "eng": "found",
+    "per": "یافت"
+  },
+  {
+    "eng": "free",
+    "per": "رایگان"
+  },
+  {
+    "eng": "freedom",
+    "per": "آزادی"
+  },
+  {
+    "eng": "frequency",
+    "per": "فرکانس"
+  },
+  {
+    "eng": "fuel",
+    "per": "سوخت"
+  },
+  {
+    "eng": "fully",
+    "per": "به طور کامل"
+  },
+  {
+    "eng": "function",
+    "per": "تابع"
+  },
+  {
+    "eng": "fund",
+    "per": "صندوق"
+  },
+  {
+    "eng": "fundamental",
+    "per": "اساسی"
+  },
+  {
+    "eng": "funding",
+    "per": "تامین مالی"
+  },
+  {
+    "eng": "furthermore",
+    "per": "علاوه بر این"
+  },
+  {
+    "eng": "gain",
+    "per": "به دست آوردن"
+  },
+  {
+    "eng": "gang",
+    "per": "باند"
+  },
+  {
+    "eng": "generate",
+    "per": "تولید کند"
+  },
+  {
+    "eng": "genre",
+    "per": "ژانر"
+  },
+  {
+    "eng": "govern",
+    "per": "حکومت کنند"
+  },
+  {
+    "eng": "grab",
+    "per": "چنگ زدن"
+  },
+  {
+    "eng": "grade",
+    "per": "درجه"
+  },
+  {
+    "eng": "gradually",
+    "per": "به تدریج"
+  },
+  {
+    "eng": "grand",
+    "per": "بزرگ"
+  },
+  {
+    "eng": "grant",
+    "per": "کمک مالی"
+  },
+  {
+    "eng": "guarantee",
+    "per": "تضمین می کند"
+  },
+  {
+    "eng": "handle",
+    "per": "دسته"
+  },
+  {
+    "eng": "harm",
+    "per": "آسیب"
+  },
+  {
+    "eng": "harmful",
+    "per": "مضر"
+  },
+  {
+    "eng": "hearing",
+    "per": "شنیدن"
+  },
+  {
+    "eng": "heaven",
+    "per": "بهشت"
+  },
+  {
+    "eng": "heel",
+    "per": "پاشنه پا"
+  },
+  {
+    "eng": "hell",
+    "per": "جهنم"
+  },
+  {
+    "eng": "hesitate",
+    "per": "تردید کنید"
+  },
+  {
+    "eng": "high",
+    "per": "بالا"
+  },
+  {
+    "eng": "hire",
+    "per": "استخدام کنید"
+  },
+  {
+    "eng": "hold",
+    "per": "نگه دارید"
+  },
+  {
+    "eng": "hollow",
+    "per": "توخالی"
+  },
+  {
+    "eng": "holy",
+    "per": "مقدس"
+  },
+  {
+    "eng": "honour",
+    "per": "افتخار"
+  },
+  {
+    "eng": "host",
+    "per": "میزبان"
+  },
+  {
+    "eng": "house",
+    "per": "خانه"
+  },
+  {
+    "eng": "household",
+    "per": "خانوار"
+  },
+  {
+    "eng": "housing",
+    "per": "مسکن"
+  },
+  {
+    "eng": "humorous",
+    "per": "طنز"
+  },
+  {
+    "eng": "humour",
+    "per": "طنز"
+  },
+  {
+    "eng": "hunt",
+    "per": "شکار"
+  },
+  {
+    "eng": "hunting",
+    "per": "شکار"
+  },
+  {
+    "eng": "hurt",
+    "per": "صدمه دیده"
+  },
+  {
+    "eng": "ideal",
+    "per": "ایده آل"
+  },
+  {
+    "eng": "illustrate",
+    "per": "نشان دادن"
+  },
+  {
+    "eng": "illustration",
+    "per": "تصویرسازی"
+  },
+  {
+    "eng": "imagination",
+    "per": "تخیل"
+  },
+  {
+    "eng": "impatient",
+    "per": "بی تاب"
+  },
+  {
+    "eng": "imply",
+    "per": "دلالت کند"
+  },
+  {
+    "eng": "impose",
+    "per": "تحمیل کند"
+  },
+  {
+    "eng": "impress",
+    "per": "تحت تاثیر قرار دادن"
+  },
+  {
+    "eng": "impressed",
+    "per": "تحت تاثیر قرار گرفت"
+  },
+  {
+    "eng": "inch",
+    "per": "اینچ"
+  },
+  {
+    "eng": "incident",
+    "per": "حادثه"
+  },
+  {
+    "eng": "income",
+    "per": "درآمد"
+  },
+  {
+    "eng": "increasingly",
+    "per": "به طور فزاینده"
+  },
+  {
+    "eng": "industrial",
+    "per": "صنعتی"
+  },
+  {
+    "eng": "infection",
+    "per": "عفونت"
+  },
+  {
+    "eng": "inform",
+    "per": "اطلاع رسانی کند"
+  },
+  {
+    "eng": "initial",
+    "per": "اولیه"
+  },
+  {
+    "eng": "initially",
+    "per": "در ابتدا"
+  },
+  {
+    "eng": "initiative",
+    "per": "ابتکار عمل"
+  },
+  {
+    "eng": "inner",
+    "per": "درونی"
+  },
+  {
+    "eng": "inquiry",
+    "per": "استعلام"
+  },
+  {
+    "eng": "insight",
+    "per": "بینش"
+  },
+  {
+    "eng": "insist",
+    "per": "اصرار کنید"
+  },
+  {
+    "eng": "inspire",
+    "per": "الهام بخش"
+  },
+  {
+    "eng": "install",
+    "per": "نصب کنید"
+  },
+  {
+    "eng": "instance",
+    "per": "نمونه"
+  },
+  {
+    "eng": "institute",
+    "per": "موسسه"
+  },
+  {
+    "eng": "institution",
+    "per": "موسسه"
+  },
+  {
+    "eng": "insurance",
+    "per": "بیمه"
+  },
+  {
+    "eng": "intended",
+    "per": "در نظر گرفته شده است"
+  },
+  {
+    "eng": "intense",
+    "per": "شدید"
+  },
+  {
+    "eng": "internal",
+    "per": "داخلی"
+  },
+  {
+    "eng": "interpret",
+    "per": "تفسیر کنید"
+  },
+  {
+    "eng": "interrupt",
+    "per": "قطع کردن"
+  },
+  {
+    "eng": "investigation",
+    "per": "تحقیق"
+  },
+  {
+    "eng": "investment",
+    "per": "سرمایه گذاری"
+  },
+  {
+    "eng": "issue",
+    "per": "موضوع"
+  },
+  {
+    "eng": "joy",
+    "per": "شادی"
+  },
+  {
+    "eng": "judgement",
+    "per": "قضاوت"
+  },
+  {
+    "eng": "junior",
+    "per": "جوان"
+  },
+  {
+    "eng": "justice",
+    "per": "عدالت"
+  },
+  {
+    "eng": "justify",
+    "per": "توجیه کند"
+  },
+  {
+    "eng": "labour",
+    "per": "کار"
+  },
+  {
+    "eng": "landscape",
+    "per": "چشم انداز"
+  },
+  {
+    "eng": "largely",
+    "per": "تا حد زیادی"
+  },
+  {
+    "eng": "latest",
+    "per": "آخرین"
+  },
+  {
+    "eng": "launch",
+    "per": "راه اندازی"
+  },
+  {
+    "eng": "leadership",
+    "per": "رهبری"
+  },
+  {
+    "eng": "league",
+    "per": "لیگ"
+  },
+  {
+    "eng": "lean",
+    "per": "لاغر"
+  },
+  {
+    "eng": "leave",
+    "per": "ترک"
+  },
+  {
+    "eng": "level",
+    "per": "سطح"
+  },
+  {
+    "eng": "licence",
+    "per": "مجوز"
+  },
+  {
+    "eng": "limited",
+    "per": "محدود است"
+  },
+  {
+    "eng": "line",
+    "per": "خط"
+  },
+  {
+    "eng": "lively",
+    "per": "پر جنب و جوش"
+  },
+  {
+    "eng": "load",
+    "per": "بار"
+  },
+  {
+    "eng": "loan",
+    "per": "وام"
+  },
+  {
+    "eng": "logical",
+    "per": "منطقی"
+  },
+  {
+    "eng": "long-term",
+    "per": "بلند مدت"
+  },
+  {
+    "eng": "loose",
+    "per": "شل"
+  },
+  {
+    "eng": "lord",
+    "per": "ارباب"
+  },
+  {
+    "eng": "low",
+    "per": "پایین"
+  },
+  {
+    "eng": "lower",
+    "per": "پایین تر"
+  },
+  {
+    "eng": "lung",
+    "per": "ریه"
+  },
+  {
+    "eng": "maintain",
+    "per": "حفظ کند"
+  },
+  {
+    "eng": "majority",
+    "per": "اکثریت"
+  },
+  {
+    "eng": "make",
+    "per": "ساختن"
+  },
+  {
+    "eng": "map",
+    "per": "نقشه"
+  },
+  {
+    "eng": "mass",
+    "per": "جرم"
+  },
+  {
+    "eng": "massive",
+    "per": "عظیم"
+  },
+  {
+    "eng": "master",
+    "per": "استاد"
+  },
+  {
+    "eng": "matching",
+    "per": "مطابقت دادن"
+  },
+  {
+    "eng": "material",
+    "per": "مواد"
+  },
+  {
+    "eng": "maximum",
+    "per": "حداکثر"
+  },
+  {
+    "eng": "means",
+    "per": "به معنی"
+  },
+  {
+    "eng": "measurement",
+    "per": "اندازه گیری"
+  },
+  {
+    "eng": "medium",
+    "per": "متوسط"
+  },
+  {
+    "eng": "melt",
+    "per": "ذوب شود"
+  },
+  {
+    "eng": "military",
+    "per": "نظامی"
+  },
+  {
+    "eng": "mineral",
+    "per": "معدنی"
+  },
+  {
+    "eng": "minimum",
+    "per": "حداقل"
+  },
+  {
+    "eng": "minister",
+    "per": "وزیر"
+  },
+  {
+    "eng": "minor",
+    "per": "جزئی"
+  },
+  {
+    "eng": "minority",
+    "per": "اقلیت"
+  },
+  {
+    "eng": "mission",
+    "per": "ماموریت"
+  },
+  {
+    "eng": "mistake",
+    "per": "اشتباه"
+  },
+  {
+    "eng": "mixed",
+    "per": "مختلط"
+  },
+  {
+    "eng": "model",
+    "per": "مدل"
+  },
+  {
+    "eng": "modify",
+    "per": "اصلاح کنید"
+  },
+  {
+    "eng": "monitor",
+    "per": "نظارت کنید"
+  },
+  {
+    "eng": "moral",
+    "per": "اخلاقی"
+  },
+  {
+    "eng": "motor",
+    "per": "موتور"
+  },
+  {
+    "eng": "mount",
+    "per": "سوار کردن"
+  },
+  {
+    "eng": "multiple",
+    "per": "چندگانه"
+  },
+  {
+    "eng": "multiply",
+    "per": "ضرب کنند"
+  },
+  {
+    "eng": "mysterious",
+    "per": "مرموز"
+  },
+  {
+    "eng": "narrow",
+    "per": "باریک"
+  },
+  {
+    "eng": "national",
+    "per": "ملی"
+  },
+  {
+    "eng": "neat",
+    "per": "مرتب"
+  },
+  {
+    "eng": "negative",
+    "per": "منفی"
+  },
+  {
+    "eng": "nerve",
+    "per": "عصب"
+  },
+  {
+    "eng": "nevertheless",
+    "per": "با این وجود"
+  },
+  {
+    "eng": "nightmare",
+    "per": "کابوس"
+  },
+  {
+    "eng": "notion",
+    "per": "مفهوم"
+  },
+  {
+    "eng": "numerous",
+    "per": "متعدد"
+  },
+  {
+    "eng": "obey",
+    "per": "اطاعت کن"
+  },
+  {
+    "eng": "object",
+    "per": "شی"
+  },
+  {
+    "eng": "objective",
+    "per": "هدف"
+  },
+  {
+    "eng": "obligation",
+    "per": "تعهد"
+  },
+  {
+    "eng": "observation",
+    "per": "مشاهده"
+  },
+  {
+    "eng": "observe",
+    "per": "مشاهده کنید"
+  },
+  {
+    "eng": "obtain",
+    "per": "بدست آوردن"
+  },
+  {
+    "eng": "occasionally",
+    "per": "گاهی اوقات"
+  },
+  {
+    "eng": "offence",
+    "per": "جرم"
+  },
+  {
+    "eng": "offend",
+    "per": "توهین کردن"
+  },
+  {
+    "eng": "offensive",
+    "per": "توهین آمیز"
+  },
+  {
+    "eng": "official",
+    "per": "رسمی"
+  },
+  {
+    "eng": "opening",
+    "per": "باز کردن"
+  },
+  {
+    "eng": "operate",
+    "per": "عمل کنند"
+  },
+  {
+    "eng": "opponent",
+    "per": "حریف"
+  },
+  {
+    "eng": "oppose",
+    "per": "مخالفت کنند"
+  },
+  {
+    "eng": "opposed",
+    "per": "مخالفت کرد"
+  },
+  {
+    "eng": "opposition",
+    "per": "مخالفت"
+  },
+  {
+    "eng": "organ",
+    "per": "اندام"
+  },
+  {
+    "eng": "origin",
+    "per": "منشاء"
+  },
+  {
+    "eng": "otherwise",
+    "per": "در غیر این صورت"
+  },
+  {
+    "eng": "outcome",
+    "per": "نتیجه"
+  },
+  {
+    "eng": "outer",
+    "per": "بیرونی"
+  },
+  {
+    "eng": "outline",
+    "per": "طرح کلی"
+  },
+  {
+    "eng": "overall",
+    "per": "به طور کلی"
+  },
+  {
+    "eng": "owe",
+    "per": "بدهکار"
+  },
+  {
+    "eng": "pace",
+    "per": "سرعت"
+  },
+  {
+    "eng": "package",
+    "per": "بسته بندی"
+  },
+  {
+    "eng": "panel",
+    "per": "پانل"
+  },
+  {
+    "eng": "parliament",
+    "per": "مجلس"
+  },
+  {
+    "eng": "participant",
+    "per": "شرکت کننده"
+  },
+  {
+    "eng": "partly",
+    "per": "تا حدی"
+  },
+  {
+    "eng": "passage",
+    "per": "گذر"
+  },
+  {
+    "eng": "patient",
+    "per": "بیمار"
+  },
+  {
+    "eng": "pension",
+    "per": "حقوق بازنشستگی"
+  },
+  {
+    "eng": "permanent",
+    "per": "دائمی"
+  },
+  {
+    "eng": "permit",
+    "per": "مجوز"
+  },
+  {
+    "eng": "perspective",
+    "per": "چشم انداز"
+  },
+  {
+    "eng": "phase",
+    "per": "فاز"
+  },
+  {
+    "eng": "phenomenon",
+    "per": "پدیده"
+  },
+  {
+    "eng": "philosophy",
+    "per": "فلسفه"
+  },
+  {
+    "eng": "pick",
+    "per": "انتخاب کنید"
+  },
+  {
+    "eng": "picture",
+    "per": "تصویر"
+  },
+  {
+    "eng": "pile",
+    "per": "توده"
+  },
+  {
+    "eng": "pitch",
+    "per": "زمین"
+  },
+  {
+    "eng": "plain",
+    "per": "ساده"
+  },
+  {
+    "eng": "plot",
+    "per": "طرح"
+  },
+  {
+    "eng": "plus",
+    "per": "به علاوه"
+  },
+  {
+    "eng": "pointed",
+    "per": "اشاره کرد"
+  },
+  {
+    "eng": "popularity",
+    "per": "محبوبیت"
+  },
+  {
+    "eng": "pose",
+    "per": "ژست گرفتن"
+  },
+  {
+    "eng": "position",
+    "per": "موقعیت"
+  },
+  {
+    "eng": "positive",
+    "per": "مثبت"
+  },
+  {
+    "eng": "possess",
+    "per": "در اختیار داشتن"
+  },
+  {
+    "eng": "potential",
+    "per": "بالقوه"
+  },
+  {
+    "eng": "power",
+    "per": "قدرت"
+  },
+  {
+    "eng": "praise",
+    "per": "ستایش"
+  },
+  {
+    "eng": "pregnant",
+    "per": "حامله"
+  },
+  {
+    "eng": "preparation",
+    "per": "آماده سازی"
+  },
+  {
+    "eng": "presence",
+    "per": "حضور"
+  },
+  {
+    "eng": "preserve",
+    "per": "حفظ کند"
+  },
+  {
+    "eng": "price",
+    "per": "قیمت"
+  },
+  {
+    "eng": "prime",
+    "per": "نخست"
+  },
+  {
+    "eng": "principle",
+    "per": "اصل"
+  },
+  {
+    "eng": "print",
+    "per": "چاپ کنید"
+  },
+  {
+    "eng": "priority",
+    "per": "اولویت"
+  },
+  {
+    "eng": "privacy",
+    "per": "حریم خصوصی"
+  },
+  {
+    "eng": "procedure",
+    "per": "رویه"
+  },
+  {
+    "eng": "process",
+    "per": "فرآیند"
+  },
+  {
+    "eng": "produce",
+    "per": "تولید کنند"
+  },
+  {
+    "eng": "professional",
+    "per": "حرفه ای"
+  },
+  {
+    "eng": "progress",
+    "per": "پیشرفت"
+  },
+  {
+    "eng": "project",
+    "per": "پروژه"
+  },
+  {
+    "eng": "proof",
+    "per": "اثبات"
+  },
+  {
+    "eng": "proposal",
+    "per": "پیشنهاد"
+  },
+  {
+    "eng": "propose",
+    "per": "پیشنهاد کند"
+  },
+  {
+    "eng": "prospect",
+    "per": "چشم انداز"
+  },
+  {
+    "eng": "protection",
+    "per": "حفاظت"
+  },
+  {
+    "eng": "psychologist",
+    "per": "روانشناس"
+  },
+  {
+    "eng": "psychology",
+    "per": "روانشناسی"
+  },
+  {
+    "eng": "publication",
+    "per": "انتشار"
+  },
+  {
+    "eng": "pupil",
+    "per": "دانش آموز"
+  },
+  {
+    "eng": "purchase",
+    "per": "خرید"
+  },
+  {
+    "eng": "pure",
+    "per": "خالص"
+  },
+  {
+    "eng": "pursue",
+    "per": "دنبال کردن"
+  },
+  {
+    "eng": "range",
+    "per": "محدوده"
+  },
+  {
+    "eng": "rank",
+    "per": "رتبه"
+  },
+  {
+    "eng": "rapid",
+    "per": "سریع"
+  },
+  {
+    "eng": "rapidly",
+    "per": "به سرعت"
+  },
+  {
+    "eng": "rate",
+    "per": "نرخ"
+  },
+  {
+    "eng": "raw",
+    "per": "خام"
+  },
+  {
+    "eng": "reach",
+    "per": "رسیدن"
+  },
+  {
+    "eng": "realistic",
+    "per": "واقع بینانه"
+  },
+  {
+    "eng": "reasonable",
+    "per": "منطقی"
+  },
+  {
+    "eng": "recall",
+    "per": "به یاد بیاور"
+  },
+  {
+    "eng": "recover",
+    "per": "بهبود می یابند"
+  },
+  {
+    "eng": "reduction",
+    "per": "کاهش"
+  },
+  {
+    "eng": "regard",
+    "per": "توجه"
+  },
+  {
+    "eng": "regional",
+    "per": "منطقه ای"
+  },
+  {
+    "eng": "register",
+    "per": "ثبت نام کنید"
+  },
+  {
+    "eng": "regret",
+    "per": "پشیمانی"
+  },
+  {
+    "eng": "regulation",
+    "per": "مقررات"
+  },
+  {
+    "eng": "relatively",
+    "per": "نسبتا"
+  },
+  {
+    "eng": "relevant",
+    "per": "مربوطه"
+  },
+  {
+    "eng": "relief",
+    "per": "تسکین"
+  },
+  {
+    "eng": "rely",
+    "per": "تکیه کنید"
+  },
+  {
+    "eng": "remark",
+    "per": "تذکر"
+  },
+  {
+    "eng": "representative",
+    "per": "نماینده"
+  },
+  {
+    "eng": "reputation",
+    "per": "شهرت"
+  },
+  {
+    "eng": "requirement",
+    "per": "نیاز"
+  },
+  {
+    "eng": "rescue",
+    "per": "نجات"
+  },
+  {
+    "eng": "reserve",
+    "per": "رزرو کنید"
+  },
+  {
+    "eng": "resident",
+    "per": "مقیم"
+  },
+  {
+    "eng": "resist",
+    "per": "مقاومت کن"
+  },
+  {
+    "eng": "resolve",
+    "per": "حل کردن"
+  },
+  {
+    "eng": "resort",
+    "per": "توسل"
+  },
+  {
+    "eng": "retain",
+    "per": "حفظ کند"
+  },
+  {
+    "eng": "reveal",
+    "per": "آشکار کردن"
+  },
+  {
+    "eng": "revolution",
+    "per": "انقلاب"
+  },
+  {
+    "eng": "reward",
+    "per": "پاداش"
+  },
+  {
+    "eng": "rhythm",
+    "per": "ریتم"
+  },
+  {
+    "eng": "rid",
+    "per": "خلاص کردن"
+  },
+  {
+    "eng": "root",
+    "per": "ریشه"
+  },
+  {
+    "eng": "round",
+    "per": "گرد"
+  },
+  {
+    "eng": "routine",
+    "per": "روال"
+  },
+  {
+    "eng": "rub",
+    "per": "مالیدن"
+  },
+  {
+    "eng": "rubber",
+    "per": "لاستیک"
+  },
+  {
+    "eng": "rural",
+    "per": "روستایی"
+  },
+  {
+    "eng": "rush",
+    "per": "عجله"
+  },
+  {
+    "eng": "sample",
+    "per": "نمونه"
+  },
+  {
+    "eng": "satellite",
+    "per": "ماهواره"
+  },
+  {
+    "eng": "satisfied",
+    "per": "راضی"
+  },
+  {
+    "eng": "satisfy",
+    "per": "راضی کردن"
+  },
+  {
+    "eng": "saving",
+    "per": "صرفه جویی"
+  },
+  {
+    "eng": "scale",
+    "per": "مقیاس"
+  },
+  {
+    "eng": "schedule",
+    "per": "برنامه"
+  },
+  {
+    "eng": "scheme",
+    "per": "طرح"
+  },
+  {
+    "eng": "scream",
+    "per": "فریاد زدن"
+  },
+  {
+    "eng": "screen",
+    "per": "صفحه نمایش"
+  },
+  {
+    "eng": "seat",
+    "per": "صندلی"
+  },
+  {
+    "eng": "sector",
+    "per": "بخش"
+  },
+  {
+    "eng": "secure",
+    "per": "امن"
+  },
+  {
+    "eng": "seek",
+    "per": "به دنبال"
+  },
+  {
+    "eng": "select",
+    "per": "انتخاب کنید"
+  },
+  {
+    "eng": "selection",
+    "per": "انتخاب"
+  },
+  {
+    "eng": "self",
+    "per": "خود"
+  },
+  {
+    "eng": "senior",
+    "per": "ارشد"
+  },
+  {
+    "eng": "sense",
+    "per": "حس"
+  },
+  {
+    "eng": "sensitive",
+    "per": "حساس"
+  },
+  {
+    "eng": "sentence",
+    "per": "جمله"
+  },
+  {
+    "eng": "sequence",
+    "per": "دنباله"
+  },
+  {
+    "eng": "session",
+    "per": "جلسه"
+  },
+  {
+    "eng": "settle",
+    "per": "حل و فصل شود"
+  },
+  {
+    "eng": "severe",
+    "per": "شدید"
+  },
+  {
+    "eng": "shade",
+    "per": "سایه"
+  },
+  {
+    "eng": "shadow",
+    "per": "سایه"
+  },
+  {
+    "eng": "shallow",
+    "per": "کم عمق"
+  },
+  {
+    "eng": "shame",
+    "per": "شرم"
+  },
+  {
+    "eng": "shape",
+    "per": "شکل"
+  },
+  {
+    "eng": "shelter",
+    "per": "پناهگاه"
+  },
+  {
+    "eng": "shift",
+    "per": "جابجایی"
+  },
+  {
+    "eng": "ship",
+    "per": "کشتی"
+  },
+  {
+    "eng": "shock",
+    "per": "شوک"
+  },
+  {
+    "eng": "shocked",
+    "per": "شوکه شده"
+  },
+  {
+    "eng": "shooting",
+    "per": "تیراندازی"
+  },
+  {
+    "eng": "shot",
+    "per": "شلیک کرد"
+  },
+  {
+    "eng": "significant",
+    "per": "قابل توجه است"
+  },
+  {
+    "eng": "significantly",
+    "per": "به طور قابل توجهی"
+  },
+  {
+    "eng": "silence",
+    "per": "سکوت"
+  },
+  {
+    "eng": "silk",
+    "per": "ابریشم"
+  },
+  {
+    "eng": "sincere",
+    "per": "صادقانه"
+  },
+  {
+    "eng": "slave",
+    "per": "برده"
+  },
+  {
+    "eng": "slide",
+    "per": "اسلاید"
+  },
+  {
+    "eng": "slight",
+    "per": "اندک"
+  },
+  {
+    "eng": "slip",
+    "per": "لغزش"
+  },
+  {
+    "eng": "slope",
+    "per": "شیب"
+  },
+  {
+    "eng": "solar",
+    "per": "خورشیدی"
+  },
+  {
+    "eng": "somewhat",
+    "per": "تا حدودی"
+  },
+  {
+    "eng": "soul",
+    "per": "روح"
+  },
+  {
+    "eng": "specialist",
+    "per": "متخصص"
+  },
+  {
+    "eng": "species",
+    "per": "گونه ها"
+  },
+  {
+    "eng": "speed",
+    "per": "سرعت"
+  },
+  {
+    "eng": "spiritual",
+    "per": "معنوی"
+  },
+  {
+    "eng": "split",
+    "per": "تقسیم"
+  },
+  {
+    "eng": "sponsor",
+    "per": "حامی"
+  },
+  {
+    "eng": "spot",
+    "per": "نقطه"
+  },
+  {
+    "eng": "spread",
+    "per": "گسترش"
+  },
+  {
+    "eng": "spring",
+    "per": "بهار"
+  },
+  {
+    "eng": "stable",
+    "per": "پایدار"
+  },
+  {
+    "eng": "stage",
+    "per": "مرحله"
+  },
+  {
+    "eng": "stand",
+    "per": "ایستادن"
+  },
+  {
+    "eng": "stare",
+    "per": "خیره شدن"
+  },
+  {
+    "eng": "status",
+    "per": "وضعیت"
+  },
+  {
+    "eng": "steady",
+    "per": "ثابت"
+  },
+  {
+    "eng": "steel",
+    "per": "فولاد"
+  },
+  {
+    "eng": "steep",
+    "per": "شیب دار"
+  },
+  {
+    "eng": "step",
+    "per": "گام"
+  },
+  {
+    "eng": "sticky",
+    "per": "چسبنده"
+  },
+  {
+    "eng": "stiff",
+    "per": "سفت"
+  },
+  {
+    "eng": "stock",
+    "per": "سهام"
+  },
+  {
+    "eng": "stream",
+    "per": "جریان"
+  },
+  {
+    "eng": "stretch",
+    "per": "کشش"
+  },
+  {
+    "eng": "strict",
+    "per": "سختگیر"
+  },
+  {
+    "eng": "strike",
+    "per": "اعتصاب"
+  },
+  {
+    "eng": "structure",
+    "per": "ساختار"
+  },
+  {
+    "eng": "struggle",
+    "per": "مبارزه"
+  },
+  {
+    "eng": "stuff",
+    "per": "چیزهای"
+  },
+  {
+    "eng": "subject",
+    "per": "موضوع"
+  },
+  {
+    "eng": "submit",
+    "per": "ارسال کنید"
+  },
+  {
+    "eng": "sum",
+    "per": "مجموع"
+  },
+  {
+    "eng": "surgery",
+    "per": "عمل جراحی"
+  },
+  {
+    "eng": "surround",
+    "per": "را احاطه کنند"
+  },
+  {
+    "eng": "surrounding",
+    "per": "اطراف"
+  },
+  {
+    "eng": "survey",
+    "per": "نظرسنجی"
+  },
+  {
+    "eng": "suspect",
+    "per": "مشکوک"
+  },
+  {
+    "eng": "swear",
+    "per": "قسم بخور"
+  },
+  {
+    "eng": "sweep",
+    "per": "جارو کردن"
+  },
+  {
+    "eng": "switch",
+    "per": "سوئیچ"
+  },
+  {
+    "eng": "sympathy",
+    "per": "همدردی"
+  },
+  {
+    "eng": "tale",
+    "per": "داستان"
+  },
+  {
+    "eng": "tank",
+    "per": "مخزن"
+  },
+  {
+    "eng": "target",
+    "per": "هدف"
+  },
+  {
+    "eng": "tear",
+    "per": "پاره کردن"
+  },
+  {
+    "eng": "temporary",
+    "per": "موقت"
+  },
+  {
+    "eng": "term",
+    "per": "مدت"
+  },
+  {
+    "eng": "therapy",
+    "per": "درمان"
+  },
+  {
+    "eng": "threat",
+    "per": "تهدید"
+  },
+  {
+    "eng": "threaten",
+    "per": "تهدید کند"
+  },
+  {
+    "eng": "thus",
+    "per": "بنابراین"
+  },
+  {
+    "eng": "time",
+    "per": "زمان"
+  },
+  {
+    "eng": "title",
+    "per": "عنوان"
+  },
+  {
+    "eng": "tone",
+    "per": "لحن"
+  },
+  {
+    "eng": "tough",
+    "per": "سخت"
+  },
+  {
+    "eng": "track",
+    "per": "مسیر"
+  },
+  {
+    "eng": "transfer",
+    "per": "انتقال"
+  },
+  {
+    "eng": "transform",
+    "per": "تبدیل کنید"
+  },
+  {
+    "eng": "transition",
+    "per": "انتقال"
+  },
+  {
+    "eng": "trial",
+    "per": "محاکمه"
+  },
+  {
+    "eng": "trip",
+    "per": "سفر"
+  },
+  {
+    "eng": "tropical",
+    "per": "گرمسیری"
+  },
+  {
+    "eng": "trouble",
+    "per": "مشکل"
+  },
+  {
+    "eng": "truly",
+    "per": "واقعا"
+  },
+  {
+    "eng": "trust",
+    "per": "اعتماد"
+  },
+  {
+    "eng": "try",
+    "per": "سعی کنید"
+  },
+  {
+    "eng": "tune",
+    "per": "لحن"
+  },
+  {
+    "eng": "tunnel",
+    "per": "تونل"
+  },
+  {
+    "eng": "ultimately",
+    "per": "در نهایت"
+  },
+  {
+    "eng": "unconscious",
+    "per": "ناخودآگاه"
+  },
+  {
+    "eng": "unexpected",
+    "per": "غیر منتظره"
+  },
+  {
+    "eng": "unique",
+    "per": "منحصر به فرد"
+  },
+  {
+    "eng": "universe",
+    "per": "کیهان"
+  },
+  {
+    "eng": "unknown",
+    "per": "ناشناخته"
+  },
+  {
+    "eng": "upper",
+    "per": "بالا"
+  },
+  {
+    "eng": "upwards",
+    "per": "به سمت بالا"
+  },
+  {
+    "eng": "urban",
+    "per": "شهری"
+  },
+  {
+    "eng": "urge",
+    "per": "اصرار"
+  },
+  {
+    "eng": "value",
+    "per": "ارزش"
+  },
+  {
+    "eng": "vary",
+    "per": "متفاوت است"
+  },
+  {
+    "eng": "vast",
+    "per": "وسیع"
+  },
+  {
+    "eng": "venue",
+    "per": "محل برگزاری"
+  },
+  {
+    "eng": "very",
+    "per": "بسیار"
+  },
+  {
+    "eng": "via",
+    "per": "از طریق"
+  },
+  {
+    "eng": "victory",
+    "per": "پیروزی"
+  },
+  {
+    "eng": "violence",
+    "per": "خشونت"
+  },
+  {
+    "eng": "virtual",
+    "per": "مجازی"
+  },
+  {
+    "eng": "vision",
+    "per": "بینایی"
+  },
+  {
+    "eng": "visual",
+    "per": "بصری"
+  },
+  {
+    "eng": "vital",
+    "per": "حیاتی"
+  },
+  {
+    "eng": "vitamin",
+    "per": "ویتامین"
+  },
+  {
+    "eng": "volume",
+    "per": "حجم"
+  },
+  {
+    "eng": "wage",
+    "per": "دستمزد"
+  },
+  {
+    "eng": "way",
+    "per": "راه"
+  },
+  {
+    "eng": "weakness",
+    "per": "ضعف"
+  },
+  {
+    "eng": "wealth",
+    "per": "ثروت"
+  },
+  {
+    "eng": "wealthy",
+    "per": "ثروتمند"
+  },
+  {
+    "eng": "whereas",
+    "per": "در حالی که"
+  },
+  {
+    "eng": "wherever",
+    "per": "هر کجا"
+  },
+  {
+    "eng": "whisper",
+    "per": "زمزمه کن"
+  },
+  {
+    "eng": "whom",
+    "per": "چه کسی"
+  },
+  {
+    "eng": "widely",
+    "per": "به طور گسترده"
+  },
+  {
+    "eng": "wildlife",
+    "per": "حیات وحش"
+  },
+  {
+    "eng": "willing",
+    "per": "مایل"
+  },
+  {
+    "eng": "wind",
+    "per": "باد"
+  },
+  {
+    "eng": "wire",
+    "per": "سیم"
+  },
+  {
+    "eng": "wise",
+    "per": "عاقل"
+  },
+  {
+    "eng": "witness",
+    "per": "شاهد"
+  },
+  {
+    "eng": "worse",
+    "per": "بدتر"
+  },
+  {
+    "eng": "worst",
+    "per": "بدترین"
+  },
+  {
+    "eng": "worth",
+    "per": "ارزش"
+  },
+  {
+    "eng": "wound",
+    "per": "زخم"
+  },
+  {
+    "eng": "wrap",
+    "per": "بسته بندی کردن"
+  },
+  {
+    "eng": "wrong",
+    "per": "اشتباه"
+  },
+  {
+    "eng": "yet",
+    "per": "هنوز"
+  },
+  {
+    "eng": "zone",
+    "per": "منطقه"
+  }
+]

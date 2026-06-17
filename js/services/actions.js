@@ -1341,6 +1341,70 @@ export const actionMethods = {
         } catch (error) {
             console.error('Error syncing push subscription:', error);
         }
+    },
+
+    async loadPredefinedWords(isModal = false) {
+        const selectId = isModal ? 'auto-load-select-modal' : 'auto-load-select';
+        const selectEl = document.getElementById(selectId);
+        if (!selectEl) return;
+
+        const val = selectEl.value;
+        const label = selectEl.options[selectEl.selectedIndex].text;
+
+        if (!confirm(`آیا مطمئن هستید که می‌خواهید مجموعه کلمات "${label}" را بارگذاری کنید؟`)) {
+            return;
+        }
+
+        const btn = document.activeElement;
+        const originalContent = btn ? btn.innerHTML : null;
+        if (btn) {
+            btn.disabled = true;
+            btn.innerHTML = `<span>در حال بارگذاری...</span><i class="fas fa-spinner fa-spin mr-2"></i>`;
+        }
+
+        try {
+            const res = await fetch(`./data/${val}.json`);
+            if (!res.ok) throw new Error(`خطا در دانلود فایل: ${res.statusText}`);
+            
+            const wordsList = await res.json();
+            if (!Array.isArray(wordsList) || wordsList.length === 0) {
+                throw new Error("لیست کلمات نامعتبر یا خالی است.");
+            }
+
+            const folderId = Date.now();
+            const folderName = `Oxford ${val.toUpperCase().replace('-OXFORD', '')}`;
+            
+            const newFolder = {
+                id: folderId,
+                name: folderName,
+                isSystem: false,
+                isPhrase: false,
+                words: []
+            };
+
+            wordsList.forEach((w, index) => {
+                newFolder.words.push({
+                    id: folderId + index + 1,
+                    eng: w.eng,
+                    per: w.per,
+                    success: false,
+                    failed: false
+                });
+            });
+
+            this.data.folders.push(newFolder);
+            this.save();
+            this.showAlert(`مجموعه "${folderName}" با موفقیت بارگذاری شد و ${wordsList.length} کلمه به برنامه اضافه گردید.`, 'success');
+
+        } catch (e) {
+            console.error(e);
+            this.showAlert("خطا در بارگذاری کلمات: " + e.message, "error");
+        } finally {
+            if (btn && originalContent) {
+                btn.disabled = false;
+                btn.innerHTML = originalContent;
+            }
+        }
     }
 };
 
