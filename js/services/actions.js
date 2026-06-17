@@ -682,6 +682,18 @@ export const actionMethods = {
             }
         }
 
+        const cleanSentence = (str) => {
+            if (!str) return '';
+            let clean = str;
+            try {
+                const temp = document.createElement('div');
+                temp.innerHTML = str;
+                clean = temp.textContent || temp.innerText || str;
+            } catch (e) {}
+            clean = clean.replace(/<[^>]*>/g, '');
+            return clean.replace(/\s+/g, ' ').trim();
+        };
+
         // 1. Load irregular verbs list if not cached
         if (!this.irregularVerbsCache) {
             try {
@@ -811,11 +823,13 @@ export const actionMethods = {
                         if (data.matches) {
                             myMemorySentences = data.matches
                                 .filter(m => m.segment && m.segment.toLowerCase() !== lowerWord && m.segment.split(' ').length > 2)
-                                .slice(0, 4)
-                                .map(m => ({
-                                    english: m.segment,
-                                    persian: m.translation
-                                }));
+                                .map(m => {
+                                    const english = cleanSentence(m.segment);
+                                    const persian = cleanSentence(m.translation);
+                                    return { english, persian };
+                                })
+                                .filter(s => s.english.length > 0 && s.persian.length > 0)
+                                .slice(0, 4);
                         }
                     }
                 })
