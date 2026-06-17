@@ -8,6 +8,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "db-migrate": "node scripts/migrate.js",
+    "push-ui": "node scripts/push_ui.js",
     "deploy": "npm run build && git add . && git commit -m \"auto-update\" && git push -f origin main"
   },
   "keywords": [],

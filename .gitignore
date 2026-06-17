@@ -7,4 +7,6 @@ dist/
 scripts/push/
 scripts/send_push.py
 scripts/send_push.js
+scripts/push_ui.js
+
 
