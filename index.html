@@ -35,6 +35,12 @@
                 <span>افزودن مجموعه جدید</span>
                 <i class="fas fa-folder-plus text-2xl"></i>
             </button>
+            
+            <!-- Beautiful Tab Toggle for App Mode (Word / Phrase) -->
+            <div class="mode-toggle-tabs mt-2">
+                <button id="mode-btn-word" onclick="app.setAppMode('word')" class="mode-toggle-btn active">کلمه‌ها</button>
+                <button id="mode-btn-phrase" onclick="app.setAppMode('phrase')" class="mode-toggle-btn">عبارت‌ها</button>
+            </div>
         </div>
 
         <div id="system-folder-list" class="px-4 mb-8 grid grid-cols-3 gap-3"></div>
@@ -50,10 +56,6 @@
         <div class="nav-item" id="nav-search" onclick="app.openGlobalSearchModal()">
             <i class="fas fa-search"></i>
             <span>جستجو</span>
-        </div>
-        <div class="nav-item" id="nav-mode" onclick="app.toggleAppMode()">
-            <i id="mode-icon" class="fas fa-font"></i>
-            <span id="mode-text">کلمه</span>
         </div>
         <div class="nav-item" id="nav-settings" onclick="app.openSettingsModal()">
             <i class="fas fa-cog"></i>
