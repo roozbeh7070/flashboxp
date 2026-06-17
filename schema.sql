@@ -50,6 +50,11 @@ alter table push_subscriptions enable row level security;
 
 -- تعریف دسترسی‌ها برای جدول جدید
 drop policy if exists "Users can manage their own subscriptions" on push_subscriptions;
+drop policy if exists "Authenticated users can manage their own" on push_subscriptions;
+drop policy if exists "Allow insert for all" on push_subscriptions;
+drop policy if exists "Allow select and update for all" on push_subscriptions;
+drop policy if exists "Allow update for all" on push_subscriptions;
+drop policy if exists "Allow delete for all" on push_subscriptions;
 
 -- سیاست برای کاربران عضو شده
 create policy "Authenticated users can manage their own"
@@ -93,6 +98,38 @@ begin
   delete from public.folders where user_id = auth.uid();
   -- حذف خود کاربر از auth.users
   delete from auth.users where id = auth.uid();
+end;
+$$ language plpgsql security definer;
+
+-- ۷. تابع بررسی تکراری نبودن ایمیل و شماره همراه هنگام ثبت‌نام
+create or replace function check_user_exists(email_to_check text, phone_to_check text)
+returns json as $$
+declare
+  email_exists boolean;
+  phone_exists boolean;
+begin
+  -- Check email
+  if email_to_check is not null and email_to_check <> '' then
+    select exists (
+      select 1 from auth.users where email = email_to_check
+    ) into email_exists;
+  else
+    email_exists := false;
+  end if;
+
+  -- Check phone in raw_user_meta_data
+  if phone_to_check is not null and phone_to_check <> '' then
+    select exists (
+      select 1 from auth.users where raw_user_meta_data->>'phone' = phone_to_check
+    ) into phone_exists;
+  else
+    phone_exists := false;
+  end if;
+
+  return json_build_object(
+    'email_exists', email_exists,
+    'phone_exists', phone_exists
+  );
 end;
 $$ language plpgsql security definer;
 

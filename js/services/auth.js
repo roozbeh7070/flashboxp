@@ -61,6 +61,32 @@ export const authMethods = {
                 submitBtn.innerText = originalText;
                 return;
             }
+
+            try {
+                const { data: checkData, error: checkError } = await supabase.rpc('check_user_exists', {
+                    email_to_check: email,
+                    phone_to_check: phone
+                });
+
+                if (checkError) {
+                    console.warn("Failed to check duplicate user info:", checkError);
+                } else if (checkData) {
+                    if (checkData.email_exists) {
+                        this.showAlert("این ایمیل قبلاً ثبت‌نام شده است.", "error");
+                        submitBtn.disabled = false;
+                        submitBtn.innerText = originalText;
+                        return;
+                    }
+                    if (checkData.phone_exists) {
+                        this.showAlert("این شماره همراه قبلاً ثبت‌نام شده است.", "error");
+                        submitBtn.disabled = false;
+                        submitBtn.innerText = originalText;
+                        return;
+                    }
+                }
+            } catch (err) {
+                console.warn("Error running user exist check:", err);
+            }
         }
 
         try {
