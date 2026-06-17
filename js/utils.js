@@ -113,13 +113,6 @@ export const urlBase64ToUint8Array = (base64String) => {
 
 export const getUserDisplayName = (user) => {
     if (!user) return '';
-    const email = user.email.toLowerCase();
-    if (email === 'raw94me@yahoo.com') {
-        return 'احسان معمار';
-    }
-    if (email === 'rkeyhanfar@yahoo.com') {
-        return 'روزبه کیهان فر';
-    }
     return user.user_metadata?.name || user.user_metadata?.full_name || user.email;
 };
 
