@@ -51,8 +51,8 @@ class FlashcardApp {
         await this.checkUserSession();
         if (this.user) {
             await this.triggerSync();
-            this.checkPushPermissionOnLaunch();
         }
+        this.checkPushPermissionOnLaunch();
 
         // Automatic synchronization when connection is restored
         window.addEventListener('online', () => {

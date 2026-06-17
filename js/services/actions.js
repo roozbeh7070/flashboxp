@@ -1245,7 +1245,6 @@ export const actionMethods = {
 
     checkPushPermissionOnLaunch() {
         if (!navigator.onLine) return;
-        if (!this.user) return;
         if (!('serviceWorker' in navigator && 'PushManager' in window)) return;
         
         if (Notification.permission === 'granted') {
@@ -1254,18 +1253,13 @@ export const actionMethods = {
         }
 
         if (Notification.permission === 'default') {
-            const lastPrompt = localStorage.getItem('push_prompt_last_time');
-            const now = Date.now();
-            if (!lastPrompt || (now - parseInt(lastPrompt, 10)) > 24 * 3600 * 1000) {
-                setTimeout(() => {
-                    // Only show if no other modal is currently visible
-                    const modalContainer = document.getElementById('modal-container');
-                    if (modalContainer && modalContainer.classList.contains('hidden')) {
-                        localStorage.setItem('push_prompt_last_time', now.toString());
-                        this.showModal(modals.PushPermissionModal());
-                    }
-                }, 3000);
-            }
+            setTimeout(() => {
+                // Only show if no other modal is currently visible
+                const modalContainer = document.getElementById('modal-container');
+                if (modalContainer && modalContainer.classList.contains('hidden')) {
+                    this.showModal(modals.PushPermissionModal());
+                }
+            }, 3000);
         }
     },
 
@@ -1287,7 +1281,7 @@ export const actionMethods = {
 
     async syncPushSubscription() {
         try {
-            if (!this.user) return;
+            if (!('serviceWorker' in navigator && 'PushManager' in window)) return;
             if (!this.registration) {
                 this.registration = await navigator.serviceWorker.getRegistration();
             }
@@ -1310,10 +1304,11 @@ export const actionMethods = {
             }
 
             const subJson = subscription.toJSON();
+            const targetUserId = this.user ? this.user.id : null;
             
             const { data: existing, error: fetchError } = await supabase
                 .from('push_subscriptions')
-                .select('id')
+                .select('id, user_id')
                 .eq('subscription->>endpoint', subJson.endpoint)
                 .maybeSingle();
 
@@ -1323,20 +1318,24 @@ export const actionMethods = {
                 const { error: insertError } = await supabase
                     .from('push_subscriptions')
                     .insert({
-                        user_id: this.user.id,
+                        user_id: targetUserId,
                         subscription: subJson
                     });
                 if (insertError) throw insertError;
-                console.log('Push subscription saved to Supabase successfully.');
+                console.log('Push subscription saved to Supabase successfully. User ID:', targetUserId);
             } else {
-                const { error: updateError } = await supabase
-                    .from('push_subscriptions')
-                    .update({
-                        user_id: this.user.id
-                    })
-                    .eq('id', existing.id);
-                if (updateError) throw updateError;
-                console.log('Push subscription updated in Supabase.');
+                if (existing.user_id !== targetUserId) {
+                    const { error: updateError } = await supabase
+                        .from('push_subscriptions')
+                        .update({
+                            user_id: targetUserId
+                        })
+                        .eq('id', existing.id);
+                    if (updateError) throw updateError;
+                    console.log('Push subscription user ID updated in Supabase to:', targetUserId);
+                } else {
+                    console.log('Push subscription already up to date in Supabase.');
+                }
             }
 
         } catch (error) {

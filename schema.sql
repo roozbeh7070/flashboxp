@@ -40,7 +40,7 @@ using (auth.uid() = user_id);
 -- ۵. جدول اشتراک‌های نوتیفیکیشن (Push Subscriptions)
 create table if not exists push_subscriptions (
   id uuid default gen_random_uuid() primary key,
-  user_id uuid references auth.users not null,
+  user_id uuid references auth.users, -- ساختار Nullable برای کاربران مهمان
   subscription jsonb not null,
   created_at timestamp with time zone default timezone('utc'::text, now()) not null
 );
@@ -50,9 +50,36 @@ alter table push_subscriptions enable row level security;
 
 -- تعریف دسترسی‌ها برای جدول جدید
 drop policy if exists "Users can manage their own subscriptions" on push_subscriptions;
-create policy "Users can manage their own subscriptions"
+
+-- سیاست برای کاربران عضو شده
+create policy "Authenticated users can manage their own"
 on push_subscriptions for all
-using (auth.uid() = user_id);
+to authenticated
+using (auth.uid() = user_id)
+with check (auth.uid() = user_id);
+
+-- سیاست برای عضویت مهمان (ثبت نام نوتیفیکیشن قبل از لاگین)
+create policy "Allow insert for all"
+on push_subscriptions for insert
+to anon, authenticated
+with check (user_id is null or auth.uid() = user_id);
+
+-- سیاست برای مشاهده و آپدیت مهمان بر اساس شناسه نال یا فیلتر خودشان
+create policy "Allow select and update for all"
+on push_subscriptions for select
+to anon, authenticated
+using (user_id is null or auth.uid() = user_id);
+
+create policy "Allow update for all"
+on push_subscriptions for update
+to anon, authenticated
+using (user_id is null or auth.uid() = user_id)
+with check (user_id is null or auth.uid() = user_id);
+
+create policy "Allow delete for all"
+on push_subscriptions for delete
+to anon, authenticated
+using (user_id is null or auth.uid() = user_id);
 
 -- ۶. تابع حذف حساب کاربری و تمامی داده‌های مربوط به آن
 create or replace function delete_user()
