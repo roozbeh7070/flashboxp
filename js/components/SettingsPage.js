@@ -157,7 +157,7 @@ export const SettingsPage = (user = null) => {
             <div class="settings-section-content">
                 <div class="p-5 space-y-4">
                     <div class="p-3 bg-gray-100 text-gray-400 rounded-2xl text-center font-black text-[10px] tracking-widest uppercase">
-                        Software Version 1.3.0
+                        Software Version 1.3.1
                     </div>
                     
                     <a href="https://boxp.ir" target="_blank" class="w-full p-5 bg-orange-500 text-white rounded-2xl font-black flex justify-center items-center gap-2 shadow-md active:scale-[0.98] transition-all no-underline">
@@ -167,6 +167,11 @@ export const SettingsPage = (user = null) => {
                     <button onclick="app.manualUpdateCheck(this)" class="w-full p-4 bg-blue-50 text-blue-600 rounded-2xl font-black flex justify-between items-center border border-blue-100 active:scale-95 transition-all">
                         <span>بروزرسانی برنامه</span>
                         <i class="fas fa-sync-alt text-lg"></i>
+                    </button>
+
+                    <button onclick="app.showInstallGuide()" class="w-full p-4 bg-orange-50 text-orange-600 rounded-2xl font-black flex justify-between items-center border border-orange-100 active:scale-95 transition-all">
+                        <span>راهنمای نصب اپلیکیشن (PWA)</span>
+                        <i class="fas fa-mobile-alt text-lg"></i>
                     </button>
                 </div>
             </div>

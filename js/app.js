@@ -1,6 +1,7 @@
 import { getInitialData, saveData, loadDataFromIndexedDB, ensureSystemFolders } from './storage.js';
 import * as utils from './utils.js';
 import * as modals from './components/Modals.js';
+import { showA2HSPrompt, checkA2HSOnLaunch } from './components/A2HSPrompt.js';
 
 import { authMethods } from './services/auth.js';
 import { folderMethods } from './services/folders.js';
@@ -66,6 +67,9 @@ class FlashcardApp {
             const perMicBtn = document.getElementById('per-mic-btn');
             if (perMicBtn) perMicBtn.style.display = 'none';
         }
+
+        // Check Add to Home Screen (A2HS) PWA install on launch
+        checkA2HSOnLaunch();
     }
 
     registerServiceWorker() {
@@ -158,6 +162,10 @@ class FlashcardApp {
 
     showUpdatePrompt() {
         this.showModal(modals.UpdatePromptModal());
+    }
+
+    showInstallGuide() {
+        showA2HSPrompt(true);
     }
 
     updateUILabels() {

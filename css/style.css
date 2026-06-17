@@ -224,4 +224,145 @@ input, button, select { font-family: var(--apple-font) !important; }
     font-size: 13px !important;
 }
 
+/* Add to Home Screen (A2HS) styles */
+.a2hs-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.a2hs-overlay.show {
+    opacity: 1;
+    visibility: visible;
+}
+.a2hs-sheet {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border-radius: 30px 30px 0 0;
+    padding: 24px 20px calc(24px + env(safe-area-inset-bottom, 16px));
+    box-shadow: 0 -8px 32px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    transform: translateY(100%);
+    transition: transform 0.4s cubic-bezier(0.1, 0.8, 0.25, 1);
+    font-family: var(--apple-font);
+    direction: rtl;
+    text-align: right;
+    max-width: 500px;
+    margin: 0 auto;
+    border-top: 1px solid rgba(255, 255, 255, 0.35);
+}
+.a2hs-sheet.show {
+    transform: translateY(0);
+}
+.a2hs-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+.a2hs-logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    object-fit: cover;
+}
+.a2hs-title {
+    font-size: 16px !important;
+    font-weight: 900;
+    color: #1c1c1e;
+    margin-bottom: 4px;
+}
+.a2hs-subtitle {
+    font-size: 13px !important;
+    font-weight: 700;
+    color: #8e8e93;
+    line-height: 1.5;
+}
+.a2hs-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+.a2hs-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    background: rgba(255, 255, 255, 0.65);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 14px 16px;
+    border-radius: 18px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.01);
+}
+.a2hs-step-icon {
+    width: 28px;
+    height: 28px;
+    background: #eef2f6;
+    color: #4b5563;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px !important;
+    font-weight: 850;
+    flex-shrink: 0;
+}
+.a2hs-step-desc {
+    font-size: 13px !important;
+    font-weight: 750;
+    color: #2c2c2e;
+    line-height: 1.6;
+}
+.a2hs-btn-primary {
+    width: 100%;
+    padding: 16px;
+    background: #1c4849;
+    color: white;
+    border-radius: 20px;
+    font-weight: 900;
+    font-size: 14px;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(28, 72, 73, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.2s;
+    border: none;
+    cursor: pointer;
+}
+.a2hs-btn-primary:active {
+    transform: scale(0.97);
+    background: #133233;
+}
+.a2hs-btn-secondary {
+    width: 100%;
+    padding: 14px;
+    background: transparent;
+    color: #8e8e93;
+    border-radius: 16px;
+    font-weight: 800;
+    font-size: 13px;
+    text-align: center;
+    transition: all 0.2s;
+    border: none;
+    cursor: pointer;
+    margin-top: 8px;
+}
+.a2hs-btn-secondary:active {
+    color: #48484a;
+    background: rgba(0,0,0,0.03);
+}
+
 
