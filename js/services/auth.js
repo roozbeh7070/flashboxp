@@ -15,6 +15,9 @@ export const authMethods = {
                 console.log('User signed in:', this.user);
                 await this.triggerSync();
             }
+            if (typeof this.renderSettingsPageContent === 'function') {
+                this.renderSettingsPageContent();
+            }
         });
     },
 
@@ -49,7 +52,7 @@ export const authMethods = {
             const confirmPassword = document.getElementById('auth-confirm-password').value;
             phone = document.getElementById('auth-phone').value.trim();
             if (password !== confirmPassword) {
-                alert("رمز عبور و تکرار آن با هم مطابقت ندارند.");
+                this.showAlert("رمز عبور و تکرار آن با هم مطابقت ندارند.", "error");
                 submitBtn.disabled = false;
                 submitBtn.innerText = originalText;
                 return;
@@ -71,20 +74,24 @@ export const authMethods = {
                 
                 if (data && data.session) {
                     this.user = data.user;
-                    alert("ثبت‌نام با موفقیت انجام شد! خوش آمدید.");
+                    this.showAlert("ثبت‌نام با موفقیت انجام شد! خوش آمدید.", "success", () => {
+                        this.closeModal();
+                    });
                 } else {
-                    alert("ثبت‌نام با موفقیت انجام شد! اکنون می‌توانید با اطلاعات کاربری خود وارد شوید.");
+                    this.showAlert("ثبت‌نام با موفقیت انجام شد! اکنون می‌توانید با اطلاعات کاربری خود وارد شوید.", "success", () => {
+                        this.closeModal();
+                    });
                 }
-                this.closeModal();
             } else {
                 const { data, error } = await supabase.auth.signInWithPassword({ email, password });
                 if (error) throw error;
                 this.user = data.user;
-                this.closeModal();
-                alert("خوش آمدید!");
+                this.showAlert("خوش آمدید!", "success", () => {
+                    this.closeModal();
+                });
             }
         } catch (err) {
-            alert("خطا: " + err.message);
+            this.showAlert("خطا: " + err.message, "error");
         } finally {
             submitBtn.disabled = false;
             submitBtn.innerText = originalText;
@@ -101,7 +108,7 @@ export const authMethods = {
             });
             if (error) throw error;
         } catch (err) {
-            alert("خطا در ورود با گوگل: " + err.message);
+            this.showAlert("خطا در ورود با گوگل: " + err.message, "error");
         }
     },
 
@@ -109,8 +116,9 @@ export const authMethods = {
         if (confirm("آیا مایلید از حساب کاربری خود خارج شوید؟")) {
             await supabase.auth.signOut();
             this.user = null;
-            this.closeModal();
-            alert("از حساب خود خارج شدید.");
+            this.showAlert("از حساب خود خارج شدید.", "info", () => {
+                this.closeModal();
+            });
         }
     }
 };

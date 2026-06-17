@@ -58,7 +58,10 @@ export const ensureSystemFolders = (data) => {
     if (!data.folders) data.folders = [];
 
     // Robust Data Migration and De-duplication
-    data.folders.forEach(f => { if(f.name === 'موفق‌ها') f.name = 'کلمات موفق'; });
+    data.folders.forEach(f => {
+        if(f.name === 'موفق‌ها') f.name = 'کلمات موفق';
+        if(f.name === 'تمرین مجدد (عبارت)') f.name = 'تمرین مجدد';
+    });
     
     const systemFolders = [
         {name: 'همه کلمات', words: [], isSystem: true, id: 0},
@@ -85,7 +88,7 @@ export const ensureSystemFolders = (data) => {
     const phraseSystemFolders = [
         {name: 'همه عبارت‌ها', words: [], isSystem: true, id: 300, isPhrase: true},
         {name: 'عبارت‌های موفق', words: [], isSystem: true, id: 322, isPhrase: true},
-        {name: 'تمرین مجدد (عبارت)', words: [], isSystem: true, id: 311, isPhrase: true}
+        {name: 'تمرین مجدد', words: [], isSystem: true, id: 311, isPhrase: true}
     ];
 
     phraseSystemFolders.forEach(sys => {
@@ -120,7 +123,7 @@ export const getInitialData = () => {
             {name: 'تمرین مجدد', words: [], isSystem: true, id: 111},
             {name: 'همه عبارت‌ها', words: [], isSystem: true, id: 300, isPhrase: true},
             {name: 'عبارت‌های موفق', words: [], isSystem: true, id: 322, isPhrase: true},
-            {name: 'تمرین مجدد (عبارت)', words: [], isSystem: true, id: 311, isPhrase: true}
+            {name: 'تمرین مجدد', words: [], isSystem: true, id: 311, isPhrase: true}
         ],
         settings: {
             targetLang: 'en'

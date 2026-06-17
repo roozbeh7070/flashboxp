@@ -11,7 +11,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="flashboxp">
     <meta name="theme-color" content="#1c4849">
-    <link rel="manifest" href="./manifest.json?v=1.3">
+    <link rel="manifest" href="./manifest.json?v=1.4">
     <link rel="apple-touch-icon" href="doc/icon.png">
 
     <!-- External Assets -->
@@ -23,8 +23,8 @@
 <body class="pb-28 overflow-x-hidden">
     <h1 class="sr-only">فلش باکس پی - جعبه لایتنر هوشمند یادگیری زبان</h1>
 
-    <div class="pt-8 px-4 relative z-10">
-        <img src="./doc/logo.png" alt="Logo" class="h-24 mx-auto object-contain" style="image-rendering: -webkit-optimize-contrast;">
+    <div id="app-logo-header" class="pt-8 px-4 relative z-10">
+        <img src="./doc/logo.png" alt="Logo" class="h-24 mx-auto object-contain" style="image-rendering: -webkit-optimize-contrast; transform: translateY(16px);">
     </div>
 
     <!-- Home Screen -->
@@ -80,8 +80,9 @@
             <div id="add-word-container" class="ios-card p-5 mt-4 border border-gray-100">
                 <div class="flex flex-col gap-3 mb-4">
                     <div class="relative w-full">
-                        <input id="eng-input" type="text" placeholder="Word (English)" dir="ltr" class="w-full p-4 pr-24 bg-gray-200 rounded-xl outline-none font-bold text-lg text-gray-900">
+                        <input id="eng-input" type="text" oninput="app.checkGrammarDebounced('eng-input')" placeholder="Word (English)" dir="ltr" class="w-full p-4 pr-32 bg-gray-200 rounded-xl outline-none font-bold text-lg text-gray-900">
                         <div class="absolute inset-y-0 right-0 flex items-center gap-1 pr-2">
+                            <button id="eng-input-grammar-btn" class="hidden w-10 h-10 text-red-500 flex items-center justify-center animate-pulse"><i class="fas fa-exclamation-circle text-lg"></i></button>
                             <button onclick="app.startVoiceInput(this, 'eng-input', 'en-US')" class="w-10 h-10 text-orange-500 flex items-center justify-center transition-all active:scale-90"><i class="fas fa-microphone text-lg"></i></button>
                             <button onclick="app.pasteFromClipboard('eng-input')" class="w-10 h-10 text-gray-600 flex items-center justify-center"><i class="fas fa-paste text-lg"></i></button>
                         </div>
@@ -116,6 +117,22 @@
                         <button onclick="app.setWordFilter('failed', this)" class="word-filter-btn flex-1 py-3 rounded-xl font-black text-sm text-gray-400">ناموفق</button>
                     </div>
                 </div>
+                <!-- Selection Bar -->
+                <div id="selection-bar" class="bg-white rounded-2xl p-3 shadow-sm border border-gray-100 flex items-center justify-between gap-2 h-14">
+                    <div id="selection-buttons-container" class="flex gap-2 items-center w-full">
+                        <button id="toggle-select-btn" onclick="app.toggleSelectionMode()" class="w-full py-2 bg-gray-100 text-gray-700 hover:bg-gray-200 rounded-xl font-black text-[13px] transition-all active:scale-95" style="font-size: 13px !important;">انتخاب کلمه</button>
+                        <button id="select-all-btn" onclick="app.selectAllWords()" class="hidden px-4 py-2 bg-gray-100 text-gray-700 hover:bg-gray-200 rounded-xl font-black text-[13px] transition-all active:scale-95" style="font-size: 13px !important;">انتخاب همه</button>
+                    </div>
+                    <div id="selection-actions" class="hidden flex gap-3 items-center shrink-0" dir="rtl">
+                        <span id="selected-count" class="font-black text-[13px] text-blue-600" style="font-size: 13px !important;">0</span>
+                        <button onclick="app.bulkMoveWordsPrompt()" class="w-9 h-9 bg-blue-50 text-blue-600 rounded-lg flex items-center justify-center active:scale-95 transition-all hover:bg-blue-100" title="انتقال">
+                            <i class="fas fa-exchange-alt"></i>
+                        </button>
+                        <button onclick="app.bulkDeleteWordsPrompt()" class="w-9 h-9 bg-red-50 text-red-500 rounded-lg flex items-center justify-center active:scale-95 transition-all hover:bg-red-100" title="حذف">
+                            <i class="fas fa-trash-alt"></i>
+                        </button>
+                    </div>
+                </div>
                 <div class="relative w-full">
                     <input id="search-input" type="text" oninput="app.handleSearchInput(this)" placeholder="جستجو در این مجموعه (کلمه یا معنی)..." class="w-full p-4 pr-4 pl-12 bg-white rounded-2xl border border-gray-100 shadow-sm outline-none text-gray-700 font-bold">
                     <button id="search-clear-btn" onclick="app.clearSearch()" class="hidden absolute inset-y-0 left-0 w-12 flex items-center justify-center text-gray-300 active:text-gray-500">
@@ -125,6 +142,24 @@
             </div>
 
             <div id="word-list" class="pb-32"></div>
+        </div>
+    </div>
+
+    <!-- Settings Screen -->
+    <div id="settings-screen" class="hidden relative z-20">
+        <div class="p-4 space-y-4">
+            <!-- Title Box -->
+            <div class="blue-sharp p-2.5 rounded-2xl flex justify-between items-center font-black text-lg shadow-md">
+                <div class="w-10 h-10"></div>
+                <div class="flex-1 text-center text-white text-base">تنظیمات</div>
+                <button onclick="app.goHome()" class="w-10 h-10 bg-white text-gray-800 rounded-xl flex items-center justify-center shadow-sm active:scale-95 transition-all">
+                    <i class="fas fa-arrow-right text-sm"></i>
+                </button>
+            </div>
+            
+            <div id="settings-content" class="space-y-4 pb-32">
+                <!-- Content injected dynamically -->
+            </div>
         </div>
     </div>
 

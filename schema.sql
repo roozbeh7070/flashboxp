@@ -1,5 +1,5 @@
 -- ۱. ساخت جدول مجموعه‌ها (Folders)
-create table folders (
+create table if not exists folders (
   id bigint primary key, -- شناسه عددی منطبق بر Timestamp جاوااسکریپت
   user_id uuid references auth.users not null, -- متصل به شناسه کاربر وارد شده
   name text not null,
@@ -9,7 +9,7 @@ create table folders (
 );
 
 -- ۲. ساخت جدول کلمات (Words)
-create table words (
+create table if not exists words (
   id bigint primary key, -- شناسه عددی منطبق بر Timestamp جاوااسکریپت
   folder_id bigint references folders(id) on delete cascade not null, -- متصل به پوشه مربوطه
   user_id uuid references auth.users not null,
@@ -27,10 +27,26 @@ alter table folders enable row level security;
 alter table words enable row level security;
 
 -- ۴. تعریف دسترسی‌ها (Policies)
+drop policy if exists "Users can manage their own folders" on folders;
 create policy "Users can manage their own folders" 
 on folders for all 
 using (auth.uid() = user_id);
 
+drop policy if exists "Users can manage their own words" on words;
 create policy "Users can manage their own words" 
 on words for all 
 using (auth.uid() = user_id);
+
+-- ۵. تابع حذف حساب کاربری و تمامی داده‌های مربوط به آن
+create or replace function delete_user()
+returns void as $$
+begin
+  -- حذف تمامی کلمات کاربر
+  delete from public.words where user_id = auth.uid();
+  -- حذف تمامی مجموعه‌های کاربر
+  delete from public.folders where user_id = auth.uid();
+  -- حذف خود کاربر از auth.users
+  delete from auth.users where id = auth.uid();
+end;
+$$ language plpgsql security definer;
+

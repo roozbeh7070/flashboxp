@@ -18,7 +18,10 @@ export const wordMethods = {
                 if (this.currentFilter === 'failed') return item.word.failed;
                 return true;
             })
-            .map(item => WordCard(item.word, item.originalIndex, this.currentMode === 'phrase' || folder.isPhrase))
+            .map(item => {
+                const isSelected = this.selectedWordIds && this.selectedWordIds.includes(item.word.id);
+                return WordCard(item.word, item.originalIndex, this.currentMode === 'phrase' || folder.isPhrase, isSelected);
+            })
             .join('');
     },
 
@@ -204,6 +207,195 @@ export const wordMethods = {
             this.save();
             this.renderWords();
         }
+        this.closeModal();
+    },
+
+    handleWordClick(event, index, id) {
+        if (this.selectionMode) {
+            this.toggleWordSelection(id);
+        } else {
+            this.openWordDetailsModal(index);
+        }
+    },
+
+    toggleSelectionMode(forceValue) {
+        if (forceValue !== undefined) {
+            this.selectionMode = forceValue;
+        } else {
+            this.selectionMode = !this.selectionMode;
+        }
+
+        const toggleBtn = document.getElementById('toggle-select-btn');
+        const selectAllBtn = document.getElementById('select-all-btn');
+        const actionsContainer = document.getElementById('selection-actions');
+        const buttonsContainer = document.getElementById('selection-buttons-container');
+
+        if (toggleBtn) {
+            if (this.selectionMode) {
+                toggleBtn.innerText = 'لغو';
+                toggleBtn.classList.remove('bg-gray-100', 'text-gray-700', 'w-full');
+                toggleBtn.classList.add('bg-red-500', 'text-white', 'px-4');
+                if (buttonsContainer) buttonsContainer.classList.remove('w-full');
+                if (selectAllBtn) selectAllBtn.classList.remove('hidden');
+                if (actionsContainer) actionsContainer.classList.remove('hidden');
+            } else {
+                const initialText = this.currentMode === 'phrase' ? 'انتخاب عبارت' : 'انتخاب کلمه';
+                toggleBtn.innerText = initialText;
+                toggleBtn.classList.add('bg-gray-100', 'text-gray-700', 'w-full');
+                toggleBtn.classList.remove('bg-red-500', 'text-white', 'px-4');
+                if (buttonsContainer) buttonsContainer.classList.add('w-full');
+                if (selectAllBtn) selectAllBtn.classList.add('hidden');
+                if (actionsContainer) actionsContainer.classList.add('hidden');
+                this.selectedWordIds = [];
+            }
+        }
+        this.updateSelectedCountUI();
+        this.renderWords();
+    },
+
+    toggleWordSelection(id) {
+        this.selectedWordIds = this.selectedWordIds || [];
+        const index = this.selectedWordIds.indexOf(id);
+        if (index === -1) {
+            this.selectedWordIds.push(id);
+        } else {
+            this.selectedWordIds.splice(index, 1);
+        }
+        this.updateSelectedCountUI();
+        this.renderWords();
+    },
+
+    updateSelectedCountUI() {
+        const countSpan = document.getElementById('selected-count');
+        if (countSpan) {
+            const count = (this.selectedWordIds || []).length;
+            countSpan.innerText = count.toString();
+        }
+    },
+
+    selectAllWords() {
+        const searchTerm = document.getElementById('search-input').value.toLowerCase();
+        const folder = this.data.folders[this.activeIdx];
+        
+        const visibleWords = folder.words.filter(w => {
+            const matchesSearch = w.eng.toLowerCase().includes(searchTerm) || w.per.toLowerCase().includes(searchTerm);
+            if (!matchesSearch) return false;
+            if (this.currentFilter === 'success') return w.success && !w.failed;
+            if (this.currentFilter === 'failed') return w.failed;
+            return true;
+        });
+
+        this.selectedWordIds = this.selectedWordIds || [];
+        const allVisibleSelected = visibleWords.every(w => this.selectedWordIds.includes(w.id));
+
+        if (allVisibleSelected) {
+            // Deselect visible ones
+            visibleWords.forEach(w => {
+                const idx = this.selectedWordIds.indexOf(w.id);
+                if (idx !== -1) this.selectedWordIds.splice(idx, 1);
+            });
+        } else {
+            // Select all visible ones
+            visibleWords.forEach(w => {
+                if (!this.selectedWordIds.includes(w.id)) {
+                    this.selectedWordIds.push(w.id);
+                }
+            });
+        }
+
+        this.updateSelectedCountUI();
+        this.renderWords();
+    },
+
+    bulkDeleteWordsPrompt() {
+        const count = (this.selectedWordIds || []).length;
+        if (count === 0) {
+            alert("لطفاً ابتدا حداقل یک کلمه را انتخاب کنید.");
+            return;
+        }
+        this.showModal(modals.BulkDeleteWordModal(count));
+    },
+
+    executeBulkDelete() {
+        const wordIds = [...(this.selectedWordIds || [])];
+        if (wordIds.length === 0) return this.closeModal();
+
+        this.data.deletedWordIds = this.data.deletedWordIds || [];
+        
+        this.data.folders.forEach(folder => {
+            wordIds.forEach(id => {
+                const idx = folder.words.findIndex(w => w.id === id);
+                if (idx !== -1) {
+                    folder.words.splice(idx, 1);
+                    if (!this.data.deletedWordIds.includes(id)) {
+                        this.data.deletedWordIds.push(id);
+                    }
+                }
+            });
+        });
+
+        this.save();
+        this.toggleSelectionMode(false);
+        this.closeModal();
+    },
+
+    bulkMoveWordsPrompt() {
+        const count = (this.selectedWordIds || []).length;
+        if (count === 0) {
+            alert("لطفاً ابتدا حداقل یک کلمه را انتخاب کنید.");
+            return;
+        }
+        this.showModal(modals.BulkMoveWordModal(count));
+
+        const folderOptions = this.data.folders
+            .map((f, i) => ({ label: f.name, value: i }))
+            .filter(o => !this.data.folders[o.value].isSystem);
+
+        this.tempBulkMoveFolderIdx = folderOptions.length > 0 ? folderOptions[0].value : null;
+
+        this.createCustomSelect('bulk-folder-dest-dropdown', folderOptions, this.tempBulkMoveFolderIdx, (val) => {
+            this.tempBulkMoveFolderIdx = parseInt(val);
+        });
+    },
+
+    executeBulkMove() {
+        const destIdx = this.tempBulkMoveFolderIdx;
+        if (destIdx === null || destIdx === undefined) return this.closeModal();
+
+        const destFolder = this.data.folders[destIdx];
+        if (!destFolder) return this.closeModal();
+
+        const wordIds = [...(this.selectedWordIds || [])];
+        
+        wordIds.forEach(id => {
+            let foundSource = null;
+            for (let fIdx = 0; fIdx < this.data.folders.length; fIdx++) {
+                const folder = this.data.folders[fIdx];
+                if (folder.isSystem) continue;
+                const wIdx = folder.words.findIndex(w => w.id === id);
+                if (wIdx !== -1) {
+                    foundSource = { folder, wIdx, word: folder.words[wIdx] };
+                    break;
+                }
+            }
+
+            if (foundSource) {
+                foundSource.folder.words.splice(foundSource.wIdx, 1);
+
+                const word = foundSource.word;
+                word.updated_at = Date.now();
+                if (destFolder.isPhrase) {
+                    word.isPhrase = true;
+                } else {
+                    delete word.isPhrase;
+                }
+
+                destFolder.words.unshift(word);
+            }
+        });
+
+        this.save();
+        this.toggleSelectionMode(false);
         this.closeModal();
     }
 };

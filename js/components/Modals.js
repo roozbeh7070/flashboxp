@@ -3,4 +3,7 @@ export * from './modals/WordModals.js';
 export * from './modals/QuizModals.js';
 export * from './modals/AuthModal.js';
 export * from './modals/SettingsModals.js';
+export * from './modals/AlertModal.js';
+export * from './modals/ChangePasswordModal.js';
 export * from './modals/SearchModal.js';
+

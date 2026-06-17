@@ -20,11 +20,21 @@ class FlashcardApp {
         this.registration = null;
         this.user = null;
         this.currentMode = 'word';
+        this.selectionMode = false;
+        this.selectedWordIds = [];
 
         this.init();
     }
 
     async init() {
+        window.alert = (message) => {
+            if (typeof this.showAlert === 'function') {
+                this.showAlert(message);
+            } else {
+                console.log("Alert: " + message);
+            }
+        };
+
         try {
             const dbData = await loadDataFromIndexedDB();
             if (dbData) {
@@ -65,16 +75,33 @@ class FlashcardApp {
                         this.registration = reg;
                         console.log('Service Worker registered', reg);
                         
+                        // 1. If there's already a waiting worker, show the update prompt
+                        if (reg.waiting) {
+                            this.showUpdatePrompt();
+                        }
+
+                        // 2. If a new service worker is found while the app is running
                         reg.onupdatefound = () => {
                             const installingWorker = reg.installing;
-                            installingWorker.onstatechange = () => {
-                                if (installingWorker.state === 'installed' && navigator.serviceWorker.controller) {
-                                    this.showUpdatePrompt();
-                                }
-                            };
+                            if (installingWorker) {
+                                installingWorker.onstatechange = () => {
+                                    if (installingWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                                        this.showUpdatePrompt();
+                                    }
+                                };
+                            }
                         };
                     })
-                    .catch(err => console.log('Service Worker registration failed', err));
+                    .catch(err => console.warn('Service Worker registration failed:', err));
+
+                // 3. Reload page when the new Service Worker activates and takes control
+                let refreshing = false;
+                navigator.serviceWorker.addEventListener('controllerchange', () => {
+                    if (!refreshing) {
+                        refreshing = true;
+                        window.location.reload();
+                    }
+                });
             });
         }
     }
@@ -136,12 +163,12 @@ class FlashcardApp {
         const isPhrase = this.currentMode === 'phrase';
         const lang = this.data.settings.targetLang;
         const labels = {
-            'en': isPhrase ? 'Phrase / Sentence' : 'English',
+            'en': isPhrase ? 'phrase' : 'English',
             'de': isPhrase ? 'Satz' : 'Deutsch',
             'fr': isPhrase ? 'Phrase' : 'Français'
         };
         const perLabels = {
-            'en': isPhrase ? 'جمله یا عبارت' : 'انگلیسی',
+            'en': isPhrase ? 'عبارت' : 'انگلیسی',
             'de': isPhrase ? 'جمله یا عبارت' : 'آلمانی',
             'fr': isPhrase ? 'جمله یا عبارت' : 'فرانسوی'
         };
@@ -161,7 +188,12 @@ class FlashcardApp {
         window.scrollTo(0, 0);
         document.getElementById('word-screen').classList.add('hidden');
         document.getElementById('quiz-screen').classList.add('hidden');
+        document.getElementById('settings-screen').classList.add('hidden');
         document.getElementById('home-screen').classList.remove('hidden');
+        
+        const topLogo = document.getElementById('app-logo-header');
+        if (topLogo) topLogo.classList.remove('hidden');
+        
         document.querySelectorAll('.nav-item').forEach(item => item.classList.remove('active'));
         document.getElementById('nav-home').classList.add('active');
         this.renderFolders();

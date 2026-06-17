@@ -38,6 +38,9 @@ export const folderMethods = {
     openFolder(index) {
         window.scrollTo(0, 0);
         this.activeIdx = index;
+        if (typeof this.toggleSelectionMode === 'function') {
+            this.toggleSelectionMode(false);
+        }
         const folder = this.data.folders[index];
         document.getElementById('folder-title-text').innerText = folder.name;
         document.getElementById('folder-word-count-box').innerText = folder.words.length;
