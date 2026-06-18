@@ -94,6 +94,18 @@ class FlashcardApp {
             this.updateConnectionStatus();
         });
 
+        // Check connection when app visibility changes (returns from background/standby)
+        document.addEventListener('visibilitychange', () => {
+            if (document.visibilityState === 'visible') {
+                this.updateConnectionStatus();
+            }
+        });
+
+        // Polling check connection status fallback every 5 seconds
+        setInterval(() => {
+            this.updateConnectionStatus();
+        }, 5000);
+
         // Hide Persian mic button in Safari as it's not supported
         if (utils.isSafari()) {
             const perMicBtn = document.getElementById('per-mic-btn');
@@ -266,6 +278,7 @@ class FlashcardApp {
 
     // --- Navigation ---
     goHome() {
+        this.updateConnectionStatus();
         window.scrollTo(0, 0);
         document.getElementById('word-screen').classList.add('hidden');
         document.getElementById('quiz-screen').classList.add('hidden');
