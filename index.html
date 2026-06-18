@@ -21,6 +21,17 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body class="pb-28 overflow-x-hidden">
+    <!-- Startup Loader -->
+    <div id="startup-loader" class="startup-loader">
+        <div class="loader-content">
+            <img src="./doc/logo.png" alt="Logo" class="loader-logo">
+            <div class="loader-progress-container">
+                <div id="loader-progress-bar" class="loader-progress-bar"></div>
+            </div>
+            <div id="loader-status-text" class="loader-status-text">در حال بارگذاری...</div>
+        </div>
+    </div>
+
     <h1 class="sr-only">فلش باکس پی - جعبه لایتنر هوشمند یادگیری زبان</h1>
 
     <div id="app-logo-header" class="pt-8 px-4 relative z-10">
@@ -48,6 +59,11 @@
 
     <!-- Bottom Navigation -->
     <div class="bottom-nav">
+        <!-- Connection Status Indicator (Dynamic) -->
+        <div class="nav-item" id="nav-status" style="cursor: default; pointer-events: none;">
+            <i id="nav-status-icon" class="fas fa-wifi" style="color: #22c55e;"></i>
+            <span id="nav-status-text">آنلاین</span>
+        </div>
         <div class="nav-item active" id="nav-home" onclick="app.goHome()">
             <i class="fas fa-home"></i>
             <span>خانه</span>
@@ -68,8 +84,13 @@
             <div id="folder-title-box" class="blue-sharp p-4 rounded-3xl flex justify-between items-center font-black text-xl shadow-lg">
                 <div id="folder-title-text" class="flex-1 text-right truncate px-2">نام مجموعه</div>
                 <div class="flex gap-2">
+                    <div id="edit-folder-btn-wrapper" class="w-12 h-12">
+                        <button id="edit-folder-btn" onclick="app.openEditFolderModal()" class="w-full h-full bg-white text-blue-500 rounded-2xl flex items-center justify-center shadow-sm active:scale-95 transition-all" title="ویرایش نام مجموعه">
+                            <i class="fas fa-edit"></i>
+                        </button>
+                    </div>
                     <div id="del-folder-btn-wrapper" class="w-12 h-12">
-                        <button id="del-folder-btn" onclick="app.confirmDeleteFolder()" class="w-full h-full bg-white text-red-500 rounded-2xl flex items-center justify-center shadow-sm active:scale-95 transition-all">
+                        <button id="del-folder-btn" onclick="app.confirmDeleteFolder()" class="w-full h-full bg-white text-red-500 rounded-2xl flex items-center justify-center shadow-sm active:scale-95 transition-all" title="حذف مجموعه">
                             <i class="fas fa-trash-alt"></i>
                         </button>
                     </div>
@@ -104,6 +125,10 @@
                     <button onclick="app.checkDuplicateBeforeAdd()" class="flex-[2] blue-sharp p-4 rounded-2xl font-black text-lg shadow-md active:scale-95 transition-all">ذخیره</button>
                     <button id="explore-word-btn" onclick="app.openExploreModal()" class="flex-[3] bg-white text-orange-500 p-4 rounded-2xl font-black text-lg shadow-sm active:bg-gray-50 transition-all flex items-center justify-center gap-2">
                         <i class="fas fa-search text-sm"></i> جستجوی پیشرفته
+                    </button>
+                    <!-- Idiomatic Translation button (Only visible in Phrase mode) -->
+                    <button id="idiomatic-translate-btn" onclick="app.getIdiomaticTranslation()" class="flex-[3] bg-white text-orange-500 p-4 rounded-2xl font-black text-lg shadow-sm active:bg-gray-50 transition-all hidden items-center justify-center gap-2">
+                        <i class="fas fa-search text-sm"></i> ترجمه روان
                     </button>
                 </div>
             </div>

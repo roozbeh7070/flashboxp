@@ -152,8 +152,31 @@ export const BulkMoveWordModal = (count) => `
                 <div id="bulk-folder-dest-dropdown"></div>
             </div>
             <div class="flex gap-3 mt-6">
-                <button onclick="app.closeModal()" class="flex-1 p-4 text-red-500 font-black">لغو</button>
-                <button onclick="app.executeBulkMove()" class="flex-1 p-5 blue-sharp rounded-2xl font-black shadow-xl">انتقال</button>
+                <button onclick="app.closeModal()" class="flex-[1] p-4 text-red-500 font-black">لغو</button>
+                <button onclick="app.executeBulkMove()" class="flex-[1] p-5 blue-sharp rounded-2xl font-black shadow-xl">انتقال</button>
             </div>
         </div>
     </div>`;
+
+export const IdiomaticTranslationModal = (alternatives) => {
+    const listHtml = alternatives.map(t => `
+        <button onclick="app.selectIdiomaticTranslation('${escapeHTML(t)}')" class="w-full text-right p-4 bg-gray-50 active:bg-gray-100 hover:bg-gray-100 rounded-2xl border border-gray-200/50 flex justify-between items-center transition-all">
+            <span class="font-bold text-gray-800 text-[13px] leading-relaxed">${escapeHTML(t)}</span>
+            <i class="fas fa-chevron-left text-gray-300"></i>
+        </button>
+    `).join('');
+
+    return `
+        <div class="ios-modal p-6 max-h-[80vh] flex flex-col text-right" style="width: 95%; max-w: 420px;">
+            <div class="flex justify-between items-center mb-4 pb-2 border-b border-gray-200">
+                <div class="flex flex-col text-right">
+                    <span class="text-[10px] font-black text-gray-400">انتخاب ترجمه روان</span>
+                    <h3 class="text-base font-black text-gray-900">چند ترجمه مناسب یافت شد:</h3>
+                </div>
+                <button onclick="app.closeModal()" class="text-gray-400 hover:text-gray-600 transition-colors"><i class="fas fa-times-circle text-2xl"></i></button>
+            </div>
+            <div class="overflow-y-auto flex-1 space-y-2.5 pr-1">
+                ${listHtml}
+            </div>
+        </div>`;
+};

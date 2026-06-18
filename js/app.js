@@ -28,6 +28,8 @@ class FlashcardApp {
     }
 
     async init() {
+        this.setLoaderStatus(15, 'در حال راه‌اندازی...');
+
         window.alert = (message) => {
             if (typeof this.showAlert === 'function') {
                 this.showAlert(message);
@@ -36,6 +38,8 @@ class FlashcardApp {
             }
         };
 
+        // 1. Loading local data
+        this.setLoaderStatus(35, 'در حال بارگذاری اطلاعات محلی...');
         try {
             const dbData = await loadDataFromIndexedDB();
             if (dbData) {
@@ -47,19 +51,47 @@ class FlashcardApp {
 
         this.renderFolders();
         this.setupEventListeners();
+        
+        // Update online/offline icon immediately
+        this.updateConnectionStatus();
+
+        // 2. Service Worker registration
+        this.setLoaderStatus(55, 'در حال بررسی بروزرسانی برنامه...');
         this.registerServiceWorker();
         this.updateUILabels();
-        await this.checkUserSession();
-        if (this.user) {
-            await this.triggerSync();
+
+        // 3. Authenticate and Sync
+        this.setLoaderStatus(75, 'در حال بررسی حساب کاربری...');
+        try {
+            await this.checkUserSession();
+        } catch (e) {
+            console.warn('Auth check failed:', e);
         }
+
+        if (this.user) {
+            if (navigator.onLine) {
+                this.setLoaderStatus(90, 'در حال همگام‌سازی ابری...');
+                try {
+                    await this.triggerSync();
+                } catch (e) {
+                    console.warn('Sync failed:', e);
+                }
+            } else {
+                console.log('Skipping sync: Device is offline');
+            }
+        }
+
         this.checkPushPermissionOnLaunch();
 
         // Automatic synchronization when connection is restored
         window.addEventListener('online', () => {
+            this.updateConnectionStatus();
             if (this.user) {
                 this.triggerSync();
             }
+        });
+        window.addEventListener('offline', () => {
+            this.updateConnectionStatus();
         });
 
         // Hide Persian mic button in Safari as it's not supported
@@ -71,6 +103,45 @@ class FlashcardApp {
         // Check Add to Home Screen (A2HS) PWA install on launch
         checkA2HSOnLaunch();
         this.updateModeToggleUI();
+
+        // 4. Complete
+        this.setLoaderStatus(100, 'خوش آمدید!');
+        setTimeout(() => {
+            this.hideLoader();
+        }, 300);
+    }
+
+    setLoaderStatus(percent, text) {
+        const progressBar = document.getElementById('loader-progress-bar');
+        const statusText = document.getElementById('loader-status-text');
+        if (progressBar) progressBar.style.width = `${percent}%`;
+        if (statusText) statusText.innerText = text;
+    }
+
+    hideLoader() {
+        const loader = document.getElementById('startup-loader');
+        if (loader) {
+            loader.classList.add('fade-out');
+            setTimeout(() => {
+                loader.style.display = 'none';
+            }, 400);
+        }
+    }
+
+    updateConnectionStatus() {
+        const statusIcon = document.getElementById('nav-status-icon');
+        const statusText = document.getElementById('nav-status-text');
+        if (!statusIcon || !statusText) return;
+
+        if (navigator.onLine) {
+            statusIcon.className = 'fas fa-wifi';
+            statusIcon.style.color = '#22c55e'; // green-500
+            statusText.innerText = 'آنلاین';
+        } else {
+            statusIcon.className = 'fas fa-wifi-slash';
+            statusIcon.style.color = '#ef4444'; // red-500
+            statusText.innerText = 'آفلاین';
+        }
     }
 
     registerServiceWorker() {

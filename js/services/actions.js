@@ -78,10 +78,12 @@ export const actionMethods = {
         const container = document.getElementById('modal-container');
         container.innerHTML = content;
         container.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
     },
 
     closeModal() {
         document.getElementById('modal-container').classList.add('hidden');
+        document.body.style.overflow = '';
     },
 
     createCustomSelect(containerId, options, selectedValue, onChange) {
@@ -847,19 +849,78 @@ export const actionMethods = {
         let verbConjugations = null;
         let irregularVerb = null;
         let irregularBase = '';
+
+        // Helper to get base form from present participle (-ing)
+        const getVerbBaseFromIng = (word) => {
+            if (!word.endsWith('ing') || word.length <= 3) return word;
+            const stem = word.slice(0, -3);
+            
+            if (stem.endsWith('y')) {
+                if (word === 'dying') return 'die';
+                if (word === 'lying') return 'lie';
+                if (word === 'tying') return 'tie';
+                if (word === 'vying') return 'vie';
+            }
+            
+            const doubleConsonants = ['pp', 'tt', 'nn', 'mm', 'gg', 'dd', 'bb', 'rr'];
+            for (const dc of doubleConsonants) {
+                if (stem.endsWith(dc)) return stem.slice(0, -1);
+            }
+            
+            const vowels = 'aeiou';
+            if (stem.length >= 2) {
+                const lastChar = stem[stem.length - 1];
+                const prevChar = stem[stem.length - 2];
+                if (!vowels.includes(lastChar) && lastChar !== 'y' && lastChar !== 'w' && lastChar !== 'x') {
+                    if (vowels.includes(prevChar)) {
+                        const prevPrevChar = stem.length >= 3 ? stem[stem.length - 3] : '';
+                        if (!vowels.includes(prevPrevChar)) {
+                            return stem + 'e';
+                        }
+                    }
+                }
+            }
+            return stem;
+        };
+
+        // Helper to generate present participle (-ing) from base
+        const getIngForm = (base) => {
+            if (base.endsWith('ie')) {
+                return base.slice(0, -2) + 'ying';
+            }
+            if (base.endsWith('e') && !base.endsWith('ee') && !base.endsWith('oe') && !base.endsWith('ye')) {
+                return base.slice(0, -1) + 'ing';
+            }
+            const vowels = 'aeiou';
+            if (base.length >= 2) {
+                const last = base[base.length - 1];
+                const prev = base[base.length - 2];
+                const prevPrev = base.length >= 3 ? base[base.length - 3] : '';
+                if (vowels.includes(prev) && !vowels.includes(last) && last !== 'w' && last !== 'x' && last !== 'y') {
+                    if (!vowels.includes(prevPrev) && base.length <= 4) {
+                        return base + last + 'ing';
+                    }
+                }
+            }
+            return base + 'ing';
+        };
+
+        const lookupWord = getVerbBaseFromIng(lowerWord);
+        const isIngWord = lowerWord.endsWith('ing') && lowerWord.length > 3;
+
         if (this.irregularVerbsCache) {
-            if (this.irregularVerbsCache[lowerWord]) {
-                irregularVerb = this.irregularVerbsCache[lowerWord][0];
-                irregularBase = lowerWord;
+            if (this.irregularVerbsCache[lookupWord]) {
+                irregularVerb = this.irregularVerbsCache[lookupWord][0];
+                irregularBase = lookupWord;
             } else {
                 for (const [base, infoArr] of Object.entries(this.irregularVerbsCache)) {
                     const info = infoArr[0];
                     const forms2 = info["2"] || [];
                     const forms3 = info["3"] || [];
                     const forms1 = info["1"] || [base];
-                    if (forms2.map(f => f.toLowerCase()).includes(lowerWord) || 
-                        forms3.map(f => f.toLowerCase()).includes(lowerWord) ||
-                        forms1.map(f => f.toLowerCase()).includes(lowerWord)) {
+                    if (forms2.map(f => f.toLowerCase()).includes(lookupWord) || 
+                        forms3.map(f => f.toLowerCase()).includes(lookupWord) ||
+                        forms1.map(f => f.toLowerCase()).includes(lookupWord)) {
                         irregularVerb = info;
                         irregularBase = base;
                         break;
@@ -869,23 +930,26 @@ export const actionMethods = {
         }
 
         if (irregularVerb) {
+            const base = irregularBase;
+            const ingForm = isIngWord ? lowerWord : getIngForm(base);
             verbConjugations = {
-                base: irregularBase,
+                base: base,
                 past: irregularVerb["2"] ? irregularVerb["2"].join(' / ') : '',
                 pp: irregularVerb["3"] ? irregularVerb["3"].join(' / ') : '',
+                ing: ingForm,
                 type: 'بی‌قاعده (Irregular)'
             };
         } else {
             const isVerb = dictData && dictData[0]?.meanings.some(m => m.partOfSpeech.toLowerCase() === 'verb');
             if (isVerb) {
-                let base = lowerWord;
-                let past = lowerWord;
+                let base = lookupWord;
+                let past = base;
                 
-                if (lowerWord.endsWith('ed')) {
-                    if (lowerWord.endsWith('ied')) {
-                        base = lowerWord.slice(0, -3) + 'y';
+                if (base.endsWith('ed')) {
+                    if (base.endsWith('ied')) {
+                        base = base.slice(0, -3) + 'y';
                     } else {
-                        base = lowerWord.slice(0, -2);
+                        base = base.slice(0, -2);
                     }
                 } else {
                     if (base.endsWith('e')) {
@@ -903,10 +967,12 @@ export const actionMethods = {
                     }
                 }
                 
+                const ingForm = isIngWord ? lowerWord : getIngForm(base);
                 verbConjugations = {
                     base: base,
                     past: past,
                     pp: past,
+                    ing: ingForm,
                     type: 'باقاعده (Regular)'
                 };
             }
@@ -987,6 +1053,12 @@ export const actionMethods = {
                             <span class="text-gray-400 font-bold">اسم مفعول (Past Participle):</span>
                             <span class="font-black text-gray-800 cursor-pointer hover:text-blue-500 transition-colors" dir="ltr" onclick="app.clickVerbForm('${utils.escapeHTML(verbConjugations.pp)}', event)">${utils.escapeHTML(verbConjugations.pp)}</span>
                         </div>
+                        ${verbConjugations.ing ? `
+                        <div class="bg-gray-50 p-3 rounded-2xl border border-gray-200/50 flex justify-between items-center text-[13px] shadow-xs">
+                            <span class="text-gray-400 font-bold">اسم فاعل / شکل استمراری (Present Participle):</span>
+                            <span class="font-black text-gray-800 cursor-pointer hover:text-blue-500 transition-colors" dir="ltr" onclick="app.clickVerbForm('${utils.escapeHTML(verbConjugations.ing)}', event)">${utils.escapeHTML(verbConjugations.ing)}</span>
+                        </div>
+                        ` : ''}
                     </div>
                 </div>`;
         }
@@ -1401,6 +1473,72 @@ export const actionMethods = {
             console.error(e);
             this.showAlert("خطا در بارگذاری کلمات: " + e.message, "error");
         }
+    },
+
+    async getIdiomaticTranslation() {
+        if (!navigator.onLine) {
+            alert('برای دریافت ترجمه روان باید به اینترنت متصل باشید.');
+            return;
+        }
+
+        const engInput = document.getElementById('eng-input');
+        if (!engInput) return;
+        const phrase = engInput.value.trim();
+        if (!phrase) {
+            alert('لطفاً ابتدا عبارت انگلیسی را وارد کنید.');
+            return;
+        }
+
+        const btn = document.getElementById('idiomatic-translate-btn');
+        const originalContent = btn.innerHTML;
+        btn.disabled = true;
+        btn.innerHTML = `<span>در حال دریافت...</span><i class="fas fa-spinner fa-spin text-[13px]"></i>`;
+
+        try {
+            const res = await fetch(`https://api.mymemory.translated.net/get?q=${encodeURIComponent(phrase)}&langpair=en|fa`);
+            const json = await res.json();
+            
+            const uniqueTranslations = [];
+            const primary = json.responseData?.translatedText?.trim();
+            if (primary && primary.toLowerCase() !== phrase.toLowerCase()) {
+                uniqueTranslations.push(primary);
+            }
+
+            if (json.matches) {
+                json.matches.forEach(m => {
+                    const trans = m.translation?.trim();
+                    if (trans && trans.toLowerCase() !== phrase.toLowerCase() && !uniqueTranslations.includes(trans)) {
+                        uniqueTranslations.push(trans);
+                    }
+                });
+            }
+
+            if (uniqueTranslations.length === 0) {
+                alert('ترجمه مناسبی یافت نشد. لطفاً خودتان ترجمه را بنویسید یا از دکمه ترجمه معمولی استفاده کنید.');
+            } else if (uniqueTranslations.length === 1) {
+                const perInput = document.getElementById('per-input');
+                if (perInput) {
+                    perInput.value = uniqueTranslations[0];
+                }
+            } else {
+                // Show picker modal
+                this.showModal(modals.IdiomaticTranslationModal(uniqueTranslations));
+            }
+        } catch (e) {
+            console.error("Idiomatic translation error:", e);
+            alert('خطا در دریافت ترجمه روان. لطفاً بعداً تلاش کنید.');
+        } finally {
+            btn.disabled = false;
+            btn.innerHTML = originalContent;
+        }
+    },
+
+    selectIdiomaticTranslation(translation) {
+        const perInput = document.getElementById('per-input');
+        if (perInput) {
+            perInput.value = translation;
+        }
+        this.closeModal();
     }
 };
 
