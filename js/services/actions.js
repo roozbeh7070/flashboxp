@@ -1498,15 +1498,26 @@ export const actionMethods = {
             const res = await fetch(`https://api.mymemory.translated.net/get?q=${encodeURIComponent(phrase)}&langpair=en|fa`);
             const json = await res.json();
             
+            const cleanText = (txt) => {
+                if (!txt) return '';
+                return txt
+                    .replace(/&#x0d;/gi, '')
+                    .replace(/#&x0d;/gi, '')
+                    .replace(/&#13;/g, '')
+                    .replace(/\r/g, '')
+                    .replace(/\n/g, ' ')
+                    .trim();
+            };
+
             const uniqueTranslations = [];
-            const primary = json.responseData?.translatedText?.trim();
+            const primary = cleanText(json.responseData?.translatedText);
             if (primary && primary.toLowerCase() !== phrase.toLowerCase()) {
                 uniqueTranslations.push(primary);
             }
 
             if (json.matches) {
                 json.matches.forEach(m => {
-                    const trans = m.translation?.trim();
+                    const trans = cleanText(m.translation);
                     if (trans && trans.toLowerCase() !== phrase.toLowerCase() && !uniqueTranslations.includes(trans)) {
                         uniqueTranslations.push(trans);
                     }
