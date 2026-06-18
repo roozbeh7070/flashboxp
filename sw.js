@@ -1,4 +1,4 @@
-const CACHE_NAME = 'lang-app-v25';
+const CACHE_NAME = 'lang-app-v26';
 const ASSETS = [
     './',
     './index.html',
@@ -10,7 +10,10 @@ const ASSETS = [
     './doc/logo.png',
     './doc/icon.png',
     './data/b1-oxford.json',
-    './data/b2-oxford.json'
+    './data/b2-oxford.json',
+    'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css',
+    'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/webfonts/fa-solid-900.woff2',
+    'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/webfonts/fa-regular-400.woff2'
 ];
 
 // Install Service Worker
@@ -56,7 +59,10 @@ self.addEventListener('fetch', (event) => {
     if (event.request.method !== 'GET') return;
     
     const url = new URL(event.request.url);
-    if (url.origin !== self.location.origin) return;
+    const isLocal = url.origin === self.location.origin;
+    const isFontAwesome = url.hostname === 'cdnjs.cloudflare.com' && url.pathname.includes('font-awesome');
+    
+    if (!isLocal && !isFontAwesome) return;
 
     // Bypass service worker cache for local development to ensure updates are reflected instantly
     if (self.location.hostname === 'localhost' || self.location.hostname === '127.0.0.1') {
